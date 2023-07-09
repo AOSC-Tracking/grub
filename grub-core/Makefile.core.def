@@ -1098,6 +1098,11 @@ module = {
 };
 
 module = {
+  name = pause;
+  common = commands/pause.c;
+};
+
+module = {
   name = play;
   x86 = commands/i386/pc/play.c;
   enable = x86;
