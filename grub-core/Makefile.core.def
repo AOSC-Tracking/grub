@@ -1034,6 +1034,11 @@ module = {
 };
 
 module = {
+  name = memsize;
+  common = commands/memsize.c;
+};
+
+module = {
   name = minicmd;
   common = commands/minicmd.c;
 };
