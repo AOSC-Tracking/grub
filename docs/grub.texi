@@ -6700,6 +6700,7 @@ you forget a command, you can run the command @command{help}
 * lsmod::                       Show loaded modules
 * lsmem::                       List free and allocated memory blocks
 * lsmemregions::                List memory regions
+* memsize::                     Get the amount of available RAM
 * md5sum::                      Compute or check MD5 hash
 * module::                      Load module for multiboot kernel
 * multiboot::                   Load multiboot compliant kernel
@@ -7843,6 +7844,67 @@ List free and allocated memory blocks.
 @deffn Command lsmemregions
 Prints memory region general information including size, number of
 blocks, and total free / total allocated memory per region.
+@end deffn
+
+
+@node memsize
+@subsection memsize
+
+@deffn Command memsize [@option{-b}|@option{-k}|@option{-m}|@option{-g}|@option{-K}|@option{-M}|@option{-G}] [@option{-q}] [@option{--set} VARNAME]
+Iterate through GRUB memory map to get the amount of system RAM available to
+GRUB. The final integer value of the unit specified will be exported to the
+environment as @code{VARNAME} to make good use of the @pxref{test} command,
+and optionally be printed out to the console.
+
+The final value is checked to make sure it does not exceed the limit of the
+@pxref{test} command, which is INT_MAX. Otherwise, it raises an error.
+
+The default unit used for the value is MiB (@option{-M}).
+
+The default variable name is @code{memsize}.
+
+@option{-q} disables the output.
+
+@code{VARNAME} should be a valid identifier and should not exceed 63
+characters.
+
+The units can be:
+
+@table @code
+@item @option{-b}
+Display and export the value in number of bytes.
+
+@item @option{-k}
+Display and export the vaule in kilobytes (@code{kB}).
+
+@item @option{-m}
+Display and export the vaule in megabytes (@code{MB}).
+
+@item @option{-g}
+Display and export the vaule in gigabytes (@code{GB}).
+
+@item @option{-K}
+Display and export the vaule in kibibytes (@code{KiB}).
+
+@item @option{-M}
+Display and export the vaule in mebibytes (@code{MiB}).
+
+@item @option{-G}
+Display and export the vaule in gibibytes (@code{GiB}).
+@end table
+
+One can make use of this command to implement mechanisms like e.g. booting
+into different modes depending on available RAM:
+
+@example
+memsize -M --set=mem_avail
+if [ "$mem_avail" -lt 512 ] ; then
+  set boot_target="multi-user.target"
+else
+  set boot_target="graphical.target"
+fi
+@end example
+
 @end deffn
 
 
