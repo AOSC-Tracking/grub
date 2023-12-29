@@ -518,6 +518,8 @@ main (int argc, char *argv[])
   xorriso_push ("-as");
   xorriso_push ("mkisofs");
   xorriso_push ("-graft-points");
+  xorriso_push ("-iso-level");
+  xorriso_push ("3");
 
   iso9660_dir = grub_util_make_temporary_dir ();
   grub_util_info ("temporary iso9660 dir is `%s'", iso9660_dir);
