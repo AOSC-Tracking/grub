@@ -263,7 +263,8 @@ for linux in ${reverse_sorted_list}; do
       initramfs=`grep CONFIG_INITRAMFS_SOURCE= "${config}" | cut -f2 -d= | tr -d \"`
   fi
 
-  if test -z "${initramfs}" && test -z "${initrd_real}" ; then
+  if ( test -z "${initramfs}" && test -z "${initrd_real}" ) || \
+    [[ "${initrd_real}" = "intel-ucode.img" ]]; then
     # "UUID=" and "ZFS=" magic is parsed by initrd or initramfs.  Since there's
     # no initrd or builtin initramfs, it can't work here.
     if [ "x${GRUB_DEVICE_PARTUUID}" = "x" ] \
