@@ -396,7 +396,8 @@ menu_text_print_timeout (int timeout, void *dataptr)
   char *msg_translated = 0;
 
   grub_term_gotoxy (data->term,
-		    (struct grub_term_coordinate) { 0, data->geo.timeout_y });
+		    (struct grub_term_coordinate) { STANDARD_MARGIN,
+		    data->geo.timeout_y + 1 });
 
   if (data->timeout_msg == TIMEOUT_TERSE
       || data->timeout_msg == TIMEOUT_TERSE_NO_MARGIN)
