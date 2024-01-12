@@ -1,0 +1,27 @@
+From 8e8976fa14c4fe5e88cf9998893565635500d5b3 Mon Sep 17 00:00:00 2001
+From: Cyan <cyanoxygen@aosc.io>
+Date: Fri, 12 Jan 2024 22:19:25 +0800
+Subject: [PATCH] po/Makefile.in.in: disable parallel execution
+
+---
+ gettext-runtime/po/Makefile.in.in | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/gettext-runtime/po/Makefile.in.in b/gettext-runtime/po/Makefile.in.in
+index 6b25f0d91..eb6e9d943 100644
+--- a/gettext-runtime/po/Makefile.in.in
++++ b/gettext-runtime/po/Makefile.in.in
+@@ -92,6 +92,10 @@ DISTFILESDEPS = $(DISTFILESDEPS_$(DIST_DEPENDS_ON_UPDATE_PO))
+ 
+ all: all-@USE_NLS@
+ 
++# FIXME: msgfilter might fail at some time if there are too much parallel
++# jobs. This is observed while building GNU GRUB with -j129.
++
++.NOTPARALLEL:
+ 
+ .SUFFIXES:
+ .SUFFIXES: .po .gmo .sed .sin .nop .po-create .po-update
+-- 
+2.39.1
+
