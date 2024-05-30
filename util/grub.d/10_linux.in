@@ -212,6 +212,19 @@ linux_entry() {
 	local args="$4"
 	local _id="$5"
 	local os_class="$(get_os_id)"
+
+	case "${GRUB_FB_ROTATION}" in
+		inverted | 180)
+			args="$args fbcon=rotate:2"
+			;;
+		left | 90)
+			args="$args fbcon=rotate:3"
+			;;
+		right | 270)
+			args="$args fbcon=rotate:1"
+			;;
+	esac
+
 	if [ ! -z "$os_class" ];  then
 		os_class="--class $(echo $os_class | grub_quote)"
 	fi
