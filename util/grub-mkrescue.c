@@ -769,8 +769,8 @@ main (int argc, char *argv[])
       || source_dirs[GRUB_INSTALL_PLATFORM_RISCV64_EFI])
     {
       FILE *f;
-      char *efidir_efi = grub_util_path_concat (2, iso9660_dir, "efi");
-      char *efidir_efi_boot = grub_util_path_concat (3, iso9660_dir, "efi", "boot");
+      char *efidir_efi = grub_util_path_concat (2, iso9660_dir, "EFI");
+      char *efidir_efi_boot = grub_util_path_concat (3, iso9660_dir, "EFI", "BOOT");
       char *imgname, *img32, *img64, *img_mac = NULL;
       char *efiimgfat, *iso_uuid_file, *diskdir, *diskdir_uuid;
       grub_install_mkdir_p (efidir_efi_boot);
@@ -792,39 +792,39 @@ main (int argc, char *argv[])
       free (diskdir_uuid);
       free (diskdir);
 
-      imgname = grub_util_path_concat (2, efidir_efi_boot, "bootia64.efi");
+      imgname = grub_util_path_concat (2, efidir_efi_boot, "BOOTIA64.EFI");
       make_image_fwdisk_abs (GRUB_INSTALL_PLATFORM_IA64_EFI, "ia64-efi", imgname);
       free (imgname);
 
       grub_install_push_module ("part_apple");
-      img64 = grub_util_path_concat (2, efidir_efi_boot, "bootx64.efi");
+      img64 = grub_util_path_concat (2, efidir_efi_boot, "BOOTx64.EFI");
       make_image_abs (GRUB_INSTALL_PLATFORM_X86_64_EFI, "x86_64-efi", img64);
       grub_install_pop_module ();
 
       grub_install_push_module ("part_apple");
-      img32 = grub_util_path_concat (2, efidir_efi_boot, "bootia32.efi");
+      img32 = grub_util_path_concat (2, efidir_efi_boot, "BOOTIA32.EFI");
       make_image_abs (GRUB_INSTALL_PLATFORM_I386_EFI, "i386-efi", img32);
       grub_install_pop_module ();
 
-      imgname = grub_util_path_concat (2, efidir_efi_boot, "bootarm.efi");
+      imgname = grub_util_path_concat (2, efidir_efi_boot, "BOOTARM.EFI");
       make_image_abs (GRUB_INSTALL_PLATFORM_ARM_EFI, "arm-efi", imgname);
       free (imgname);
 
-      imgname = grub_util_path_concat (2, efidir_efi_boot, "bootaa64.efi");
+      imgname = grub_util_path_concat (2, efidir_efi_boot, "BOOTAA64.EFI");
       make_image_abs (GRUB_INSTALL_PLATFORM_ARM64_EFI, "arm64-efi", imgname);
       free (imgname);
 
-      imgname = grub_util_path_concat (2, efidir_efi_boot, "bootloongarch64.efi");
+      imgname = grub_util_path_concat (2, efidir_efi_boot, "BOOTLOONGARCH64.EFI");
       make_image_fwdisk_abs (GRUB_INSTALL_PLATFORM_LOONGARCH64_EFI,
 			     "loongarch64-efi",
 			     imgname);
       free (imgname);
 
-      imgname = grub_util_path_concat (2, efidir_efi_boot, "bootriscv32.efi");
+      imgname = grub_util_path_concat (2, efidir_efi_boot, "BOOTRISCV32.EFI");
       make_image_abs (GRUB_INSTALL_PLATFORM_RISCV32_EFI, "riscv32-efi", imgname);
       free (imgname);
 
-      imgname = grub_util_path_concat (2, efidir_efi_boot, "bootriscv64.efi");
+      imgname = grub_util_path_concat (2, efidir_efi_boot, "BOOTRISCV64.EFI");
       make_image_abs (GRUB_INSTALL_PLATFORM_RISCV64_EFI, "riscv64-efi", imgname);
       free (imgname);
 
