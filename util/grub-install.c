@@ -849,6 +849,7 @@ main (int argc, char *argv[])
   int is_efi = 0;
   const char *efi_distributor = NULL;
   const char *efi_file = NULL;
+  const char *efi_file_ow = NULL;
   char **grub_devices;
   grub_fs_t grub_fs;
   grub_device_t grub_dev = NULL;
@@ -1176,6 +1177,7 @@ main (int argc, char *argv[])
 	      break;
 	    case GRUB_INSTALL_PLATFORM_LOONGARCH64_EFI:
 	      efi_file = "BOOTLOONGARCH64.EFI";
+	      efi_file_ow = "BOOTLOONGARCH.EFI";
 	      break;
 	    case GRUB_INSTALL_PLATFORM_RISCV32_EFI:
 	      efi_file = "BOOTRISCV32.EFI";
@@ -1212,6 +1214,7 @@ main (int argc, char *argv[])
 	      break;
 	    case GRUB_INSTALL_PLATFORM_LOONGARCH64_EFI:
 	      efi_file = "grubloongarch64.efi";
+	      efi_file_ow = "grubloongarch.efi";
 	      break;
 	    case GRUB_INSTALL_PLATFORM_RISCV32_EFI:
 	      efi_file = "grubriscv32.efi";
@@ -1988,6 +1991,11 @@ main (int argc, char *argv[])
       {
 	char *dst = grub_util_path_concat (2, efidir, efi_file);
 	grub_install_copy_file (imgfile, dst, 1);
+
+	if (platform == GRUB_INSTALL_PLATFORM_LOONGARCH64_EFI) {
+	  char *dst_ow = grub_util_path_concat (2, efidir, efi_file_ow);
+	  grub_install_copy_file (dst, dst_ow, 1);
+	}
 
 	grub_set_install_backup_ponr ();
 
