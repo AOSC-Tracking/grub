@@ -958,6 +958,8 @@ main (int argc, char *argv[])
   int is_efi = 0;
   const char *efi_distributor = NULL;
   const char *efi_suffix = NULL, *efi_suffix_upper = NULL;
+  // For LoongArch old-world firmware compatibility.
+  const char *efi_suffix_ow = NULL, *efi_suffix_upper_ow = NULL;
   char *efi_file = NULL;
   char **grub_devices;
   grub_fs_t grub_fs;
@@ -1285,6 +1287,8 @@ main (int argc, char *argv[])
 	case GRUB_INSTALL_PLATFORM_LOONGARCH64_EFI:
 	  efi_suffix = "loongarch64";
 	  efi_suffix_upper = "LOONGARCH64";
+	  efi_suffix_ow = "loongarch";
+	  efi_suffix_upper_ow = "LOONGARCH";
 	  break;
 	case GRUB_INSTALL_PLATFORM_RISCV32_EFI:
 	  efi_suffix = "riscv32";
@@ -2145,6 +2149,11 @@ main (int argc, char *argv[])
       {
 	char *dst = grub_util_path_concat (2, efidir, efi_file);
 	char *removable_file = xasprintf ("BOOT%s.EFI", efi_suffix_upper);
+	char *removable_file_ow;
+	if (platform == GRUB_INSTALL_PLATFORM_LOONGARCH64_EFI)
+	  {
+	    removable_file_ow = xasprintf ("BOOT%s.EFI", efi_suffix_upper_ow);
+	  }
 
 	if (uefi_secure_boot)
 	  {
@@ -2215,6 +2224,11 @@ main (int argc, char *argv[])
 		    grub_util_info ("Secure boot: installing shim and image into rm path");
 		    also_install_removable (shim_signed, base_efidir, removable_file, 1);
 
+		    if (platform == GRUB_INSTALL_PLATFORM_LOONGARCH64_EFI)
+		      {
+		        also_install_removable (shim_signed, base_efidir, removable_file_ow, 1);
+		      }
+
 		    also_install_removable (efi_signed, base_efidir, chained_base, 1);
 		    also_install_removable (mok_src, base_efidir, mok_file, 0);
 
@@ -2244,6 +2258,11 @@ main (int argc, char *argv[])
 		  {
 		    grub_util_info ("Secure boot (no shim): installing signed grub binary into rm path");
 		    also_install_removable (efi_signed, base_efidir, removable_file, 1);
+
+		    if (platform == GRUB_INSTALL_PLATFORM_LOONGARCH64_EFI)
+		      {
+		        also_install_removable (efi_signed, base_efidir, removable_file_ow, 1);
+		      }
 		  }
 	      }
 
@@ -2268,11 +2287,22 @@ main (int argc, char *argv[])
 	    grub_util_info ("No Secure Boot: installing core image");
 	    grub_install_copy_file (imgfile, dst, 1);
 	    if (force_extra_removable)
-	      also_install_removable (imgfile, base_efidir, removable_file, 1);
+	      {
+	        also_install_removable (imgfile, base_efidir, removable_file, 1);
+
+	        if (platform == GRUB_INSTALL_PLATFORM_LOONGARCH64_EFI)
+		  {
+	            also_install_removable (imgfile, base_efidir, removable_file_ow, 1);
+		  }
+	      }
 	  }
 
 	grub_set_install_backup_ponr ();
 
+	if (platform == GRUB_INSTALL_PLATFORM_LOONGARCH64_EFI)
+	  {
+	    free (removable_file_ow);
+	  }
 	free (removable_file);
 	free (dst);
       }
