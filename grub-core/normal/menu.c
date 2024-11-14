@@ -580,10 +580,15 @@ run_menu (grub_menu_t menu, int nested, int *auto_boot, int *notify_boot)
   int default_entry, current_entry;
   int timeout;
   enum timeout_style timeout_style;
+  bool right_to_select;
 
   *notify_boot = 1;
 
   default_entry = get_entry_number (menu, "default");
+
+  /* Read if the right arrow key is enabled for selection. Default to `true'
+     if unset. */
+  right_to_select = grub_env_get_bool ("right_to_select", true);
 
   /* If DEFAULT_ENTRY is not within the menu entries, fall back to
      the first entry.  */
@@ -761,9 +766,17 @@ run_menu (grub_menu_t menu, int nested, int *auto_boot, int *notify_boot)
 	    case '\r':
 	    case GRUB_TERM_KEY_RIGHT:
 	    case GRUB_TERM_CTRL | 'f':
-	      menu_fini ();
-              *auto_boot = 0;
-	      return current_entry;
+	      /* Right arrow key to select only when boolean value
+		 `right_to_select' is set to `true' or not specified
+		 (defaults to `true'). */
+	      if ((c != GRUB_TERM_KEY_RIGHT) ||
+		  right_to_select)
+		{
+		  menu_fini ();
+		  *auto_boot = 0;
+		  return current_entry;
+		}
+	      break;
 
 	    case GRUB_TERM_ESC:
 	      if (nested)
