@@ -1596,6 +1596,10 @@ This option may be set to a list of GRUB module names separated by spaces.
 Each module will be loaded as early as possible, at the start of
 @file{grub.cfg}.
 
+@item GRUB_RIGHT_TO_SELECT
+This option may be set to specify whether the right arrow key may be used
+to make a selection. This option defaults to @samp{true}.
+
 @end table
 
 The following options are still accepted for compatibility with existing

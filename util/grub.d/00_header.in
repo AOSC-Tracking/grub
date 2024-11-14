@@ -37,6 +37,7 @@ if [ "x${GRUB_DEFAULT}" = "x" ] ; then GRUB_DEFAULT=0 ; fi
 if [ "x${GRUB_DEFAULT}" = "xsaved" ] ; then GRUB_DEFAULT='${saved_entry}' ; fi
 if [ "x${GRUB_TIMEOUT}" = "x" ] ; then GRUB_TIMEOUT=5 ; fi
 if [ "x${GRUB_GFXMODE}" = "x" ] ; then GRUB_GFXMODE=auto ; fi
+if [ "x${GRUB_RIGHT_TO_SELECT}" = "x" ] ; then GRUB_RIGHT_TO_SELECT=true ; fi
 
 if [ "x${GRUB_DEFAULT_BUTTON}" = "x" ] ; then GRUB_DEFAULT_BUTTON="$GRUB_DEFAULT" ; fi
 if [ "x${GRUB_DEFAULT_BUTTON}" = "xsaved" ] ; then GRUB_DEFAULT_BUTTON='${saved_entry}' ; fi
@@ -354,3 +355,8 @@ fi
 if [ "x${GRUB_BADRAM}" != "x" ] ; then
   echo "badram ${GRUB_BADRAM}"
 fi
+
+# Whether to allow selecting with the right arrow key.
+cat << EOF
+set right_to_select=${GRUB_RIGHT_TO_SELECT}
+EOF
