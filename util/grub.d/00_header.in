@@ -254,6 +254,17 @@ EOF
   ;;
 esac
 
+cat << EOF
+# Hardware quirks:
+#
+# MacBook Pro 15'' (Mid-2010, MacBookPro6,2) are known to have broken
+# graphical terminal output. Use console output for this model.
+smbios --type 1 --get-string 5 --set system_model
+if [ "x$system_model" = "xMacBookPro6,2" ]; then
+	terminal_output console
+fi
+EOF
+
 if [ "x$gfxterm" = x1 ]; then
     if [ "x$GRUB_THEME" != x ] && [ -f "$GRUB_THEME" ] \
 	&& is_path_readable_by_grub "$GRUB_THEME"; then
