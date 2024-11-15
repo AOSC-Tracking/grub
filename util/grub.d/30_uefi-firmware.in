@@ -26,7 +26,7 @@ export TEXTDOMAINDIR="@localedir@"
 
 . "$pkgdatadir/grub-mkconfig_lib"
 
-LABEL="UEFI Firmware Settings"
+LABEL=$(gettext_printf "UEFI Firmware Settings")
 
 gettext_printf "Adding boot menu entry for UEFI Firmware Settings ...\n" >&2
 
