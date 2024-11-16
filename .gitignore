@@ -256,7 +256,6 @@ widthspec.bin
 /po/POTFILES-shell.in
 /po/POTFILES.in
 /po/Rules-quot
-/po/grub.pot
 /po/remove-potcdate.sed
 /po/stamp-po
 /printf_test
