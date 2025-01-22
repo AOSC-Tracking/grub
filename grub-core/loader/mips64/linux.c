@@ -17,6 +17,7 @@
  *  along with GRUB.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+#include <grub/types.h>
 #include <grub/efi/api.h>
 #include <grub/efi/efi.h>
 #include <grub/elf.h>
@@ -500,6 +501,7 @@ grub_cmd_initrd (grub_command_t cmd __attribute__ ((unused)),
 {
   grub_size_t size = 0;
   void *initrd_dest;
+  void *balloon = NULL;
   grub_err_t err;
   struct grub_linux_initrd_context initrd_ctx = { 0, 0, 0 };
 
@@ -516,6 +518,14 @@ grub_cmd_initrd (grub_command_t cmd __attribute__ ((unused)),
     goto fail;
 
   size = grub_get_initrd_size (&initrd_ctx);
+
+  // make sure we can allocate sufficient memory for the initrd
+  balloon = grub_memalign (0x10000, size);
+  if (!balloon)
+    goto fail;
+  else
+    // free this region for the relocator
+    grub_free(balloon);
 
   {
     grub_relocator_chunk_t ch;
