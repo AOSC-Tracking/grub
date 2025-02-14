@@ -1298,36 +1298,36 @@ SUFFIX (relocate_addrs) (Elf_Ehdr *e, struct section_metadata *smd,
 		   case R_MIPS_26:
 		     {
 		       grub_uint32_t *t32 = (grub_uint32_t *) target;
-		       grub_addr_t addr = grub_host_to_target64 (sym_addr);
-		       *t32 = ((*t32) & 0xfc000000U) | ((addr >> 2) & 0x3ffffffUL);
+		       grub_uint64_t addr = grub_host_to_target64 (sym_addr);
+		       *t32 = ((*t32) & 0xfc000000U) | ((addr >> 2) & 0x3ffffffULL);
 		     }
 		     break;
 		   case R_MIPS_LO16:
 		     {
 		       grub_int16_t *t16 = (grub_int16_t *) target;
-		       grub_addr_t addr = grub_host_to_target64 (sym_addr);
+		       grub_uint64_t addr = grub_host_to_target64 (sym_addr);
 		       *t16 = (grub_int16_t) addr;
 		     }
 		     break;
 		   case R_MIPS_HI16:
 		     {
 		       grub_int16_t *t16 = (grub_int16_t *) target;
-		       grub_addr_t addr = grub_host_to_target64 (sym_addr);
-		       *t16 = (grub_int16_t) ((addr + 0x8000UL) >> 16);
+		       grub_uint64_t addr = grub_host_to_target64 (sym_addr);
+		       *t16 = (grub_int16_t) ((addr + 0x8000ULL) >> 16);
 		     }
 		     break;
 		   case R_MIPS_HIGHER:
 		     {
 		       grub_int16_t *t16 = (grub_int16_t *) target;
-		       grub_addr_t addr = grub_host_to_target64 (sym_addr);
-		       *t16 = (grub_int16_t) ((addr + 0x80008000UL) >> 32);
+		       grub_uint64_t addr = grub_host_to_target64 (sym_addr);
+		       *t16 = (grub_int16_t) ((addr + 0x80008000ULL) >> 32);
 		     }
 		     break;
 		   case R_MIPS_HIGHEST:
 		     {
 		       grub_uint16_t *t16 = (grub_uint16_t *) target;
-		       grub_addr_t addr = grub_host_to_target64 (sym_addr);
-		       *t16 = (grub_uint16_t) ((addr + 0x800080008000UL) >> 48);
+		       grub_uint64_t addr = grub_host_to_target64 (sym_addr);
+		       *t16 = (grub_uint16_t) ((addr + 0x800080008000ULL) >> 48);
 		     }
 		     break;
 		   default:
@@ -1983,19 +1983,19 @@ translate_relocation_pe (struct translate_context *ctx,
 	    /* Hi */
 	    ctx->current_address
 	      = add_fixup_entry (&ctx->lst, 0,
-				 (grub_int16_t) ((target & 0x8000UL) >> 16),
+				 (grub_int16_t) ((target & 0x8000ULL) >> 16),
 				 0, ctx->current_address,
 				 image_target);
 	    /* Higher */
 	    ctx->current_address
 	      = add_fixup_entry (&ctx->lst, 0,
-				 (grub_int16_t) ((target & 0x80008000UL) >> 32),
+				 (grub_int16_t) ((target & 0x80008000ULL) >> 32),
 				 0, ctx->current_address,
 				 image_target);
 	    /* Highest */
 	    ctx->current_address
 	      = add_fixup_entry (&ctx->lst, 0,
-				 (grub_uint16_t) ((target & 0x800080008000UL) >> 48),
+				 (grub_uint16_t) ((target & 0x800080008000ULL) >> 48),
 				 0, ctx->current_address,
 				 image_target);
 	  }
@@ -2018,13 +2018,13 @@ translate_relocation_pe (struct translate_context *ctx,
 	    /* Higher */
 	    ctx->current_address
 	      = add_fixup_entry (&ctx->lst, 0,
-				 (grub_int16_t) ((target & 0x80008000UL) >> 32),
+				 (grub_int16_t) ((target & 0x80008000ULL) >> 32),
 				 0, ctx->current_address,
 				 image_target);
 	    /* Highest */
 	    ctx->current_address
 	      = add_fixup_entry (&ctx->lst, 0,
-				 (grub_uint16_t) ((target & 0x800080008000UL) >> 48),
+				 (grub_uint16_t) ((target & 0x800080008000ULL) >> 48),
 				 0, ctx->current_address,
 				 image_target);
 	  }
@@ -2047,13 +2047,13 @@ translate_relocation_pe (struct translate_context *ctx,
 	    /* Hi */
 	    ctx->current_address
 	      = add_fixup_entry (&ctx->lst, 0,
-				 (grub_int16_t) ((target & 0x8000UL) >> 16),
+				 (grub_int16_t) ((target & 0x8000ULL) >> 16),
 				 0, ctx->current_address,
 				 image_target);
 	    /* Highest */
 	    ctx->current_address
 	      = add_fixup_entry (&ctx->lst, 0,
-				 (grub_uint16_t) ((target & 0x800080008000UL) >> 48),
+				 (grub_uint16_t) ((target & 0x800080008000ULL) >> 48),
 				 0, ctx->current_address,
 				 image_target);
 	  }
@@ -2076,13 +2076,13 @@ translate_relocation_pe (struct translate_context *ctx,
 	    /* Hi */
 	    ctx->current_address
 	      = add_fixup_entry (&ctx->lst, 0,
-				 (grub_int16_t) ((target & 0x8000UL) >> 16),
+				 (grub_int16_t) ((target & 0x8000ULL) >> 16),
 				 0, ctx->current_address,
 				 image_target);
 	    /* Higher */
 	    ctx->current_address
 	      = add_fixup_entry (&ctx->lst, 0,
-				 (grub_int16_t) ((target & 0x80008000UL) >> 32),
+				 (grub_int16_t) ((target & 0x80008000ULL) >> 32),
 				 0, ctx->current_address,
 				 image_target);
 	  }
