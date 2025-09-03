@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: grub 2.12-rc1\n"
 "Report-Msgid-Bugs-To: bug-grub@gnu.org\n"
-"POT-Creation-Date: 2024-11-16 22:18+0800\n"
+"POT-Creation-Date: 2025-09-03 12:14+0800\n"
 "PO-Revision-Date: 2023-07-11 14:44+0800\n"
 "Last-Translator: Wenbin Lv <wenbin816@gmail.com>\n"
 "Language-Team: Chinese (simplified) <i18n-zh@googlegroups.com>\n"
@@ -153,8 +153,8 @@ msgstr "加载 ACPI 主机表和参数指定的表。"
 msgid "error: %s.\n"
 msgstr "错误：%s。\n"
 
-#: grub-core/commands/acpihalt.c:368 grub-core/kern/efi/mm.c:147
-#: grub-core/kern/efi/mm.c:160 grub-core/kern/emu/misc.c:96
+#: grub-core/commands/acpihalt.c:368 grub-core/kern/efi/mm.c:143
+#: grub-core/kern/efi/mm.c:156 grub-core/kern/emu/misc.c:96
 #: grub-core/kern/emu/misc.c:108 grub-core/kern/emu/misc.c:118
 #: grub-core/kern/emu/misc.c:147 grub-core/kern/emu/mm.c:34
 #: grub-core/kern/emu/mm.c:44 grub-core/kern/emu/mm.c:73
@@ -247,7 +247,7 @@ msgstr "无法确定引导设备的分区 UUID"
 #: grub-core/loader/i386/xen.c:861 grub-core/loader/i386/xnu.c:487
 #: grub-core/loader/ia64/efi/linux.c:459 grub-core/loader/ia64/efi/linux.c:539
 #: grub-core/loader/mips/linux.c:238 grub-core/loader/mips/linux.c:429
-#: grub-core/loader/mips64/linux.c:395 grub-core/loader/mips64/linux.c:507
+#: grub-core/loader/mips64/linux.c:396 grub-core/loader/mips64/linux.c:509
 #: grub-core/loader/multiboot.c:322 grub-core/loader/multiboot.c:374
 #: grub-core/loader/multiboot.c:384
 #: grub-core/loader/powerpc/ieee1275/linux.c:280
@@ -305,7 +305,7 @@ msgstr "显示块列表。"
 #: grub-core/loader/i386/bsd.c:2095 grub-core/loader/i386/linux.c:1065
 #: grub-core/loader/i386/pc/linux.c:412 grub-core/loader/i386/xen.c:783
 #: grub-core/loader/i386/xen.c:866 grub-core/loader/ia64/efi/linux.c:545
-#: grub-core/loader/mips/linux.c:432 grub-core/loader/mips64/linux.c:510
+#: grub-core/loader/mips/linux.c:432 grub-core/loader/mips64/linux.c:512
 #: grub-core/loader/multiboot.c:388
 #: grub-core/loader/powerpc/ieee1275/linux.c:358
 #: grub-core/loader/sparc64/ieee1275/linux.c:387 grub-core/loader/xnu.c:591
@@ -1603,9 +1603,9 @@ msgid ""
 "the output. The default variable name is `memsize'. The unit can be b for "
 "bytes,or K, M, G for binary units. The default unit is MiB."
 msgstr ""
-"获得 GRUB 可用的系统内存大小，将其转化为指定单位，然后将该数字设置到环境变量中。"
-"默认情况下会将获得的值输出至屏幕中。可以使用 -q 开关禁用输出。"
-"默认的变量名为 “memsize”。也可以指定其他单位：b 为字节，K、M 及 G 为对应的二进制单位。"
+"获得 GRUB 可用的系统内存大小，将其转化为指定单位，然后将该数字设置到环境变量"
+"中。默认情况下会将获得的值输出至屏幕中。可以使用 -q 开关禁用输出。默认的变量"
+"名为 “memsize”。也可以指定其他单位：b 为字节，K、M 及 G 为对应的二进制单位。"
 "默认的单位为 MiB。"
 
 #: grub-core/commands/memtools.c:140
@@ -1779,11 +1779,11 @@ msgstr "[模块1 模块2 ...]"
 
 #: grub-core/commands/nativedisk.c:326
 msgid ""
-"Switch to native disk drivers. If no modules are specified default set (pata,"
-"ahci,usbms,ohci,uhci,ehci) is used"
+"Switch to native disk drivers. If no modules are specified default set "
+"(pata,ahci,usbms,ohci,uhci,ehci) is used"
 msgstr ""
-"切换为使用原生磁盘驱动程序。如果没有指定模块，则使用默认集合 (pata,ahci,"
-"usbms,ohci,uhci,ehci)。"
+"切换为使用原生磁盘驱动程序。如果没有指定模块，则使用默认集合 "
+"(pata,ahci,usbms,ohci,uhci,ehci)。"
 
 #: grub-core/commands/parttool.c:40
 msgid ""
@@ -2559,7 +2559,9 @@ msgstr "  没有可用信息"
 msgid ""
 "  A video driver is active, cannot initialize this driver until it is "
 "deactivated\n"
-msgstr "  当前已经有视频驱动程序正在运行。需要卸载运行中的驱动程序才能载入该驱动程序。\n"
+msgstr ""
+"  当前已经有视频驱动程序正在运行。需要卸载运行中的驱动程序才能载入该驱动程"
+"序。\n"
 
 #: grub-core/commands/videoinfo.c:203
 msgid "  Failed to initialize video adapter"
@@ -3105,7 +3107,7 @@ msgstr "没有符号表"
 
 #: grub-core/efiemu/loadcore.c:346 grub-core/kern/dl.c:629
 #: grub-core/loader/ia64/efi/linux.c:345 grub-core/loader/mips/linux.c:248
-#: grub-core/loader/mips64/linux.c:405 grub-core/loader/multiboot_elfxx.c:89
+#: grub-core/loader/mips64/linux.c:406 grub-core/loader/multiboot_elfxx.c:89
 #: grub-core/loader/powerpc/ieee1275/linux.c:291
 #: grub-core/loader/sparc64/ieee1275/linux.c:320
 msgid "this ELF file is not of the right type"
@@ -3535,7 +3537,7 @@ msgstr "xz 文件已损坏，或使用了不支持的块选项"
 #: grub-core/kern/riscv/dl.c:47 grub-core/kern/sparc64/dl.c:36
 #: grub-core/kern/x86_64/dl.c:36 grub-core/loader/i386/bsd.c:1451
 #: grub-core/loader/i386/bsdXX.c:52 grub-core/loader/ia64/efi/linux.c:341
-#: grub-core/loader/mips/linux.c:298 grub-core/loader/mips64/linux.c:438
+#: grub-core/loader/mips/linux.c:298 grub-core/loader/mips64/linux.c:439
 #: grub-core/loader/multiboot.c:232 grub-core/loader/multiboot_elfxx.c:86
 #: grub-core/loader/powerpc/ieee1275/linux.c:305
 #: grub-core/loader/sparc64/ieee1275/linux.c:331
@@ -3597,7 +3599,7 @@ msgstr "无效的架构无关的 ELF 魔数"
 msgid "Print infomation useful for GDB debugging"
 msgstr "打印对于 GDB 调试很有用的信息"
 
-#: grub-core/kern/efi/mm.c:139
+#: grub-core/kern/efi/mm.c:135
 #, c-format
 msgid "invalid memory address (0x%s > 0x%s)"
 msgstr "无效的内存地址 (0x%s > 0x%s)"
@@ -3985,7 +3987,7 @@ msgstr "无效的设备树"
 #: grub-core/loader/emu/linux.c:172 grub-core/loader/i386/linux.c:1157
 #: grub-core/loader/i386/pc/linux.c:483 grub-core/loader/i386/xen.c:969
 #: grub-core/loader/i386/xen.c:971 grub-core/loader/ia64/efi/linux.c:591
-#: grub-core/loader/mips/linux.c:498 grub-core/loader/mips64/linux.c:562
+#: grub-core/loader/mips/linux.c:498 grub-core/loader/mips64/linux.c:572
 #: grub-core/loader/powerpc/ieee1275/linux.c:406
 #: grub-core/loader/sparc64/ieee1275/linux.c:511
 msgid "Load Linux."
@@ -3995,7 +3997,7 @@ msgstr "加载 Linux。"
 #: grub-core/loader/emu/linux.c:174 grub-core/loader/i386/linux.c:1159
 #: grub-core/loader/i386/pc/linux.c:486 grub-core/loader/i386/xen.c:973
 #: grub-core/loader/ia64/efi/linux.c:594 grub-core/loader/mips/linux.c:500
-#: grub-core/loader/mips64/linux.c:564
+#: grub-core/loader/mips64/linux.c:574
 #: grub-core/loader/powerpc/ieee1275/linux.c:408
 #: grub-core/loader/sparc64/ieee1275/linux.c:513
 msgid "Load initrd."
@@ -7299,6 +7301,7 @@ msgid "blocklists are incomplete"
 msgstr "块列表不完整"
 
 #: util/grub-kbdcomp.in:24
+#, sh-printf-format
 msgid "Usage: %s -o OUTPUT CKBMAP_ARGUMENTS...\\n"
 msgstr "用法：%s -o 输出 CKBMAP参数...\\n"
 
@@ -7317,6 +7320,7 @@ msgid "print the version information and exit"
 msgstr "输出版本信息并退出"
 
 #: util/grub-kbdcomp.in:31
+#, sh-printf-format
 msgid "%s generates a keyboard layout for GRUB using ckbcomp\\n"
 msgstr "%s 使用 ckbcomp 生成 GRUB 使用的键盘布局"
 
@@ -7327,10 +7331,12 @@ msgstr "请将问题与缺陷报告至 <bug-grub@gnu.org>。"
 
 #: util/grub-kbdcomp.in:41 util/grub-mkconfig.in:72 util/grub-reboot.in:72
 #: util/grub-set-default.in:66
+#, sh-printf-format
 msgid "%s: option requires an argument -- `%s'\\n"
 msgstr "%s: 选项需要一个参数 -- \"%s\"\\n"
 
 #: util/grub-mkconfig.in:57
+#, sh-printf-format
 msgid "Usage: %s [OPTION]\\n"
 msgstr "用法：%s [选项]\\n"
 
@@ -7343,14 +7349,17 @@ msgid "output generated config to FILE [default=stdout]"
 msgstr "将生成的配置输出到指定 <文件> [默认=标准输出]"
 
 #: util/grub-mkconfig.in:97 util/grub-reboot.in:104 util/grub-set-default.in:98
+#, sh-printf-format
 msgid "Unrecognized option `%s'\\n"
 msgstr "无法识别的选项 \"%s\"\\n"
 
 #: util/grub-mkconfig.in:121
+#, sh-printf-format
 msgid "%s: You must run this as root\\n"
 msgstr "%s: 您必须以 root 身份运行该程序\\n"
 
 #: util/grub-mkconfig.in:130
+#, sh-printf-format
 msgid "%s: Not found.\\n"
 msgstr "%s: 未找到。\\n"
 
@@ -7360,6 +7369,7 @@ msgstr "正在生成 grub 配置文件 ..."
 
 #. TRANSLATORS: %s is replaced by filename
 #: util/grub-mkconfig.in:299
+#, sh-printf-format
 msgid ""
 "Syntax errors are detected in generated GRUB config file.\n"
 "Ensure that there are no errors in /etc/default/grub\n"
@@ -7380,6 +7390,7 @@ msgid "Warning:"
 msgstr "警告："
 
 #: util/grub-reboot.in:49 util/grub-set-default.in:47
+#, sh-printf-format
 msgid "Usage: %s [OPTION] MENU_ENTRY\\n"
 msgstr "用法：%s [选项] 菜单项\\n"
 
@@ -7388,6 +7399,7 @@ msgid "Set the default boot menu entry for GRUB, for the next boot only."
 msgstr "设置 GRUB 默认引导菜单项（仅对下一次启动有效）"
 
 #: util/grub-reboot.in:53 util/grub-set-default.in:53
+#, sh-printf-format
 msgid ""
 "expect GRUB images under the directory DIR/%s instead of the %s directory"
 msgstr "将 GRUB 镜像安装到 <目录>/%s 下，而不是 %s 目录"
@@ -7429,6 +7441,7 @@ msgid "Menu entry not specified."
 msgstr "未指定菜单项。"
 
 #: util/grub-reboot.in:143
+#, sh-printf-format
 msgid "%s will remain the default boot entry until manually cleared with:\\n"
 msgstr "%s 将一直是默认启动项，直到使用以下命令清除：\\n"
 
@@ -7437,6 +7450,7 @@ msgid "Set the default boot menu entry for GRUB."
 msgstr "设置 GRUB 默认引导菜单项。"
 
 #: util/grub-set-default.in:49
+#, sh-printf-format
 msgid "This requires setting GRUB_DEFAULT=saved in %s/default/grub.\\n"
 msgstr "这需要在 %s/default/grub 中设置 GRUB_DEFAULT=saved 才能实现。\\n"
 
@@ -7452,12 +7466,12 @@ msgid ""
 msgstr "请求使用串行终端，但未指定 GRUB_SERIAL_COMMAND。将使用默认参数。"
 
 #: util/grub.d/00_header.in:252
-#, c-format
+#, c-format, sh-printf-format
 msgid "Found theme: %s\\n"
 msgstr "找到主题：%s\\n"
 
 #: util/grub.d/00_header.in:288
-#, c-format
+#, c-format, sh-printf-format
 msgid "Found background: %s\\n"
 msgstr "找到背景：%s\\n"
 
@@ -7475,12 +7489,12 @@ msgstr ""
 "在已设置 GRUB_HIDDEN_TIMEOUT 的情况下将 GRUB_TIMEOUT 设为非零值已不再受支持。"
 
 #: util/grub.d/10_hurd.in:48
-#, c-format
+#, c-format, sh-printf-format
 msgid "Found GNU Mach: %s"
 msgstr "找到 GNU Mach：%s"
 
 #: util/grub.d/10_hurd.in:63
-#, c-format
+#, c-format, sh-printf-format
 msgid "Found Hurd module: %s"
 msgstr "找到 Hurd 模块：%s"
 
@@ -7490,19 +7504,19 @@ msgid "Some Hurd stuff found, but not enough to boot."
 msgstr "找到某些 Hurd 内容，但不足以进行引导。"
 
 #: util/grub.d/10_hurd.in:109
-#, c-format
+#, c-format, sh-printf-format
 msgid "%s, with Hurd %s (recovery mode)"
 msgstr "%s，使用 Hurd %s（恢复模式）"
 
 #: util/grub.d/10_hurd.in:112
-#, c-format
+#, c-format, sh-printf-format
 msgid "%s, with Hurd %s"
 msgstr "%s，使用 Hurd %s"
 
 #: util/grub.d/10_hurd.in:118 util/grub.d/10_kfreebsd.in:87
-#: util/grub.d/10_linux.in:105 util/grub.d/10_netbsd.in:113
-#: util/grub.d/20_linux_xen.in:131 util/grub.d/30_os-prober.in:290
-#, c-format
+#: util/grub.d/10_netbsd.in:113 util/grub.d/20_linux_xen.in:131
+#: util/grub.d/30_os-prober.in:290
+#, c-format, sh-printf-format
 msgid ""
 "Please don't use old title `%s' for GRUB_DEFAULT, use `%s' (for versions "
 "before 2.00) or `%s' (for 2.00 or later)"
@@ -7522,9 +7536,8 @@ msgstr "加载 Hurd ..."
 
 #. TRANSLATORS: %s is replaced with an OS name
 #: util/grub.d/10_hurd.in:252 util/grub.d/10_kfreebsd.in:243
-#: util/grub.d/10_linux.in:297 util/grub.d/10_netbsd.in:182
-#: util/grub.d/30_os-prober.in:266
-#, c-format
+#: util/grub.d/10_netbsd.in:182 util/grub.d/30_os-prober.in:266
+#, c-format, sh-printf-format
 msgid "Advanced options for %s"
 msgstr "%s 的高级选项"
 
@@ -7534,73 +7547,123 @@ msgid "Loading kernel of Illumos ..."
 msgstr "加载 Illumos 内核 ..."
 
 #: util/grub.d/10_kfreebsd.in:79
-#, c-format
+#, c-format, sh-printf-format
 msgid "%s, with kFreeBSD %s (recovery mode)"
 msgstr "%s，使用 kFreeBSd %s（恢复模式）"
 
 #: util/grub.d/10_kfreebsd.in:81
-#, c-format
+#, c-format, sh-printf-format
 msgid "%s, with kFreeBSD %s"
 msgstr "%s，使用 kFreeBSD %s"
 
 #: util/grub.d/10_kfreebsd.in:101
-#, c-format
+#, c-format, sh-printf-format
 msgid "Loading kernel of FreeBSD %s ..."
 msgstr "加载 FreeBSD %s 内核 ..."
 
 #: util/grub.d/10_kfreebsd.in:174
-#, c-format
+#, c-format, sh-printf-format
 msgid "Found kernel of FreeBSD: %s\\n"
 msgstr "找到 FreeBSD 内核：%s\\n"
 
 #: util/grub.d/10_kfreebsd.in:223
-#, c-format
+#, c-format, sh-printf-format
 msgid "Found kernel module directory: %s\\n"
 msgstr "找到内核模块目录：%s\\n"
 
-#: util/grub.d/10_linux.in:97
+#: util/grub.d/10_linux.in:15
 #, c-format
-msgid "%s, with Linux %s (recovery mode)"
-msgstr "%s，使用 Linux %s（恢复模式）"
+msgid "AOSC OS"
+msgstr ""
 
-#: util/grub.d/10_linux.in:99
+#: util/grub.d/10_linux.in:54
 #, c-format
-msgid "%s, with Linux %s"
-msgstr "%s，使用 Linux %s"
+msgid "Internal error - Failed to gather information on the root partition\\n"
+msgstr ""
 
-#: util/grub.d/10_linux.in:143 util/grub.d/20_linux_xen.in:147
+#: util/grub.d/10_linux.in:119
 #, c-format
-msgid "Loading Linux %s ..."
-msgstr "加载 Linux %s ..."
+msgid "4KiB Kernel Page Size"
+msgstr ""
+
+#: util/grub.d/10_linux.in:126
+#, c-format
+msgid "16KiB Kernel Page Size"
+msgstr ""
+
+#: util/grub.d/10_linux.in:133
+#, c-format
+msgid "64KiB Kernel Page Size"
+msgstr ""
+
+#: util/grub.d/10_linux.in:147
+#, c-format
+msgid "RC Kernel"
+msgstr ""
+
+#: util/grub.d/10_linux.in:150
+#, c-format
+msgid "LTS Kernel"
+msgstr ""
+
+#: util/grub.d/10_linux.in:156
+#, c-format, sh-printf-format
+msgid "Kernel variant '%s'"
+msgstr ""
 
 #. TRANSLATORS: ramdisk isn't identifier. Should be translated.
-#: util/grub.d/10_linux.in:150 util/grub.d/20_linux_xen.in:161
+#: util/grub.d/10_linux.in:213 util/grub.d/20_linux_xen.in:161
 #, c-format
 msgid "Loading initial ramdisk ..."
 msgstr "加载初始化内存盘..."
 
-#: util/grub.d/10_linux.in:209 util/grub.d/20_linux_xen.in:289
-#, c-format
-msgid "Found linux image: %s\\n"
-msgstr "找到 Linux 镜像：%s\\n"
+#: util/grub.d/10_linux.in:318
+#, c-format, sh-printf-format
+msgid "Initial ramdisk image for kernel '%s': '%s'"
+msgstr ""
 
-#: util/grub.d/10_linux.in:250 util/grub.d/20_linux_xen.in:325
-#, c-format
-msgid "Found initrd image: %s\\n"
-msgstr "找到 initrd 镜像：%s\\n"
+#: util/grub.d/10_linux.in:328
+#, c-format, sh-printf-format
+msgid "No initial ramdisk image found for kernel '%s'"
+msgstr ""
+
+#: util/grub.d/10_linux.in:346
+#, fuzzy, c-format
+msgid "Internal error - Failed to find the root device\\n"
+msgstr "无法找到引导设备"
+
+#: util/grub.d/10_linux.in:352 util/grub.d/10_linux.in:384
+#, c-format, sh-printf-format
+msgid "Processing kernel '%s'\\n"
+msgstr ""
+
+#: util/grub.d/10_linux.in:370
+#, fuzzy, c-format, sh-printf-format
+msgid "More kernel options for %s"
+msgstr "%s 的高级选项"
+
+#: util/grub.d/10_linux.in:386
+#, fuzzy, c-format, sh-printf-format
+msgid "With kernel %s"
+msgstr "%s，使用 %s 内核（通过 %s）"
+
+#: util/grub.d/10_linux.in:403
+#, c-format, sh-printf-format
+msgid "Done generating entries for %s."
+msgstr ""
 
 #: util/grub.d/10_netbsd.in:105
-#, c-format
+#, c-format, sh-printf-format
 msgid "%s, with kernel %s (via %s, recovery mode)"
 msgstr "%s，使用 %s 内核（通过 %s，恢复模式）"
 
 #: util/grub.d/10_netbsd.in:107
-#, c-format
+#, c-format, sh-printf-format
 msgid "%s, with kernel %s (via %s)"
 msgstr "%s，使用 %s 内核（通过 %s）"
 
 #: util/grub.d/10_netbsd.in:164
-#, c-format
+#, c-format, sh-printf-format
 msgid "Found NetBSD kernel: %s\\n"
 msgstr "找到 NetBSD 内核：%s\\n"
 
@@ -7616,7 +7679,7 @@ msgstr "Windows NT/2000/XP（加载器）"
 
 # bash printf 不支持更改参数顺序。
 #: util/grub.d/10_windows.in:85
-#, c-format
+#, c-format, sh-printf-format
 msgid "Found %s on %s (%s)\\n"
 msgstr "发现了 %s，位于 %s (%s)\\n"
 
@@ -7636,34 +7699,39 @@ msgstr "（64 位）"
 #: util/grub.d/10_xnu.in:38 util/grub.d/30_os-prober.in:53
 #: util/grub.d/30_os-prober.in:153 util/grub.d/30_os-prober.in:185
 #: util/grub.d/30_os-prober.in:226 util/grub.d/30_os-prober.in:306
-#, c-format
+#, c-format, sh-printf-format
 msgid "(on %s)"
 msgstr "（位于 %s）"
 
 #: util/grub.d/20_linux_xen.in:115
-#, c-format
+#, c-format, sh-printf-format
 msgid "%s (XSM enabled)"
 msgstr "%s（XSM 已启用）"
 
 #: util/grub.d/20_linux_xen.in:123
-#, c-format
+#, c-format, sh-printf-format
 msgid "%s, with Xen %s and Linux %s (recovery mode)"
 msgstr "%s，使用 Xen %s 和 Linux %s（恢复模式）"
 
 #: util/grub.d/20_linux_xen.in:125
-#, c-format
+#, c-format, sh-printf-format
 msgid "%s, with Xen %s and Linux %s"
 msgstr "%s，使用 Xen %s 和 Linux %s"
 
 #: util/grub.d/20_linux_xen.in:135
-#, c-format
+#, c-format, sh-printf-format
 msgid "%s, with Xen hypervisor"
 msgstr "%s，使用 Xen hypervisor"
 
 #: util/grub.d/20_linux_xen.in:146
-#, c-format
+#, c-format, sh-printf-format
 msgid "Loading Xen %s ..."
 msgstr "加载 Xen %s ..."
+
+#: util/grub.d/20_linux_xen.in:147
+#, c-format, sh-printf-format
+msgid "Loading Linux %s ..."
+msgstr "加载 Linux %s ..."
 
 #: util/grub.d/20_linux_xen.in:172
 #, c-format
@@ -7671,25 +7739,35 @@ msgid "Loading XSM policy ..."
 msgstr "加载 XSM 策略 ..."
 
 #: util/grub.d/20_linux_xen.in:265 util/grub.d/20_linux_xen.in:358
-#, c-format
+#, c-format, sh-printf-format
 msgid "Xen hypervisor, version %s"
 msgstr "Xen hypervisor，%s 版本"
 
+#: util/grub.d/20_linux_xen.in:289
+#, c-format, sh-printf-format
+msgid "Found linux image: %s\\n"
+msgstr "找到 Linux 镜像：%s\\n"
+
+#: util/grub.d/20_linux_xen.in:325
+#, c-format, sh-printf-format
+msgid "Found initrd image: %s\\n"
+msgstr "找到 initrd 镜像：%s\\n"
+
 #. TRANSLATORS: %s is replaced with an OS name
 #: util/grub.d/20_linux_xen.in:357
-#, c-format
+#, c-format, sh-printf-format
 msgid "Advanced options for %s (with Xen hypervisor)"
 msgstr "%s 的高级选项（使用 Xen hypervisor）"
 
 # bash printf 不支持更改参数顺序。
 #: util/grub.d/30_os-prober.in:148
-#, c-format
+#, c-format, sh-printf-format
 msgid "Found %s on %s\\n"
 msgstr "发现了 %s，位于 %s\\n"
 
 #. TRANSLATORS: %s is replaced by OS name.
 #: util/grub.d/30_os-prober.in:344
-#, c-format
+#, c-format, sh-printf-format
 msgid "%s is not yet supported by grub-mkconfig.\\n"
 msgstr "grub-mkconfig 尚未支持 %s。\\n"
 
@@ -7702,6 +7780,14 @@ msgstr "UEFI 设置界面"
 #, c-format
 msgid "Adding boot menu entry for UEFI Firmware Settings ...\\n"
 msgstr "正在添加 UEFI 固件设置的引导菜单项……\\n"
+
+#, c-format
+#~ msgid "%s, with Linux %s (recovery mode)"
+#~ msgstr "%s，使用 Linux %s（恢复模式）"
+
+#, c-format
+#~ msgid "%s, with Linux %s"
+#~ msgstr "%s，使用 Linux %s"
 
 #, c-format
 #~ msgid "GNU GRUB  version %s"
