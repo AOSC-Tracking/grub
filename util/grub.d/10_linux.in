@@ -206,13 +206,13 @@ linux_entry() {
 	printf "${indent}\t$_GFXPAYLOAD_LINUX\n"
 	printf "${indent}\t$SAVEDEFAULT\n"
 	printf "${indent}\tinsmod	gzio\n"
-	printf "${indent}\techo	'%s'\n" "$(gettext_printf "Loading kernel $kernel ...")"
+	printf "${indent}\techo	'%s'\n" "$(gettext_printf "Loading kernel %s ..." "$kernel")"
 	printf "${indent}\tlinux	%s %s\n" "$kernel" "$args"
 	if [ -n "$initrd" ] ; then
 		printf "${indent}\techo	'%s'\n" "$(gettext_printf "Loading initial ramdisk ...")"
 		printf "${indent}\tinitrd	%s\n" "$initrd"
 	fi
-	printf "${indent}\techo	'%s'\n" "$(gettext_printf "Booting $OS ...")"
+	printf "${indent}\techo	'%s'\n" "$(gettext_printf "Starting %s ..." "$OS")"
 	printf "${indent}}\n\n"
 }
 
