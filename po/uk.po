@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: grub 2.12-rc1\n"
 "Report-Msgid-Bugs-To: bug-grub@gnu.org\n"
-"POT-Creation-Date: 2025-09-08 15:30+0800\n"
+"POT-Creation-Date: 2025-09-08 21:37+0800\n"
 "PO-Revision-Date: 2023-07-11 18:53+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -7820,11 +7820,21 @@ msgstr ""
 msgid "Kernel variant '%s'"
 msgstr ""
 
+#: util/grub.d/10_linux.in:209
+#, fuzzy, c-format, sh-printf-format
+msgid "Loading kernel %s ..."
+msgstr "Завантаження Xen %s…"
+
 #. TRANSLATORS: ramdisk isn't identifier. Should be translated.
 #: util/grub.d/10_linux.in:212 util/grub.d/20_linux_xen.in:161
 #, c-format
 msgid "Loading initial ramdisk ..."
 msgstr "Завантаження початкового диска у оперативній пам’яті…"
+
+#: util/grub.d/10_linux.in:215
+#, fuzzy, c-format, sh-printf-format
+msgid "Starting %s ..."
+msgstr "Завантаження «%s»"
 
 #: util/grub.d/10_linux.in:323
 #, c-format, sh-printf-format

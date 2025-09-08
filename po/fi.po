@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: grub 2.06-pre2\n"
 "Report-Msgid-Bugs-To: bug-grub@gnu.org\n"
-"POT-Creation-Date: 2025-09-08 15:30+0800\n"
+"POT-Creation-Date: 2025-09-08 21:37+0800\n"
 "PO-Revision-Date: 2021-05-10 20:56+0300\n"
 "Last-Translator: Lauri Nurmi <lanurmi@iki.fi>\n"
 "Language-Team: Finnish <translation-team-fi@lists.sourceforge.net>\n"
@@ -7771,11 +7771,21 @@ msgstr ""
 msgid "Kernel variant '%s'"
 msgstr ""
 
+#: util/grub.d/10_linux.in:209
+#, fuzzy, c-format, sh-printf-format
+msgid "Loading kernel %s ..."
+msgstr "Ladataan Xen %s ..."
+
 #. TRANSLATORS: ramdisk isn't identifier. Should be translated.
 #: util/grub.d/10_linux.in:212 util/grub.d/20_linux_xen.in:161
 #, c-format
 msgid "Loading initial ramdisk ..."
 msgstr "Ladataan alustavaa ramlevyä ..."
+
+#: util/grub.d/10_linux.in:215
+#, fuzzy, c-format, sh-printf-format
+msgid "Starting %s ..."
+msgstr "Käynnistetään ”%s”"
 
 #: util/grub.d/10_linux.in:323
 #, c-format, sh-printf-format

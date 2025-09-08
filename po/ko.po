@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: grub 2.12-rc1\n"
 "Report-Msgid-Bugs-To: bug-grub@gnu.org\n"
-"POT-Creation-Date: 2025-09-08 15:30+0800\n"
+"POT-Creation-Date: 2025-09-08 21:37+0800\n"
 "PO-Revision-Date: 2023-07-12 00:40+0900\n"
 "Last-Translator: Seong-ho Cho <darkcircle.0426@gmail.com>\n"
 "Language-Team: Korean <translation-team-ko@googlegroups.com>\n"
@@ -7681,11 +7681,21 @@ msgstr ""
 msgid "Kernel variant '%s'"
 msgstr ""
 
+#: util/grub.d/10_linux.in:209
+#, fuzzy, c-format, sh-printf-format
+msgid "Loading kernel %s ..."
+msgstr "젠 %s 불러오는 중 ..."
+
 #. TRANSLATORS: ramdisk isn't identifier. Should be translated.
 #: util/grub.d/10_linux.in:212 util/grub.d/20_linux_xen.in:161
 #, c-format
 msgid "Loading initial ramdisk ..."
 msgstr "초기 램디스크 불러오는 중 ..."
+
+#: util/grub.d/10_linux.in:215
+#, fuzzy, c-format, sh-printf-format
+msgid "Starting %s ..."
+msgstr "`%s' 부팅"
 
 #: util/grub.d/10_linux.in:323
 #, c-format, sh-printf-format

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: grub 1.97+20110101\n"
 "Report-Msgid-Bugs-To: bug-grub@gnu.org\n"
-"POT-Creation-Date: 2025-09-08 15:30+0800\n"
+"POT-Creation-Date: 2025-09-08 21:37+0800\n"
 "PO-Revision-Date: 2024-11-16 22:45+0800\n"
 "Last-Translator: Mingcong Bai <jeffbai@aosc.io>\n"
 "Language-Team: Chinese (traditional) <zh-l10n@linux.org.tw>\n"
@@ -7704,11 +7704,21 @@ msgstr ""
 msgid "Kernel variant '%s'"
 msgstr ""
 
+#: util/grub.d/10_linux.in:209
+#, fuzzy, c-format, sh-printf-format
+msgid "Loading kernel %s ..."
+msgstr "正在載入 Xen %s ..."
+
 #. TRANSLATORS: ramdisk isn't identifier. Should be translated.
 #: util/grub.d/10_linux.in:212 util/grub.d/20_linux_xen.in:161
 #, c-format
 msgid "Loading initial ramdisk ..."
 msgstr "正在載入初始 ramdisk ..."
+
+#: util/grub.d/10_linux.in:215
+#, fuzzy, c-format, sh-printf-format
+msgid "Starting %s ..."
+msgstr "正在啟動「%s」"
 
 #: util/grub.d/10_linux.in:323
 #, c-format, sh-printf-format

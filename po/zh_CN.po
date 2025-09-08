@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: grub 2.12-rc1\n"
 "Report-Msgid-Bugs-To: bug-grub@gnu.org\n"
-"POT-Creation-Date: 2025-09-08 15:30+0800\n"
+"POT-Creation-Date: 2025-09-08 21:37+0800\n"
 "PO-Revision-Date: 2025-09-08 08:10+0000\n"
 "Last-Translator: 白铭骢 <jeffbai@aosc.io>\n"
 "Language-Team: Chinese (Simplified Han script) <https://weblate.aosc.io/"
@@ -7613,11 +7613,21 @@ msgstr "长期支持内核"
 msgid "Kernel variant '%s'"
 msgstr "“%s”变种内核"
 
+#: util/grub.d/10_linux.in:209
+#, c-format, sh-printf-format
+msgid "Loading kernel %s ..."
+msgstr "正在加载内核 %s ..."
+
 #. TRANSLATORS: ramdisk isn't identifier. Should be translated.
 #: util/grub.d/10_linux.in:212 util/grub.d/20_linux_xen.in:161
 #, c-format
 msgid "Loading initial ramdisk ..."
-msgstr "加载初始化内存盘..."
+msgstr "正在加载初始化内存盘..."
+
+#: util/grub.d/10_linux.in:215
+#, c-format, sh-printf-format
+msgid "Starting %s ..."
+msgstr "正在启动 %s ..."
 
 #: util/grub.d/10_linux.in:323
 #, c-format, sh-printf-format

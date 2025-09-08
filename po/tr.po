@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: grub 2.12-rc1\n"
 "Report-Msgid-Bugs-To: bug-grub@gnu.org\n"
-"POT-Creation-Date: 2025-09-08 15:30+0800\n"
+"POT-Creation-Date: 2025-09-08 21:37+0800\n"
 "PO-Revision-Date: 2024-05-16 13:05+0300\n"
 "Last-Translator: Mehmet Akif Dokuzoğlu <madanadam@gmail.com>\n"
 "Language-Team: Turkish <gnome-turk@gnome.org>\n"
@@ -7598,11 +7598,21 @@ msgstr ""
 msgid "Kernel variant '%s'"
 msgstr ""
 
+#: util/grub.d/10_linux.in:209
+#, fuzzy, c-format, sh-printf-format
+msgid "Loading kernel %s ..."
+msgstr "Xen %s yükleniyor ..."
+
 #. TRANSLATORS: ramdisk isn't identifier. Should be translated.
 #: util/grub.d/10_linux.in:212 util/grub.d/20_linux_xen.in:161
 #, c-format
 msgid "Loading initial ramdisk ..."
 msgstr "Başlangıç ramdiski yükleniyor ..."
+
+#: util/grub.d/10_linux.in:215
+#, fuzzy, c-format, sh-printf-format
+msgid "Starting %s ..."
+msgstr "`%s' açılıyor"
 
 #: util/grub.d/10_linux.in:323
 #, c-format, sh-printf-format

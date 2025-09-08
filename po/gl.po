@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: grub-2.00+20130519\n"
 "Report-Msgid-Bugs-To: bug-grub@gnu.org\n"
-"POT-Creation-Date: 2025-09-08 15:30+0800\n"
+"POT-Creation-Date: 2025-09-08 21:37+0800\n"
 "PO-Revision-Date: 2013-09-26 11:40+0200\n"
 "Last-Translator: Anton Meixome <meixome@certima.net>\n"
 "Language-Team: Galician <proxecto@trasno.net>\n"
@@ -7827,11 +7827,21 @@ msgstr ""
 msgid "Kernel variant '%s'"
 msgstr ""
 
+#: util/grub.d/10_linux.in:209
+#, fuzzy, c-format, sh-printf-format
+msgid "Loading kernel %s ..."
+msgstr "Cargando Xen %s ..."
+
 #. TRANSLATORS: ramdisk isn't identifier. Should be translated.
 #: util/grub.d/10_linux.in:212 util/grub.d/20_linux_xen.in:161
 #, c-format
 msgid "Loading initial ramdisk ..."
 msgstr "Cargando o ramdisk inicial ..."
+
+#: util/grub.d/10_linux.in:215
+#, fuzzy, c-format, sh-printf-format
+msgid "Starting %s ..."
+msgstr "Arranque de «%s»"
 
 #: util/grub.d/10_linux.in:323
 #, c-format, sh-printf-format
