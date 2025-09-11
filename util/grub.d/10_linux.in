@@ -430,22 +430,28 @@ process_kernels() {
 	# mess up the order.
 	printf "submenu '%s >>' {\n" "$submenu_title"
 	indent="$indent$tab"
-	for kernel in "${KERNELS[@]}" ; do
-		uname_r=${kernel/#@(vmlinu?|kernel)-/}
-		if [ -z "${TOPLEVEL_KERNELS["$kernel"]}" ] ; then
-			info $(gettext_printf "Processing kernel '%s'\n" "$uname_r")
-		fi
-		localpart="${uname_r//$latest/}"
-		comments="$(gettext_printf "With kernel %s" "$uname_r")"
-		comments=" ($(echo "$comments" | grub_quote))"
-		title="${OS}${comments}"
-		initrd="$(get_initrd "$uname_r")"
-		if [ -z ${initrd/${INITRD_EARLY}/} ] ; then
-			args="${ARGS/$ROOT_PARAM/$ROOT_PARAM_FALLBACK}"
-		else
-			args="$ARGS"
-		fi
-		linux_entry "$title" "${GRUB_KERNEL_DIR}${kernel}" "$initrd" "$args" "${OS_ID}-${kernel}"
+	for version in "${KERNEL_VERSIONS[@]}" ; do
+		IFS=$'\n'
+		# Entries in submenus are sorted by versions.
+		cur_version_kernels=($(echo "${KERNELS[*]}" | grep "$version"))
+		unset IFS
+		for kernel in "${cur_version_kernels[@]}" ; do
+			uname_r=${kernel/#@(vmlinu?|kernel)-/}
+			if [ -z "${TOPLEVEL_KERNELS["$kernel"]}" ] ; then
+				info $(gettext_printf "Processing kernel '%s'\n" "$uname_r")
+			fi
+			localpart="${uname_r//$latest/}"
+			comments="$(gettext_printf "With kernel %s" "$uname_r")"
+			comments=" ($(echo "$comments" | grub_quote))"
+			title="${OS}${comments}"
+			initrd="$(get_initrd "$uname_r")"
+			if [ -z ${initrd/${INITRD_EARLY}/} ] ; then
+				args="${ARGS/$ROOT_PARAM/$ROOT_PARAM_FALLBACK}"
+			else
+				args="$ARGS"
+			fi
+			linux_entry "$title" "${GRUB_KERNEL_DIR}${kernel}" "$initrd" "$args" "${OS_ID}-${kernel}"
+		done
 	done
 	printf "}\n"
 }
