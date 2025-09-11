@@ -69,6 +69,9 @@ if [ "$GRUB_DEVICE" == "$GRUB_DEVICE_BOOT" ] ; then
 else
 	GRUB_KERNEL_DIR="/"
 fi
+# Convert them into paths relative to the "actual" root, say, namespaces like
+# BtrFS subvolumes.
+GRUB_KERNEL_DIR="$(make_system_path_relative_to_its_root $GRUB_KERNEL_DIR)/"
 
 # search --fs-uuid commands.
 MENUENTRY_PREP="$(prepare_grub_to_access_device "$GRUB_DEVICE_BOOT")"
@@ -89,7 +92,7 @@ fi
 for rd in ${GRUB_EARLY_INITRD_LINUX_STOCK[@]} \
 	${GRUB_EARLY_INITRD_LINUX_CUSTOM[@]} ; do
 	if [ -e "$KERNEL_DIR"/"$rd" ] ; then
-		INITRD_EARLY="${INITRD_EARLY} ${KERNEL_DIR}/${rd}"
+		INITRD_EARLY="${INITRD_EARLY} ${GRUB_KERNEL_DIR}${rd}"
 	fi
 	INITRD_EARLY="${INITRD_EARLY##[ 	]}"
 done
