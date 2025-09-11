@@ -312,16 +312,19 @@ scan_for_kernels() {
 # Scan for a corresponding initrd image for the kernel.
 # $1: Full version of the kernel.
 get_initrd() {
-	local rd ret="${INITRD_EARLY}"
+	local rd ret="${INITRD_EARLY}" initrd_found="0"
 	for rd in \
 		initramfs-"$1".img \
 		initramfs.img-"$1" \
 		initrd-"$1".img \
 		initrd.img-"$1" \
 		initrd-"$1".gz ; do
-		if [ -e "$KERNEL_DIR/$rd" ] && [ -z "${TOPLEVEL_KERNELS["$kernel"]}" ] ; then
-			info "$(gettext_printf "Initial ramdisk image for kernel '%s': '%s'" "$1" "${GRUB_KERNEL_DIR}${rd}")"
+		if [ -e "$KERNEL_DIR/$rd" ] ; then
+			if [ -z "${TOPLEVEL_KERNELS["$kernel"]}" ] ; then
+				info "$(gettext_printf "Initial ramdisk image for kernel '%s': '%s'" "$1" "${GRUB_KERNEL_DIR}${rd}")"
+			fi
 			ret="${ret} ${GRUB_KERNEL_DIR}${rd}"
+			initrd_found="1"
 			break
 		else
 			continue
@@ -330,7 +333,9 @@ get_initrd() {
 	if [ -n "$ret" ] ; then
 		printf "%s" "$ret"
 	else
-		info "$(gettext_printf "No initial ramdisk image found for kernel '%s'" "$1")"
+		if [ -z "${TOPLEVEL_KERNELS["$kernel"]}" ] ; then
+			info "$(gettext_printf "No initial ramdisk image found for kernel '%s'" "$1")"
+		fi
 	fi
 }
 
@@ -433,7 +438,7 @@ process_kernels() {
 		title="${OS}${comments}"
 		initrd="$(get_initrd "$uname_r")"
 		if [ -z ${initrd/${INITRD_EARLY}/} ] ; then
-			ARGS="${ARGS/$ROOT_PARAM/$ROOT_PARAM_FALLBACK}"
+			args="${ARGS/$ROOT_PARAM/$ROOT_PARAM_FALLBACK}"
 		else
 			args="$ARGS"
 		fi
