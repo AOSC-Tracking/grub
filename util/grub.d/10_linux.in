@@ -203,8 +203,12 @@ linux_entry() {
 	local initrd="$3"
 	local args="$4"
 	local _id="$5"
+	local os_class="$(get_os_id)"
+	if [ ! -z "$os_class" ];  then
+		os_class="--class $(echo $os_class | grub_quote)"
+	fi
 
-	printf "${indent}menuentry '%s' --class linux \$menuentry_id_option '%s' {\n" "$title" "$_id"
+	printf "${indent}menuentry '%s' $os_class --class gnu --class gnu-linux --class linux \$menuentry_id_option '%s' {\n" "$title" "$_id"
 	printf "$(echo "$MENUENTRY_PREP" | sed "s|^|\t${indent}|g")\n"
 	printf "${indent}\t$_GFXPAYLOAD_LINUX\n"
 	printf "${indent}\t$SAVEDEFAULT\n"
@@ -301,6 +305,16 @@ prioritize() {
 	IFS=$'\n'
 	echo -n "${newkernels[*]}"
 	IFS="$OLDIFS"
+}
+
+get_os_id() {
+(
+	if [ ! -e /etc/os-release ] ; then
+		return
+	fi
+	source "/etc/os-release"
+	echo "$ID"
+)
 }
 
 scan_for_kernels() {
