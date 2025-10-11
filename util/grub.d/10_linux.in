@@ -66,12 +66,14 @@ fi
 # kernel changes.
 if [ "$GRUB_DEVICE" == "$GRUB_DEVICE_BOOT" ] ; then
 	GRUB_KERNEL_DIR="${KERNEL_DIR%%/}/"
+	# Convert them into paths relative to the "actual" root, say, namespaces like
+	# BtrFS subvolumes.
+	GRUB_KERNEL_DIR="$(make_system_path_relative_to_its_root $GRUB_KERNEL_DIR)/"
 else
+	# If /boot is a separate partition, the path GRUB loads the kernel should
+	# be /KERNEL_FILE instead of /boot/KERNEL_FILE.
 	GRUB_KERNEL_DIR="/"
 fi
-# Convert them into paths relative to the "actual" root, say, namespaces like
-# BtrFS subvolumes.
-GRUB_KERNEL_DIR="$(make_system_path_relative_to_its_root $GRUB_KERNEL_DIR)/"
 
 # search --fs-uuid commands.
 MENUENTRY_PREP="$(prepare_grub_to_access_device "$GRUB_DEVICE_BOOT")"
