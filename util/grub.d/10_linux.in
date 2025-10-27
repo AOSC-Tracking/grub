@@ -156,6 +156,9 @@ variant_str() {
 		main)
 			: noop
 			;;
+		asahi)
+			gettext_printf "Apple Silicon"
+			;;
 		*)
 			gettext_printf "Kernel variant '%s'" "$1"
 			;;

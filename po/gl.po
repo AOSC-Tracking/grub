@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: grub-2.00+20130519\n"
 "Report-Msgid-Bugs-To: bug-grub@gnu.org\n"
-"POT-Creation-Date: 2025-09-08 21:37+0800\n"
+"POT-Creation-Date: 2025-10-27 18:19+0800\n"
 "PO-Revision-Date: 2013-09-26 11:40+0200\n"
 "Last-Translator: Anton Meixome <meixome@certima.net>\n"
 "Language-Team: Galician <proxecto@trasno.net>\n"
@@ -7797,83 +7797,88 @@ msgstr ""
 msgid "Internal error - Failed to gather information on the root partition\\n"
 msgstr ""
 
-#: util/grub.d/10_linux.in:118
+#: util/grub.d/10_linux.in:123
 #, c-format
 msgid "4KiB Kernel Page Size"
 msgstr ""
 
-#: util/grub.d/10_linux.in:125
+#: util/grub.d/10_linux.in:130
 #, c-format
 msgid "16KiB Kernel Page Size"
 msgstr ""
 
-#: util/grub.d/10_linux.in:132
+#: util/grub.d/10_linux.in:137
 #, c-format
 msgid "64KiB Kernel Page Size"
 msgstr ""
 
-#: util/grub.d/10_linux.in:146
+#: util/grub.d/10_linux.in:151
 #, c-format
 msgid "RC Kernel"
 msgstr ""
 
-#: util/grub.d/10_linux.in:149
+#: util/grub.d/10_linux.in:154
 #, c-format
 msgid "LTS Kernel"
 msgstr ""
 
-#: util/grub.d/10_linux.in:155
+#: util/grub.d/10_linux.in:160
+#, c-format
+msgid "Apple Silicon"
+msgstr ""
+
+#: util/grub.d/10_linux.in:163
 #, c-format, sh-printf-format
 msgid "Kernel variant '%s'"
 msgstr ""
 
-#: util/grub.d/10_linux.in:209
+#: util/grub.d/10_linux.in:221
 #, fuzzy, c-format, sh-printf-format
 msgid "Loading kernel %s ..."
 msgstr "Cargando Xen %s ..."
 
 #. TRANSLATORS: ramdisk isn't identifier. Should be translated.
-#: util/grub.d/10_linux.in:212 util/grub.d/20_linux_xen.in:161
+#: util/grub.d/10_linux.in:224 util/grub.d/20_linux_xen.in:161
 #, c-format
 msgid "Loading initial ramdisk ..."
 msgstr "Cargando o ramdisk inicial ..."
 
-#: util/grub.d/10_linux.in:215
+#: util/grub.d/10_linux.in:227
 #, fuzzy, c-format, sh-printf-format
 msgid "Starting %s ..."
 msgstr "Arranque de «%s»"
 
-#: util/grub.d/10_linux.in:323
+#: util/grub.d/10_linux.in:357
 #, c-format, sh-printf-format
 msgid "Initial ramdisk image for kernel '%s': '%s'"
 msgstr ""
 
-#: util/grub.d/10_linux.in:333
+#: util/grub.d/10_linux.in:370
 #, c-format, sh-printf-format
 msgid "No initial ramdisk image found for kernel '%s'"
 msgstr ""
 
-#: util/grub.d/10_linux.in:396
+#: util/grub.d/10_linux.in:434
 #, c-format
 msgid "Internal error - Failed to find the root device\\n"
 msgstr ""
 
-#: util/grub.d/10_linux.in:402 util/grub.d/10_linux.in:428
+#: util/grub.d/10_linux.in:440 util/grub.d/10_linux.in:471
 #, c-format, sh-printf-format
 msgid "Processing kernel '%s'\\n"
 msgstr ""
 
-#: util/grub.d/10_linux.in:420
+#: util/grub.d/10_linux.in:458
 #, fuzzy, c-format, sh-printf-format
 msgid "All kernel options for %s"
 msgstr "Opcións avanzadas para %s"
 
-#: util/grub.d/10_linux.in:431
+#: util/grub.d/10_linux.in:474
 #, fuzzy, c-format, sh-printf-format
 msgid "With kernel %s"
 msgstr "%s, con núcleo %s (vía %s)"
 
-#: util/grub.d/10_linux.in:447
+#: util/grub.d/10_linux.in:491
 #, c-format, sh-printf-format
 msgid "Done generating entries for %s."
 msgstr ""
