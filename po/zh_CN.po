@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: grub 2.12-rc1\n"
 "Report-Msgid-Bugs-To: bug-grub@gnu.org\n"
-"POT-Creation-Date: 2025-09-08 21:37+0800\n"
+"POT-Creation-Date: 2025-10-27 18:19+0800\n"
 "PO-Revision-Date: 2025-09-08 08:10+0000\n"
 "Last-Translator: 白铭骢 <jeffbai@aosc.io>\n"
 "Language-Team: Chinese (Simplified Han script) <https://weblate.aosc.io/"
@@ -7583,83 +7583,88 @@ msgstr "AOSC OS"
 msgid "Internal error - Failed to gather information on the root partition\\n"
 msgstr "内部错误：无法收集根分区信息\\n"
 
-#: util/grub.d/10_linux.in:118
+#: util/grub.d/10_linux.in:123
 #, c-format
 msgid "4KiB Kernel Page Size"
 msgstr "4KiB 内核分页"
 
-#: util/grub.d/10_linux.in:125
+#: util/grub.d/10_linux.in:130
 #, c-format
 msgid "16KiB Kernel Page Size"
 msgstr "16KiB 内核分页"
 
-#: util/grub.d/10_linux.in:132
+#: util/grub.d/10_linux.in:137
 #, c-format
 msgid "64KiB Kernel Page Size"
 msgstr "64KiB 内核分页"
 
-#: util/grub.d/10_linux.in:146
+#: util/grub.d/10_linux.in:151
 #, c-format
 msgid "RC Kernel"
 msgstr "预发布内核"
 
-#: util/grub.d/10_linux.in:149
+#: util/grub.d/10_linux.in:154
 #, c-format
 msgid "LTS Kernel"
 msgstr "长期支持内核"
 
-#: util/grub.d/10_linux.in:155
+#: util/grub.d/10_linux.in:160
+#, c-format
+msgid "Apple Silicon"
+msgstr ""
+
+#: util/grub.d/10_linux.in:163
 #, c-format, sh-printf-format
 msgid "Kernel variant '%s'"
 msgstr "“%s”变种内核"
 
-#: util/grub.d/10_linux.in:209
+#: util/grub.d/10_linux.in:221
 #, c-format, sh-printf-format
 msgid "Loading kernel %s ..."
 msgstr "正在加载内核 %s ..."
 
 #. TRANSLATORS: ramdisk isn't identifier. Should be translated.
-#: util/grub.d/10_linux.in:212 util/grub.d/20_linux_xen.in:161
+#: util/grub.d/10_linux.in:224 util/grub.d/20_linux_xen.in:161
 #, c-format
 msgid "Loading initial ramdisk ..."
 msgstr "正在加载初始化内存盘..."
 
-#: util/grub.d/10_linux.in:215
+#: util/grub.d/10_linux.in:227
 #, c-format, sh-printf-format
 msgid "Starting %s ..."
 msgstr "正在启动 %s ..."
 
-#: util/grub.d/10_linux.in:323
+#: util/grub.d/10_linux.in:357
 #, c-format, sh-printf-format
 msgid "Initial ramdisk image for kernel '%s': '%s'"
 msgstr "找到内核“%s”的初始内存盘：“%s”"
 
-#: util/grub.d/10_linux.in:333
+#: util/grub.d/10_linux.in:370
 #, c-format, sh-printf-format
 msgid "No initial ramdisk image found for kernel '%s'"
 msgstr "未找到内核“%s”的初始内存盘"
 
-#: util/grub.d/10_linux.in:396
+#: util/grub.d/10_linux.in:434
 #, c-format
 msgid "Internal error - Failed to find the root device\\n"
 msgstr "内部错误：找不到根分区\\n"
 
-#: util/grub.d/10_linux.in:402 util/grub.d/10_linux.in:428
+#: util/grub.d/10_linux.in:440 util/grub.d/10_linux.in:471
 #, c-format, sh-printf-format
 msgid "Processing kernel '%s'\\n"
 msgstr "正在处理内核“%s”\\n"
 
-#: util/grub.d/10_linux.in:420
+#: util/grub.d/10_linux.in:458
 #, c-format, sh-printf-format
 msgid "All kernel options for %s"
 msgstr "%s 的所有内核选项"
 
-#: util/grub.d/10_linux.in:431
+#: util/grub.d/10_linux.in:474
 #, c-format, sh-printf-format
 msgid "With kernel %s"
 msgstr "使用 %s 内核"
 
-#: util/grub.d/10_linux.in:447
+#: util/grub.d/10_linux.in:491
 #, c-format, sh-printf-format
 msgid "Done generating entries for %s."
 msgstr "已成功生成 %s 的启动项。"
