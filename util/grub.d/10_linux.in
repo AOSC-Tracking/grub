@@ -153,6 +153,9 @@ variant_str() {
 		lts)
 			gettext_printf "LTS Kernel"
 			;;
+		vanillarc)
+			gettext_printf "Vanilla RC Kernel"
+			;;
 		main)
 			: noop
 			;;
@@ -390,7 +393,7 @@ process_kernels() {
 	for ver in "${KERNEL_VERSIONS[@]}" ; do
 		kernels=($(echo "${KERNELS[*]}" | grep "$ver"))
 		for kernel in "${kernels[@]}" ; do
-			for variant in main lts rc ; do
+			for variant in main lts rc vanillarc ; do
 				# NOTE: Treat -main$ and -main- separately to
 				# handle partial name collisions.
 				if [ -z "${latest_variants[$variant]}" ] && (
@@ -405,7 +408,7 @@ process_kernels() {
 	# For each variant, add kernels with that version to the top level
 	# menu. This makes sure we see all configurations for this variant
 	# in the top level menu.
-	for variant in main lts rc ; do
+	for variant in main lts rc vanillarc ; do
 		if [ -z "${latest_variants[$variant]}" ] ; then
 			continue
 		fi
