@@ -7920,17 +7920,883 @@ msgid "Adding boot menu entry for UEFI Firmware Settings ...\\n"
 msgstr ""
 "Додајем унос изборника подизача система за поставке УЕФИ фирмвер ...\\n"
 
+msgid "hash file of the binary."
+msgstr "хеш датотека извршне."
+
+msgid "hash file of the certificate."
+msgstr "хеш датотека уверења."
+
+msgid "<SIGNED_FILE>"
+msgstr "<ПОТПИСАНА_ДТТКА>"
+
+msgid ""
+"Verify SIGNED_FILE against the trusted X.509 certificates in the db list"
+msgstr "Проверава SIGNED_FILE наспрам поверљивих X.509 уверења на db списку"
+
+msgid "<X509_CERTIFICATE>"
+msgstr "<X509_УВЕРЕЊЕ>"
+
+msgid "Add trusted X509_CERTIFICATE to the db list"
+msgstr "Додаје поверљиво X509_УВЕРЕЊЕ на db списак"
+
+msgid "Add distrusted X509_CERTIFICATE to the dbx list"
+msgstr "Додаје неповерљиво X509_УВЕРЕЊЕ на dbx списак"
+
+msgid ""
+"Show the list of distrusted certificates and certificate/binary hashes from "
+"the dbx list"
+msgstr ""
+"Приказује списак неповерљивих уверења и хешове уверења/извршне са dbx списка"
+
+msgid "BINARY HASH FILE"
+msgstr "ХЕШ ДАТОТЕКА ИЗВРШНЕ"
+
+msgid "Add trusted BINARY HASH to the db list."
+msgstr "Додаје поверљиви ХЕШ ИЗВРШНЕ на db списак."
+
+msgid ""
+"[-b|--binary-hash] FILE [BINARY HASH FILE]\n"
+"[-c|--cert-hash] FILE [CERTFICATE HASH FILE]"
+msgstr ""
+"[-b|--binary-hash] ДТТКА [ХЕШ ДАТОТЕКА ИЗВРШНЕ]\n"
+"[-c|--cert-hash] ДТТКА [ХЕШ ДАТОТЕКА УВЕРЕЊА]"
+
+msgid "Add distrusted CERTFICATE/BINARY HASH to the dbx list."
+msgstr "Додаје неповерљиво УВЕРЕЊЕ/ХЕШ ИЗВРШНЕ на dbx списак."
+
+msgid "Allow the default UKI entry to be added to the GRUB menu."
+msgstr "Омогућава основном UKI уносу да буде додат у ГРУБ изборник."
+
+msgid "Allow the non-default UKI entries to be added to the GRUB menu."
+msgstr "Омогућава неосновном UKI уносу да буде додат у ГРУБ изборник."
+
+msgid "Allow specificUKII entries to be added to the GRUB menu."
+msgstr "Омогућава нарочитим UKII уносима да буду додати у ГРУБ изборник."
+
+msgid ""
+"[-p|--path] [-f|--enable-fallback] DIR [-d|--show-default] [-n|--show-non-"
+"default] [-e|--entry] FILE"
+msgstr ""
+"[-p|--path] [-f|--enable-fallback] ДИР [-d|--show-default] [-n|--show-non-"
+"default] [-e|--entry] ДАТОТЕКА"
+
+msgid "Import Boot Loader Specification snippets."
+msgstr "Увози исечке спецификације Подизача система."
+
+msgid ""
+"[-p|--path] DIR [-f|--enable-fallback] [-d|--show-default] [-n|--show-non-"
+"default] [-e|--entry] FILE"
+msgstr ""
+"[-p|--path] ДИР [-f|--enable-fallback] [-d|--show-default] [-n|--show-non-"
+"default] [-e|--entry] ДАТОТЕКА"
+
+msgid "Import Unified Kernel Images"
+msgstr "Увози слике Unified кернела"
+
+msgid "max recursion depth exceeded"
+msgstr "премашена је највећа дубина дубачења"
+
+msgid "empty entry in PCR list"
+msgstr "празан унос у PCR списку"
+
+#, c-format
+msgid "entry '%s' in PCR list is not a number"
+msgstr "унос „%s“ у PCR списку није број"
+
+#, c-format
+msgid ""
+"entry %llu in PCR list is too large to be a PCR number, PCR numbers range "
+"from 0 to %u"
+msgstr ""
+"унос %llu у PCR списку је превелик да би био PCR број, PCR бројеви су у "
+"опсегу од 0 до %u"
+
+msgid "trailing comma at the end of PCR list"
+msgstr "пратећи зарез на крају PCR списка"
+
+#, c-format
+msgid "too many PCRs in PCR list, the maximum number of PCRs is %u"
+msgstr "превише PCR-ова на PCR списку, највећи број PCR-ова је %u"
+
+#, c-format
+msgid "value '%s' is not a valid asymmetric key type"
+msgstr "вредност „%s“ није исправна врста асиметричног кључа"
+
+#, c-format
+msgid "value '%s' is not a valid PCR bank"
+msgstr "вредност „%s“ није исправна PCR штанглица"
+
+#, c-format
+msgid "TPM handle value '%s' is not a number"
+msgstr "вредност TPM ручке „%s“ није број"
+
+#, c-format
+msgid ""
+"value %llu is too large to be a TPM handle, TPM handles are unsigned 32-bit "
+"integers"
+msgstr ""
+"вредност %llu је превелика да би била TPM ручка, TPM ручке су 32-битни цели "
+"бројеви без знака"
+
+msgid ""
+"Unseal key using SRK ('srk') (default) or retrieve it from an NV Index "
+"('nv')."
+msgstr ""
+"Отпечаћује кључ користећи SRK („srk“) (основно) или га преузима из NV "
+"индекса („nv“)."
+
+msgid ""
+"Comma-separated list of PCRs used to authorize key release e.g., '7,11'. "
+"(default: 7)"
+msgstr ""
+"Зарезом одвојен списак PCR-ова коришћених за овлашћивање отпуштање кључа "
+"нпр., „7,11“. (основно: 7)"
+
+msgid ""
+"Bank of PCRs used to authorize key release: SHA1, SHA256, SHA384 or SHA512. "
+"(default: SHA256)"
+msgstr ""
+"Штанглица PCR-ова коришћена за овлашћивање издања кључа: SHA1, SHA256, "
+"SHA384 или SHA512. (основно: SHA256)"
+
+msgid ""
+"Comma-separated list of PCRs to be capped after key release e.g., '7,11'."
+msgstr ""
+"Зарезом раздвојен списак PCR-ова који ће бити ограничени након покретања "
+"кључа, нпр. „7,11“."
+
+msgid ""
+"In SRK mode, path to the key file in the TPM 2.0 Key File format to unseal "
+"using the TPM (e.g., (hd0,gpt1)/boot/grub2/sealed.tpm)."
+msgstr ""
+"У SRK режиму, путања до датотеке кључа у формату TPM 2.0 датотеке кључа за "
+"отпечаћавање коришћењем TPM (нпр., (hd0,gpt1)/boot/grub2/sealed.tpm)."
+
+msgid ""
+"In SRK mode, path to the key file in the raw format to unseal using the TPM "
+"(e.g., (hd0,gpt1)/boot/grub2/sealed.key). (Mainly for backward "
+"compatibility. Please use '--tpm2key'.)"
+msgstr ""
+"У SRK режиму, путања до датотеке кључа у сировом формату за отпечаћавање "
+"коришћењем TPM (нпр., (hd0,gpt1)/boot/grub2/sealed.key). (Углавном зарад "
+"повратне сагласности. Користите „--tpm2key“.)"
+
+msgid "In SRK mode, the SRK handle if the SRK is persistent."
+msgstr "У SRK режиму, SRK ручица ако је SRK трајно."
+
+msgid ""
+"In SRK mode, the type of SRK: RSA (RSA2048) and ECC (ECC_NIST_P256)(default: "
+"ECC)"
+msgstr ""
+"У SRK режиму, врста SRK-а: RSA (RSA2048) и ECC (ECC_NIST_P256)(основно: ECC)"
+
+msgid ""
+"Required in NV Index mode, the NV handle to read which must readily exist on "
+"the TPM and which contains the key."
+msgstr ""
+"Потребно у режиму NV индекса, NV ручка за читање која мора читљиво да "
+"постоји на TPM а која садржи кључ."
+
+#, c-format
+msgid "sealed key larger than %llu bytes"
+msgstr "запечаћени кључ је већи од %llu бајта"
+
+msgid "no memory left to allocate unlock key buffer"
+msgstr "нема више меморије за доделу међумеморије кључа откључавања"
+
+msgid ""
+"cannot use TPM2 key protector without initializing it, call "
+"tpm2_protector_init first"
+msgstr ""
+"не могу да користим заштитника TPM2 кључа без његовог покретања, прво "
+"позовите „tpm2_protector_init“"
+
+msgid "in SRK mode, a key file must be specified: --tpm2key/-T or --keyfile/-k"
+msgstr ""
+"у SRK режиму, датотека кључа мора бити наведена: „--tpm2key/-T“ или „--"
+"keyfile/-k“"
+
+msgid ""
+"in SRK mode, please specify a key file with only --tpm2key/-T or --keyfile/-k"
+msgstr ""
+"у SRK режиму, наведите датотеку кључа само са „--tpm2key/-T“ или „--keyfile/-"
+"k“"
+
+msgid "in SRK mode, an NV Index cannot be specified"
+msgstr "у SRK режиму, NV индекс се не може навести"
+
+msgid "in NV Index mode, an NV Index must be specified: --nvindex or -n"
+msgstr "у режиму NV индекса, NV индекс мора бити наведен: „--nvindex“ или „-n“"
+
+msgid "a key file cannot be specified when using NV index mode"
+msgstr "датотека кључа се не може навести када се користи режим NV индекса"
+
+msgid ""
+"an SRK cannot be specified when using NV index mode with a persistent handle"
+msgstr ""
+"SRK се не може навести када се користи режим NV индекса са трајном ручком"
+
+msgid ""
+"an NV index must be either a persistent handle or an NV index handle when "
+"using NV index mode"
+msgstr ""
+"NV индекс мора бити или трајна ручка или ручка NV индекса када се користи "
+"режим NV индекса"
+
+msgid "no memory to duplicate file path"
+msgstr "нема више меморије за удвостручавање путање датотеке"
+
+#, c-format
+msgid "value '%s' is not a valid TPM2 key protector mode"
+msgstr "вредност „%s“ није исправан режим заштитника TPM2 кључа"
+
+msgid ""
+"the TPM2 key protector does not accept any non-option arguments (i.e., like "
+"-o and/or --option only)"
+msgstr ""
+"заштитник TPM2 кључа не прихвата никакве неопционе аргументе (тј., као само "
+"„-o“ и/или „--option“)"
+
+msgid "tpm2_key_protector_clear accepts no arguments"
+msgstr "„tpm2_key_protector_clear“ не прихвата аргументе"
+
+msgid ""
+"[-m mode] [-p pcr_list] [-b pcr_bank] [-c pcr_list] [-T tpm2_key_file_path] "
+"[-k sealed_key_file_path] [-s srk_handle] [-a asymmetric_key_type] [-n "
+"nv_index]"
+msgstr ""
+"[-m режим] [-p pcr_списак] [-b pcr_штанглица] [-c pcr_списак] [-T "
+"путања_tpm2_датотеке_кључа] [-k путања_датотеке_запечаћеног_кључа] [-s "
+"srk_ручка] [-a врста_асиметричног_кључа] [-n nv_индекс]"
+
+msgid "Initialize the TPM2 key protector."
+msgstr "Започиње заштитника TPM2 кључа."
+
+msgid "Clear the TPM2 key protector if previously initialized."
+msgstr "Чисти заштитника TPM2 кључа ако је претходно покренут."
+
+msgid "Dump TPM2 PCRs"
+msgstr "Избачај TPM2 PCR-а"
+
+msgid "Print all PCRs of the specified TPM 2.0 bank"
+msgstr "Исписује све PCR-ове наведене TPM 2.0 штанглице"
+
+msgid "Unlock volume(s) using key protector(s)."
+msgstr "Откључава волумен(е) користећи заштитника(е) кључа."
+
+msgid "Enable hardware acceleration."
+msgstr "Укључује хардверско убрзање."
+
+#, c-format
+msgid "no key protector provided a usable key for %s%s%s (%s)"
+msgstr "ниједан заштитник кључа није доставио искористив кључ за „%s%s%s“ (%s)"
+
+#, c-format
+msgid "Invalid cryptodisk_passphrase_tries value `%s'. Defaulting to %lu.\n"
+msgstr ""
+"Неисправна „cryptodisk_passphrase_tries“ вредност „%s“. Прелазим на %lu.\n"
+
+msgid "[--quiet] DEVICE"
+msgstr "[--quiet] УРЕЂАЈ"
+
+msgid "Check if a logical volume resides on encrypted disks."
+msgstr "Проверава да ли се логички волумен налази на шифрованим дисковима."
+
+msgid "overflow detected while obtaining size of device name"
+msgstr "откривено је прекорачење приликом добављања величине назива уређаја"
+
+msgid "overflow detected while obtaining encoding size"
+msgstr "откривено је прекорачење приликом добављања величине шифровања"
+
+msgid "overflow detected while obtaining size of canonical name"
+msgstr "откривено је прекорачење приликом добављања величине каноничког назива"
+
+msgid "overflow detected while obtaining size of device path"
+msgstr "откривено је прекорачење приликом добављања величине путање уређаја"
+
+msgid "overflow detected while obtaining size of an open path"
+msgstr "откривено је прекорачење приликом добављања величине отворене путање"
+
+msgid "overflow detected while obtaining bootpath size"
+msgstr "откривено је прекорачење приликом добављања величине путање подизања"
+
+msgid "overflow detected while allocating size of password buffer"
+msgstr "откривено је прекорачење приликом доделе величине међумеморије лозинке"
+
+msgid "link target length overflow"
+msgstr "прекорачење дужине мете везе"
+
+msgid "directory item size overflow"
+msgstr "прекорачење величине ставке директоријума"
+
+msgid "buffer size overflow"
+msgstr "прекорачење величине међумеморије"
+
+msgid "directory element size overflow"
+msgstr "прекорачење величине елемента директоријума"
+
+msgid "data size overflow"
+msgstr "прекорачење величине података"
+
+msgid "mtime overflow"
+msgstr "„mtime“ прекорачење"
+
+msgid "mode overflow"
+msgstr "прекорачење режима"
+
+msgid "namesize overflow"
+msgstr "прекорачење величине_назива"
+
+msgid "file name size overflow"
+msgstr "прекорачење величине назива датотеке"
+
+msgid "target data size overflow"
+msgstr "прекорачење величине података мете"
+
+msgid "symlink size overflow"
+msgstr "прекорачење величине симболичке везе"
+
+msgid "directory entry name length overflow"
+msgstr "прекорачење дужине назива уноса директоријума"
+
+msgid "compression buffer size overflow"
+msgstr "прекорачење величине запакивања међумеморије"
+
+msgid "symlink name length overflow"
+msgstr "прекорачење дужине назива симболичке везе"
+
+msgid "name length overflow"
+msgstr "прекорачење дужине назива"
+
+msgid "name size overflow"
+msgstr "прекорачење величине назива"
+
+msgid "link size overflow"
+msgstr "прекорачење величине везе"
+
+msgid "long name size overflow"
+msgstr "прекорачење величине дугог назива"
+
+msgid "directory data size overflow"
+msgstr "прекорачење величине података директоријума"
+
+msgid "path buffer size overflow"
+msgstr "прекорачење величине међумеморије путање"
+
+msgid "elemsize overflow"
+msgstr "прекорачење величине елемента"
+
+msgid "Get property."
+msgstr "Добавља својство."
+
+msgid "prop"
+msgstr "својс"
+
+#, c-format
+msgid "use '%s %s' to force a system restart"
+msgstr "користи „%s %s“ за присиљавање поновног покретања система"
+
+msgid "tag length overflow"
+msgstr "прекорачење дужине ознаке"
+
+msgid "overflow detected while obatining size of ofdata path"
+msgstr "откривено је прекорачење приликом добављања величине путање „ofdata“"
+
+msgid "overflow detected while obtaining length of host"
+msgstr "откривено је прекорачење приликом добављања дужине домаћина"
+
+msgid "maximum recursion depth exceeded"
+msgstr "премашена је највећа дубина дубачења"
+
+msgid "disabled command line interface access"
+msgstr "искључен је приступ сучељу линије наредби"
+
+msgid "Add a note segment reserving SIZE bytes for an appended signature"
+msgstr "Додаје подеок напомене резервишући ВЕЛИЧИНА бајта за придодат потпис"
+
+msgid "can't set env_block as it's read-only"
+msgstr "не могу да поставим „env_block“ јер је само за читање"
+
+msgid "zfs-bootfs ZFS_DATASET"
+msgstr "zfs-bootfs ZFS_СКУППОДАТАКА"
+
+msgid "Compute ZFS dataset bootpath."
+msgstr "Израчунава путању подизања ZFS скупа података."
+
+#, c-format
+msgid "appended signature size `%s', and it should not be zero"
+msgstr "величина придодатог потписа „%s“, и не може бити нула"
+
+msgid "disable command line interface access"
+msgstr "искључује приступ сучељу линије наредби"
+
+msgid "Add or remove a key protector to or from a key."
+msgstr "Додаје или уклања заштитника кључа у или из кључа."
+
+msgid "Set key protector to use (only tpm2 is currently supported)."
+msgstr ""
+"Поставља заштитника кључа за коришћење (само јје „tpm2“ тренутно подржано)."
+
+msgid "Set the path to the TPM2 device. (default: /dev/tpm0)"
+msgstr "Поставља путању на TPM2 уређај. (основно: /dev/tpm0)"
+
+msgid ""
+"Set a comma-separated list of PCRs used to authorize key release e.g., "
+"'7,11'. Please be aware that PCR 0~7 are used by the firmware and the "
+"measurement result may change after a firmware update (for baremetal "
+"systems) or a package (OVMF/SLOF) update in the VM host. This may lead to "
+"the failure of key unsealing. (default: 7)"
+msgstr ""
+"Поставља зарезом раздвојен списак PCR-ова коришћених за овлашћивање издања "
+"кључа, нпр. „7,11“. Знајте да се PCR 0~7 користе од стране фирмвера и да "
+"резултат мерења може да се промени након освежавања фирмвера (за огољене "
+"системе) или освежења пакета (OVMF/SLOF) у VM домаћину. Ово може довести до "
+"неуспеха отпечаћавања кључа. (основно: 7)"
+
+msgid ""
+"Set the bank of PCRs used to authorize key release: SHA1, SHA256, SHA384, or "
+"SHA512. (default: SHA256)"
+msgstr ""
+"Поставља штанглицу PCR-ова коришћених за овлашћивање издања кључа: SHA1, "
+"SHA256, SHA384 или SHA512. (основно: SHA256)"
+
+msgid "Set the path to a file that contains the cleartext key to protect."
+msgstr "Поставља путању на датотеку која садржи кључ чистог текста за заштиту."
+
+msgid ""
+"Set the path to the file that will contain the key after sealing (must be "
+"accessible to GRUB during boot)."
+msgstr ""
+"Поставља путању на датотеку која садржи кључ након печаћења (треба да може "
+"ГРУБ да јој приступи за време подизања)."
+
+msgid "Set the SRK handle if the SRK is to be made persistent."
+msgstr "Поставља SRK ручку ако ће SRK бити учињен трајним."
+
+msgid ""
+"Set the type of SRK: RSA (RSA2048) and ECC (ECC_NIST_P256).(default: ECC)"
+msgstr ""
+"Поставља врсту SRK-а: RSA (RSA2048) и ECC (ECC_NIST_P256).(основно: ECC)"
+
+msgid "Evict a previously persisted SRK from the TPM, if any."
+msgstr "Избегава претходно трајни SRK из TPM, ако га има."
+
+msgid "Use TPM 2.0 Key File format."
+msgstr "Користи формат датотеке TPM 2.0 кључа."
+
+msgid "Store the sealed key in a persistent or NV index handle."
+msgstr "Смешта запечаћени кључ у трајну или ручку NV индекса."
+
+#, c-format
+msgid "Could not send TPM command.\n"
+msgstr "Не могу да пошаљем TPM наредбу.\n"
+
+#, c-format
+msgid "Could not read all the specified PCRs.\n"
+msgstr "Не могу да прочитам све наведене PCR-е.\n"
+
+#, c-format
+msgid "PCR concatenation buffer not big enough.\n"
+msgstr "Међумеморија PCR надовезивања није довољно велика.\n"
+
+#, c-format
+msgid "Bad PCR value size: expected %llu bytes but got %u bytes.\n"
+msgstr "Лоша величина PCR вредности: очекивах %llu бајта али добих %u.\n"
+
+#, c-format
+msgid "Could not allocate memory for the raw format key.\n"
+msgstr "Не могу да доделим меморију за кључ сировог формата.\n"
+
+#, c-format
+msgid "Invalid tpm2key size for TPM NV buffer\n"
+msgstr "Неисправна величина „tpm2key“ за TPM NV међумеморију\n"
+
+#, c-format
+msgid "Input key size larger than %u bytes.\n"
+msgstr "Величина улазног кључа је већа од %u бајта.\n"
+
+#, c-format
+msgid "Could not export to TPM 2.0 Key File format\n"
+msgstr "Не могу да извезем у формат TPM 2.0 датотеке кључа\n"
+
+#, c-format
+msgid "Could not export to the raw format\n"
+msgstr "Не могу да извезем у сирови формат:\n"
+
+#, c-format
+msgid "--tpm2-evict is invalid when --action is 'add'.\n"
+msgstr "„--tpm2-evict“ је неисправно када је „--action“ „add“.\n"
+
+#, c-format
+msgid "Persistent handle does not support TPM 2.0 Key File format.\n"
+msgstr "Трајна ручка не подржава формат TPM 2.0 датотеке кључа.\n"
+
+#, c-format
+msgid "--tpm2-nvindex must be a persistent or NV index handle.\n"
+msgstr "„--tpm2-nvindex“ мора бити трајно или ручка NV индекса.\n"
+
+#, c-format
+msgid "--tpm2-nvindex and --tpm2-srk must be different.\n"
+msgstr "„--tpm2-nvindex“ и „--tpm2-srk“ се морају разликовати.\n"
+
+#, c-format
+msgid "--tpm2-srk must be a persistent handle, e.g. 0x81000000.\n"
+msgstr "„--tpm2-srk“ мора бити трајна ручка, нпр. 0x81000000.\n"
+
+#, c-format
+msgid "--tpm2-asymmetric is invalid when --action is 'remove'.\n"
+msgstr "„--tpm2-asymmetric“ је неисправно када је „--action“ „remove“.\n"
+
+#, c-format
+msgid "--tpm2-bank is invalid when --action is 'remove'.\n"
+msgstr "„--tpm2-bank“ је неисправно када је „--action“ „remove“.\n"
+
+#, c-format
+msgid "--tpm2-keyfile is invalid when --action is 'remove'.\n"
+msgstr "„--tpm2-keyfile“ је неисправно када је „--action“ „remove“.\n"
+
+#, c-format
+msgid "--tpm2-outfile is invalid when --action is 'remove'.\n"
+msgstr "„--tpm2-outfile“ је неисправно када је „--action“ „remove“.\n"
+
+#, c-format
+msgid "--tpm2-pcrs is invalid when --action is 'remove'.\n"
+msgstr "„--tpm2-pcrs“ је неисправно када је „--action“ „remove“.\n"
+
+#, c-format
+msgid "missing --tpm2-srk or --tpm2-nvindex for --action 'remove'.\n"
+msgstr "недостаје „--tpm2-srk“ или „--tpm2-nvindex“ за --action „remove“.\n"
+
+#, c-format
+msgid ""
+"The TPM2 key protector only supports the following actions: add, remove.\n"
+msgstr ""
+"Заштитник TPM2 кључа подржава само следеће радње: add (додај), remove "
+"(уклони).\n"
+
+#, c-format
+msgid "--action|-a can only be specified once.\n"
+msgstr "„--action|-a“ се може навести само једном.\n"
+
+#, c-format
+msgid "--protector|-p can only be specified once.\n"
+msgstr "„--protector|-p“ се може навести само једном.\n"
+
+#, c-format
+msgid "'%s' is not a valid protector.\n"
+msgstr "„%s“ није исправан заштитник.\n"
+
+#, c-format
+msgid "--tpm2-device can only be specified once.\n"
+msgstr "„--tpm2-device“ се може навести само једном.\n"
+
+#, c-format
+msgid "--tpm2-pcrs can only be specified once.\n"
+msgstr "„--tpm2-pcrs“ се може навести само једном.\n"
+
+#, c-format
+msgid "--tpm2-srk can only be specified once.\n"
+msgstr "„--tpm2-srk“ се може навести само једном.\n"
+
+#, c-format
+msgid "--tpm2-asymmetric can only be specified once.\n"
+msgstr "„--tpm2-asymmetric“ се може навести само једном.\n"
+
+#, c-format
+msgid "--tpm2-bank can only be specified once.\n"
+msgstr "„--tpm2-bank“ се може навести само једном.\n"
+
+#, c-format
+msgid "--tpm2-keyfile can only be specified once.\n"
+msgstr "„--tpm2-keyfile“ се може навести само једном.\n"
+
+#, c-format
+msgid "--tpm2-evict can only be specified once.\n"
+msgstr "„--tpm2-evict“ се може навести само једном.\n"
+
+#, c-format
+msgid "--tpm2-tpm2key can only be specified once.\n"
+msgstr "„--tpm2-tpm2key“ се може навести само једном.\n"
+
+#, c-format
+msgid "--tpm2-nvindex can only be specified once.\n"
+msgstr "„--tpm2-nvindex“ се може навести само једном.\n"
+
+#, c-format
+msgid "--action is mandatory.\n"
+msgstr "„--action“ је обавезно.\n"
+
+#, c-format
+msgid "--protector is mandatory and only 'tpm2' is currently supported.\n"
+msgstr "„--protector“ је обавезно а само је „tpm2“ тренутно подржано.\n"
+
+msgid ""
+"Protect a cleartext key using a GRUB key protector that can retrieve the key "
+"during boot to unlock fully-encrypted disks automatically."
+msgstr ""
+"Штити кључ чистог текста користећи заштитника ГРУБ кључа који може да набави "
+"кључ за време подизања да би самостално откључао потпуно шифроване дискове."
+
+msgid ""
+"x509 public key can be support only to appended signature with powerpc-"
+"ieee1275 images"
+msgstr ""
+"x509 јавни кључ може бити подршка само придодатом потпису са „powerpc-"
+"ieee1275“ сликама"
+
+msgid "SBAT data can be added only to EFI or powerpc-ieee1275 images"
+msgstr "SBAT подаци могу бити додати само EFI или powerpc-ieee1275 сликама"
+
+msgid "appended signature can be support only to powerpc-ieee1275 images"
+msgstr "придодат потпис може бити подршка само са „powerpc-ieee1275“ слике"
+
+#, c-format
+msgid ""
+"GRUB_OS_PROBER_SKIP_LIST contains deprecated <UUID>@/dev/* notation. The @/"
+"dev/* suffix is ignored."
+msgstr ""
+"GRUB_OS_PROBER_SKIP_LIST садржи застарелу <UUID>@/dev/* прибелешку. Суфикс "
+"„@/dev/*“ је занемарен."
+
+#, fuzzy
+#~ msgid "Show the list of trusted X.509 certificates from the db list"
+#~ msgstr "Приказује списак поверљивих кључева."
+
+#, fuzzy
+#~ msgid "Specify path to find UKI entries."
+#~ msgstr "Наводи хеш за коришћење."
+
+#, fuzzy, c-format
+#~ msgid "duplicate file: `%s'"
+#~ msgstr "Не могу да направим датотеку: %s"
+
+#, fuzzy
+#~ msgid "overflow detected creating argv list"
+#~ msgstr "откривено је прекорачење"
+
+#, fuzzy, c-format
+#~ msgid "variable '%s' isn't set"
+#~ msgstr "није подешена променљива „%s“"
+
+#, fuzzy
+#~ msgid "memory reading is disabled in lockdown mode"
+#~ msgstr "постављена меморија је већа од додељене меморије"
+
+#, fuzzy
+#~ msgid "RDMSR is unsupported"
+#~ msgstr "тумачење није подржано"
+
+#, fuzzy
+#~ msgid "WRMSR is unsupported"
+#~ msgstr "тумачење није подржано"
+
+#, fuzzy
+#~ msgid "List memory regions."
+#~ msgstr "Исписује слободне меморијске блокове."
+
+#, fuzzy
+#~ msgid "Only probe encrypted disks."
+#~ msgstr "Само испробава ЕФИ дискове."
+
+#, fuzzy, c-format
+#~ msgid "could not open file: %s"
+#~ msgstr "не могу да отворим датотеку кључа „%s“"
+
+#, fuzzy, c-format
+#~ msgid "could not read file size: %s"
+#~ msgstr "не могу да прочитам „%s“: %s"
+
+#, fuzzy, c-format
+#~ msgid "could not allocate buffer for %s"
+#~ msgstr "не могу да доделим командну међумеморију"
+
+#, fuzzy, c-format
+#~ msgid "could not retrieve file contents: %s"
+#~ msgstr "не могу да довучем спискове блокова: %s"
+
+#, fuzzy
+#~ msgid "malformed TPM wire key file"
+#~ msgstr "нисам успео да прочитам датотеку кључа"
+
+#, fuzzy
+#~ msgid "malformed TPM 2.0 key file"
+#~ msgstr "нисам успео да прочитам датотеку кључа"
+
+#, fuzzy
+#~ msgid "key file not specified"
+#~ msgstr "Унос изборника није наведен."
+
+#, fuzzy
+#~ msgid "Unknown Mode"
+#~ msgstr "Непознато кодирање"
+
+#, fuzzy
+#~ msgid "Invalid passphrase."
+#~ msgstr "неисправан параметар"
+
+#, fuzzy, c-format
+#~ msgid "unrecognized option: %s"
+#~ msgstr "Непозната опција „%s“\\n"
+
+#, fuzzy
+#~ msgid "disk name expected"
+#~ msgstr "очекиван је назив датотеке"
+
+#, fuzzy, c-format
+#~ msgid "invalid disk: %s"
+#~ msgstr "неисправан режим „%s“"
+
+#, fuzzy, c-format
+#~ msgid "unrecognized disk: %s"
+#~ msgstr "непозната величина кључа"
+
+#, fuzzy, c-format
+#~ msgid "no such disk: %s"
+#~ msgstr "не могу да отворим диск: %s"
+
+#, fuzzy
+#~ msgid "invalid JFS inode"
+#~ msgstr "неисправан режим „%s“"
+
+#, fuzzy
+#~ msgid "invalid directory slot index"
+#~ msgstr "неисправан шифрер „%s“ или режим „%s“"
+
+#, fuzzy
+#~ msgid "zstd file corrupted or unsupported block options"
+#~ msgstr "иксз датотека је оштећена или нису подржанеопције блока"
+
+#, fuzzy
+#~ msgid "bad shim loader signature"
+#~ msgstr "лош шим потпис"
+
+#, fuzzy
+#~ msgid "DEV"
+#~ msgstr "УРЕЂАЈ"
+
+#, fuzzy
+#~ msgid "set TPM device."
+#~ msgstr "Исписује ПЦИ уређаје."
+
+#, fuzzy, c-format
+#~ msgid "cannot open TPM device '%s': %s"
+#~ msgstr "не могу да отворим уређај: %s"
+
+#, fuzzy, c-format
+#~ msgid "cannot close TPM device: %s"
+#~ msgstr "не могу да отворим уређај: %s"
+
+#, fuzzy
+#~ msgid "invalid partition number"
+#~ msgstr "неисправан параметар"
+
+#, fuzzy, c-format
+#~ msgid "cannot cap PCR %u"
+#~ msgstr "не могу да направим резерву „%s“: %s"
+
+#, fuzzy
+#~ msgid "No device tree found"
+#~ msgstr "неисправно стабло уређаја"
+
+#, fuzzy
+#~ msgid "failed to retrieve the prop field"
+#~ msgstr "нисам успео да довучем поље структуре"
+
+#, fuzzy
+#~ msgid "[-p] [--set variable]"
+#~ msgstr "Поставља променљиве."
+
+#, fuzzy
+#~ msgid "Retrieve device tree information."
+#~ msgstr "Налази податке о уређају."
+
+#, fuzzy
+#~ msgid "filename too long"
+#~ msgstr "ниска је предуга"
+
 #, c-format
 #~ msgid "GNU GRUB  version %s"
 #~ msgstr "Гну ГРУБ  издање %s"
 
-#, c-format
-#~ msgid "%s, with Linux %s (recovery mode)"
-#~ msgstr "%s, са Линуксом %s (режим опоравка)"
+#, fuzzy
+#~ msgid "embed FILE as an x509 certificate for appended signature checking"
+#~ msgstr "уграђује ДАТОТЕКУ као јавни кључ за проверавање потписа"
 
-#, c-format
-#~ msgid "%s, with Linux %s"
-#~ msgstr "%s, са Линуксом %s"
+#, fuzzy, c-format
+#~ msgid "cannot open device %s: %s"
+#~ msgstr "не могу да отворим уређај: %s"
+
+#, fuzzy, c-format
+#~ msgid "cannot probe fs for %s: %s"
+#~ msgstr "не могу да вратим „%s“: %s"
+
+#, fuzzy, c-format
+#~ msgid "non-numeric or invalid appended signature size `%s'"
+#~ msgstr "небројевна или неисправна величина датотеке кључа „%s“"
+
+#, fuzzy
+#~ msgid "embed FILE as public key for PGP signature checking"
+#~ msgstr "уграђује ДАТОТЕКУ као јавни кључ за проверавање потписа"
+
+#, fuzzy
+#~ msgid "option requires an argument"
+#~ msgstr "%s: опција „%s%s“ захтева аргумент\n"
+
+#, fuzzy, c-format
+#~ msgid "Could not open file: %s\n"
+#~ msgstr "не могу да отворим датотеку кључа „%s“"
+
+#, fuzzy, c-format
+#~ msgid "Could not seek file: %s\n"
+#~ msgstr "Не могу да направим датотеку: %s"
+
+#, fuzzy, c-format
+#~ msgid "Could not get file length: %s\n"
+#~ msgstr "не могу да „strndup“ шифрера дужине „%"
+
+#, fuzzy, c-format
+#~ msgid "Could not allocate memory for file: %s\n"
+#~ msgstr "Не могу да нађем управљачки програм „FPSWA“"
+
+#, fuzzy, c-format
+#~ msgid "Could not read file: %s\n"
+#~ msgstr "Не могу да направим датотеку: %s"
+
+#, fuzzy, c-format
+#~ msgid "Could not get TPM response.\n"
+#~ msgstr "неподржани ХТТП одговор"
+
+#, fuzzy, c-format
+#~ msgid "Could not open TPM device (%s).\n"
+#~ msgstr "не могу да отворим уређај: %s"
+
+#, fuzzy, c-format
+#~ msgid "Could not close TPM device (%s).\n"
+#~ msgstr "Не могу да нађем управљачки програм „FPSWA“"
+
+#, fuzzy, c-format
+#~ msgid "Could not write key file (%s).\n"
+#~ msgstr "не могу да отворим датотеку кључа „%s“"
+
+#, fuzzy, c-format
+#~ msgid "--tpm2-keyfile must be specified.\n"
+#~ msgstr "излазна датотека мора бити наведена"
+
+#, fuzzy, c-format
+#~ msgid "--tpm2-outfile or --tpm2-nvindex must be specified.\n"
+#~ msgstr "излазна датотека мора бити наведена"
+
+#, fuzzy, c-format
+#~ msgid "'%s' is not a valid action.\n"
+#~ msgstr "„%s“ није месни диск"
+
+#, fuzzy, c-format
+#~ msgid "--tpm2-outfile can only be specified once.\n"
+#~ msgstr "излазна датотека мора бити наведена"
+
+#, fuzzy, c-format
+#~ msgid "Could not parse arguments.\n"
+#~ msgstr "%s: Превише аргумената\n"
 
 #, c-format
 #~ msgid ""
@@ -7952,14 +8818,19 @@ msgstr ""
 #~ "излаз ће се користити за откривање подизне извршне на њима и створиће "
 #~ "нове уносе подизача система."
 
+#, c-format
+#~ msgid "%s, with Linux %s (recovery mode)"
+#~ msgstr "%s, са Линуксом %s (режим опоравка)"
+
+#, c-format
+#~ msgid "%s, with Linux %s"
+#~ msgstr "%s, са Линуксом %s"
+
 #~ msgid "SOURCE|-u UUID|-a|-b"
 #~ msgstr "ИЗВОР|-u УУИБ|-a|-b"
 
 #~ msgid "Linux not supported yet"
 #~ msgstr "Линукс још није подржан"
-
-#~ msgid "interpret is not supported"
-#~ msgstr "тумачење није подржано"
 
 #~ msgid "Slot \"%"
 #~ msgstr "Утор „%"
@@ -8028,9 +8899,6 @@ msgstr ""
 #~ msgid "(PROGRAM ERROR) No version known!?"
 #~ msgstr "(ГРЕШКА ПРОГРАМА) Издање није познато!?"
 
-#~ msgid "%s: Too many arguments\n"
-#~ msgstr "%s: Превише аргумената\n"
-
 #~ msgid "(PROGRAM ERROR) Option should have been recognized!?"
 #~ msgstr "(ГРЕШКА ПРОГРАМА) Опција би требало да буде препозната!?"
 
@@ -8045,9 +8913,6 @@ msgstr ""
 
 #~ msgid "%s: option '%s%s' doesn't allow an argument\n"
 #~ msgstr "%s: опција „%s%s“ не допушта аргумент\n"
-
-#~ msgid "%s: option '%s%s' requires an argument\n"
-#~ msgstr "%s: опција „%s%s“ захтева аргумент\n"
 
 #~ msgid "%s: invalid option -- '%c'\n"
 #~ msgstr "%s: неисправна опција -- „%c“\n"

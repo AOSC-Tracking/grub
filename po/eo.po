@@ -7919,21 +7919,886 @@ msgstr ""
 "Aldonas praŝargilan menueron por «UEFI Firmware Settings» (Mikroprograma "
 "agordo de UEFI) ...\\n"
 
+msgid "hash file of the binary."
+msgstr "haketa dosiero de la plenumeblaĵo."
+
+msgid "hash file of the certificate."
+msgstr "haketa dosiero de la atestilo."
+
+msgid "<SIGNED_FILE>"
+msgstr "<SUBSKRIBITA_DOSIERO>"
+
+msgid ""
+"Verify SIGNED_FILE against the trusted X.509 certificates in the db list"
+msgstr ""
+"Konstati SUBSKRIBITAN_DOSIERON kontraŭ la fidindaj X.509-atestiloj en la "
+"listo db"
+
+msgid "<X509_CERTIFICATE>"
+msgstr "<X509_ATESTILO>"
+
+msgid "Add trusted X509_CERTIFICATE to the db list"
+msgstr "Aldoni fidindan X509_ATESTILON al la listo db"
+
+msgid "Add distrusted X509_CERTIFICATE to the dbx list"
+msgstr "Aldoni malfidindan X509_ATESTILON al la listo dbx"
+
+msgid ""
+"Show the list of distrusted certificates and certificate/binary hashes from "
+"the dbx list"
+msgstr ""
+"Montri la liston de malfinindaj atestiloj kaj atestilaj/plenumeblaĵaj "
+"haketoj el la listo dbx"
+
+msgid "BINARY HASH FILE"
+msgstr "PLENUMEBLAĴA HAKETO-DOSIERO"
+
+msgid "Add trusted BINARY HASH to the db list."
+msgstr "Aldoni finindan duuman haketon al la listo db."
+
+msgid ""
+"[-b|--binary-hash] FILE [BINARY HASH FILE]\n"
+"[-c|--cert-hash] FILE [CERTFICATE HASH FILE]"
+msgstr ""
+"[-b|--binary-hash] DOSIERO [DUUMA HAKETO-DOSIERO]\n"
+"[-c|--cert-hash] DOSIERO [ATESTILA HAKETO-DOSIERO]"
+
+msgid "Add distrusted CERTFICATE/BINARY HASH to the dbx list."
+msgstr "Aldoni malfidindan atestilan aŭ duuman HAKETO al la listo dbx."
+
+msgid "Allow the default UKI entry to be added to the GRUB menu."
+msgstr "Permesi ke la apriora UKB-ero estu aldonota al la GRUB-menuo."
+
+msgid "Allow the non-default UKI entries to be added to the GRUB menu."
+msgstr "Permesi ke neaprioraj UKB-eroj estu aldonatoj al la GRUB-menuo."
+
+msgid "Allow specificUKII entries to be added to the GRUB menu."
+msgstr "Permesi ke specifaj UKB-eroj estu aldonotaj al la GRUB-menuo."
+
+msgid ""
+"[-p|--path] [-f|--enable-fallback] DIR [-d|--show-default] [-n|--show-non-"
+"default] [-e|--entry] FILE"
+msgstr ""
+"[-p|--path] [-f|--enable-fallback] DOSIERUJO [-d|--show-default] [-n|--show-"
+"non-default] [-e|--entry] DOSIERO"
+
+msgid "Import Boot Loader Specification snippets."
+msgstr "Importi tranĉaĵoj por la praŝargila specifo."
+
+msgid ""
+"[-p|--path] DIR [-f|--enable-fallback] [-d|--show-default] [-n|--show-non-"
+"default] [-e|--entry] FILE"
+msgstr ""
+"[-p|--path] DOSIERUJO [-f|--enable-fallback] [-d|--show-default] [-n|--show-"
+"non-default] [-e|--entry] DOSIERO"
+
+msgid "Import Unified Kernel Images"
+msgstr "Importi unuigitajn kernajn bildojn"
+
+msgid "RDMSR is unsupported"
+msgstr "RDMSR ne estas regata"
+
+msgid "WRMSR is unsupported"
+msgstr "WRMSR ne estas regata"
+
+msgid "max recursion depth exceeded"
+msgstr "superis la maksimuman profundon de rekursio"
+
+msgid "empty entry in PCR list"
+msgstr "malprena ero en PCR-listo"
+
+#, c-format
+msgid "entry '%s' in PCR list is not a number"
+msgstr "ero '%s' en PCR-listo ne estas nombro"
+
+#, c-format
+msgid ""
+"entry %llu in PCR list is too large to be a PCR number, PCR numbers range "
+"from 0 to %u"
+msgstr ""
+"ero %llu en PCR-listo tro grandas por esti PCR-nombro, PCR nombroj ampleksas "
+"de 0 ĝis %u"
+
+msgid "trailing comma at the end of PCR list"
+msgstr "posta komo en la fino de PCR-listo"
+
+#, c-format
+msgid "too many PCRs in PCR list, the maximum number of PCRs is %u"
+msgstr "tro da PCR-oj en la PR-listo, la maksimuma nombro de PCR-oj estas %u"
+
+#, c-format
+msgid "value '%s' is not a valid asymmetric key type"
+msgstr "valoro '%s' ne estas valida tipo de malsamtempa ŝlosilo"
+
+#, c-format
+msgid "value '%s' is not a valid PCR bank"
+msgstr "valoro '%s' ne estas valida PCR-kofro"
+
+#, c-format
+msgid "TPM handle value '%s' is not a number"
+msgstr "TPM identigila valoro '%s' ne estas nombra"
+
+#, c-format
+msgid ""
+"value %llu is too large to be a TPM handle, TPM handles are unsigned 32-bit "
+"integers"
+msgstr ""
+"valora %llu tro grandas esti TPM-identigilo, TPM-identigiloj estas "
+"sensignumaj 32-bitaj entjeroj"
+
+msgid ""
+"Unseal key using SRK ('srk') (default) or retrieve it from an NV Index "
+"('nv')."
+msgstr ""
+"Malsigeli ŝlosilon per SRK ('srk') (apriore) aŭ atingi ĝin el NV-indekso "
+"('nv')."
+
+msgid ""
+"Comma-separated list of PCRs used to authorize key release e.g., '7,11'. "
+"(default: 7)"
+msgstr ""
+"Listo de PCR-oj uzataj por rajtigi ŝlosilan ellason, apartigi de komoj, ekz-"
+"e '7, 11'. (apriore: 7)"
+
+msgid ""
+"Bank of PCRs used to authorize key release: SHA1, SHA256, SHA384 or SHA512. "
+"(default: SHA256)"
+msgstr ""
+"Kofro de PCR-oj uzata por rajtigi ŝlosilan ellason: SHA1, SHA256, SHA385 aŭ "
+"SHA512."
+
+msgid ""
+"Comma-separated list of PCRs to be capped after key release e.g., '7,11'."
+msgstr ""
+"Listo de PCR-oj esti detranĉitaj post ŝlosila ellaso, apartigita de komoj, "
+"ekz-e '7,11'."
+
+msgid ""
+"In SRK mode, path to the key file in the TPM 2.0 Key File format to unseal "
+"using the TPM (e.g., (hd0,gpt1)/boot/grub2/sealed.tpm)."
+msgstr ""
+"En SRK-reĝimo, vojo al la ŝlosildosiero en la ŝlosildosiera formato TPM 2.0 "
+"por malsigeliĝi per la TPM (ekz-e (hd0,gpt1)/boot/grub2/sealed.tpm)."
+
+msgid ""
+"In SRK mode, path to the key file in the raw format to unseal using the TPM "
+"(e.g., (hd0,gpt1)/boot/grub2/sealed.key). (Mainly for backward "
+"compatibility. Please use '--tpm2key'.)"
+msgstr ""
+"En SRK-reĝimo, vojo al la ŝlosildosiero en la kruda formato por malsigeliĝi "
+"per la TMP (ekz-e (hd0,gpt1)/boot/grub2/sealed.key). (Arkaikiĝinta. La uzo "
+"de --tmp2key estas preferinda.)"
+
+msgid "In SRK mode, the SRK handle if the SRK is persistent."
+msgstr "En SRK-reĝimo la SRK-identigilo se la SRK estas ĉiama."
+
+msgid ""
+"In SRK mode, the type of SRK: RSA (RSA2048) and ECC (ECC_NIST_P256)(default: "
+"ECC)"
+msgstr ""
+"En SRK-reĝimo la tipo de SRK: RSA (RSA2048) kaj ECC (ECC_NIST_P256) "
+"(apriore: ECC)"
+
+msgid ""
+"Required in NV Index mode, the NV handle to read which must readily exist on "
+"the TPM and which contains the key."
+msgstr ""
+"Postulata en NV-indeksa reĝimo, la NV-identigilo legota, kiu devas tuj "
+"ekzisti en la TMP kaj kiu enhavas la ŝlosilon."
+
+#, c-format
+msgid "sealed key larger than %llu bytes"
+msgstr "sigelita ŝlosilo pli grandas ol %llu bajtoj"
+
+msgid "no memory left to allocate unlock key buffer"
+msgstr "neniu restanta memoro por okupi bufron por malŝlosi la ŝlosilon"
+
+msgid ""
+"cannot use TPM2 key protector without initializing it, call "
+"tpm2_protector_init first"
+msgstr ""
+"ne eblas uzi ŝlosilan protektilon por TPM2 sen iniciato de ĝi, "
+"tpm2_protector_init devas esti antaŭe vokita."
+
+msgid "in SRK mode, a key file must be specified: --tpm2key/-T or --keyfile/-k"
+msgstr ""
+"en SRK-reĝimo ŝlosildosiero devas esti specifita: --tpm2key/-T aŭ --keyfile/-"
+"k"
+
+msgid ""
+"in SRK mode, please specify a key file with only --tpm2key/-T or --keyfile/-k"
+msgstr ""
+"en SRK-reĝimo bonvolu specifi ŝlosildosieron per nur --tpm2key/-T aŭ --"
+"keyfile/-k"
+
+msgid "in SRK mode, an NV Index cannot be specified"
+msgstr "en SRK-reĝimo NV-indekso ne estas specifebla"
+
+msgid "in NV Index mode, an NV Index must be specified: --nvindex or -n"
+msgstr "en NV-indeksa reĝimo NV-indekso devas esti specifita: --nvindex aŭ -n"
+
+msgid "a key file cannot be specified when using NV index mode"
+msgstr "ŝlosildosiero ne estas specifebla kiam oni uzas NV-indeksan regimon"
+
+msgid ""
+"an SRK cannot be specified when using NV index mode with a persistent handle"
+msgstr ""
+"SRK ne povas esti specifita kiam oni uzas NV-indeksan reĝimon kun ĉiama "
+"identigilo"
+
+msgid ""
+"an NV index must be either a persistent handle or an NV index handle when "
+"using NV index mode"
+msgstr ""
+"NV-indekso devas esti aŭ ĉiama identigilo aŭ NV-indeksa identigilo kiam oni "
+"uzas NV-indeksan reĝimon"
+
+msgid "no memory to duplicate file path"
+msgstr "neniu memoro por duobligi dosieran vojon"
+
+#, c-format
+msgid "value '%s' is not a valid TPM2 key protector mode"
+msgstr "valoro '%s' ne estas valida ŝlosilo-protektila reĝimo por TPM2"
+
+msgid ""
+"the TPM2 key protector does not accept any non-option arguments (i.e., like "
+"-o and/or --option only)"
+msgstr ""
+"la ŝlosila protektilo de TPM2 ne akceptas neopciajn paramentojn (ekz-e sole "
+"-o kajaŭ --option)"
+
+msgid "tpm2_key_protector_clear accepts no arguments"
+msgstr "tpm2_key_protector_clear akceptas neniun argumentojn"
+
+msgid ""
+"[-m mode] [-p pcr_list] [-b pcr_bank] [-c pcr_list] [-T tpm2_key_file_path] "
+"[-k sealed_key_file_path] [-s srk_handle] [-a asymmetric_key_type] [-n "
+"nv_index]"
+msgstr ""
+"[-m reĝimo] [-p pcr_listo] [-b pcr_kofro] [-c pcr_listo] [-T "
+"tpm2_ŝlosildosiera_vojo] [-k vojo_de_sigelita_ŝlosildosiero] [-s "
+"srk_identigilo] [-a tipo_de_malsamtempa_ŝlosilo] [-n nv_indekso]"
+
+msgid "Initialize the TPM2 key protector."
+msgstr "Iniciati la protektilon de TPM2-ŝlosilo."
+
+msgid "Clear the TPM2 key protector if previously initialized."
+msgstr "Viŝi la protektilon de TPM-ŝlosilo se jam iniciatita."
+
+msgid "Dump TPM2 PCRs"
+msgstr "Ŝutu TPM2-PCR-oj"
+
+msgid "Print all PCRs of the specified TPM 2.0 bank"
+msgstr "Eligi ĉiujn PCR-ojn de la specifita TPM2-kofro"
+
+msgid "Unlock volume(s) using key protector(s)."
+msgstr "Malŝlosi volumo(j)n per ŝlosilaj protektilo(j)."
+
+msgid "Enable hardware acceleration."
+msgstr "Ŝalti aparatan akcelon."
+
+#, c-format
+msgid "no key protector provided a usable key for %s%s%s (%s)"
+msgstr "neniu ŝlosila protektila provizis uzeblas ŝlosilon por %s%s%s (%s)."
+
+#, c-format
+msgid "Invalid cryptodisk_passphrase_tries value `%s'. Defaulting to %lu.\n"
+msgstr ""
+"Nevalida valoro `%s' de cryptodisk_passphrase_tries value. Apriore: %lu.\n"
+
+msgid "[--quiet] DEVICE"
+msgstr "[--quiet] APARATO"
+
+msgid "Check if a logical volume resides on encrypted disks."
+msgstr "Kontroli ĉu logika voluma loĝas en ĉifritaj diskoj."
+
+msgid "overflow detected while obtaining size of device name"
+msgstr "superfluo malkovrita dum atingi grandon de aparata nomo"
+
+msgid "overflow detected while obtaining encoding size"
+msgstr "superfluo malkovrita dum atingi ĉifro-grandon."
+
+msgid "overflow detected while obtaining size of canonical name"
+msgstr "superfluo malkovrita dum atingi grandon de kanona nomo"
+
+msgid "overflow detected while obtaining size of device path"
+msgstr "superfluo malkovrita dum atingi grandon de aparata vojo"
+
+msgid "overflow detected while obtaining size of an open path"
+msgstr "superfluo malkovrita dum atingi grandon de malferma vojo"
+
+msgid "overflow detected while obtaining bootpath size"
+msgstr "superfluo malkovrita dum atingi grandon de praŝargila vojo"
+
+msgid "overflow detected while allocating size of password buffer"
+msgstr "superfluo malkovrita dum okupi grandon de pasvorta bufro"
+
+msgid "link target length overflow"
+msgstr "superfluo de ligilo-cela longo"
+
+msgid "directory item size overflow"
+msgstr "superfluo de dosierujo-era grando"
+
+msgid "buffer size overflow"
+msgstr "superfluo de bufra grando"
+
+msgid "directory element size overflow"
+msgstr "superfluo de dosierujo-elementa grando"
+
+msgid "data size overflow"
+msgstr "superfluo de datuma grando"
+
+msgid "mtime overflow"
+msgstr "mtime-superfluo"
+
+msgid "mode overflow"
+msgstr "reĝimo superfluo"
+
+msgid "namesize overflow"
+msgstr "nomgranda superfluo"
+
+msgid "file name size overflow"
+msgstr "superfluo de dosiernoma granda"
+
+msgid "target data size overflow"
+msgstr "superfluo de celo-datuma grando"
+
+msgid "symlink size overflow"
+msgstr "superfluo de grando de simbola ligilo"
+
+msgid "directory entry name length overflow"
+msgstr "superfluo de longo de dosierujo-era nomo"
+
+msgid "compression buffer size overflow"
+msgstr "superfluo de pako-bufra grando"
+
+msgid "symlink name length overflow"
+msgstr "superfluo de longo de nomo de simbola ligilo"
+
+msgid "name length overflow"
+msgstr "superfluo de nomo-longo"
+
+msgid "name size overflow"
+msgstr "superfluo de nomo-grando"
+
+msgid "link size overflow"
+msgstr "superfluo de ligila grando"
+
+msgid "long name size overflow"
+msgstr "superfluo de grando de longa nomo"
+
+msgid "directory data size overflow"
+msgstr "superfluo de grando de dosierujaj datumoj"
+
+msgid "path buffer size overflow"
+msgstr "superfluo de grando de voja bufro"
+
+msgid "elemsize overflow"
+msgstr "superfluo de grando de elemento"
+
+msgid "Get property."
+msgstr "Akiri econ."
+
+msgid "prop"
+msgstr "eco"
+
+#, c-format
+msgid "use '%s %s' to force a system restart"
+msgstr "eldevigi sisteman restarton per '%s %s'"
+
+msgid "tag length overflow"
+msgstr "superfluo de etikeda longo"
+
+msgid "overflow detected while obatining size of ofdata path"
+msgstr "superfluo malkovrita dum akiri grandon de ofdata-vojo"
+
+msgid "overflow detected while obtaining length of host"
+msgstr "superfluo malkovrita dum akiri longon de gastiganto"
+
+msgid "maximum recursion depth exceeded"
+msgstr "superiĝis maksimumo profundo de rekursio"
+
+msgid "disabled command line interface access"
+msgstr "malŝaltis atingo de komandlinia interfaco"
+
+msgid "Add a note segment reserving SIZE bytes for an appended signature"
+msgstr ""
+"Aldoni notan segmenton, kiu rezervas GRANDO bajtojn por alkroĉi subskribon"
+
+msgid "can't set env_block as it's read-only"
+msgstr "env_block ne agordebla, ĉar ĝi estas nurlega"
+
+msgid "zfs-bootfs ZFS_DATASET"
+msgstr "zfs-bootfs ZFS_DATASET"
+
+msgid "Compute ZFS dataset bootpath."
+msgstr "Komputi ŝargvojon de SFS-datumaro"
+
+#, c-format
+msgid "appended signature size `%s', and it should not be zero"
+msgstr "alkroĉis subskribo-grando '%s', kaj ĝi devas ne esti nul"
+
+msgid "disable command line interface access"
+msgstr "malŝalti atingo de komandlinia interfaco"
+
+msgid "Add or remove a key protector to or from a key."
+msgstr "Aldoni aŭ forigi ŝlosila protektilo al aŭ de ŝlosilo."
+
+msgid "Set key protector to use (only tpm2 is currently supported)."
+msgstr "Agordi uzotan ŝlosilan protektilan (nune nur eblas kun TPM2)."
+
+msgid "Set the path to the TPM2 device. (default: /dev/tpm0)"
+msgstr "Agordi la vojon al la TPM2-aparato. (apriore: /dev/tpm0)"
+
+msgid ""
+"Set a comma-separated list of PCRs used to authorize key release e.g., "
+"'7,11'. Please be aware that PCR 0~7 are used by the firmware and the "
+"measurement result may change after a firmware update (for baremetal "
+"systems) or a package (OVMF/SLOF) update in the VM host. This may lead to "
+"the failure of key unsealing. (default: 7)"
+msgstr ""
+"Agordi liston de PCR-oj, apartigitaj per komoj, por uzi rajtigi ŝlosilan "
+"ellason  ekz-e '7,11'. Bonvolu atenti ke PCR 0~7 estas uzataj de la "
+"mikroprogramaro kaj la mezura rezulto eble ŝanĝiĝos por mikroprograma "
+"ĝisdatigo (por bazmetalaj sistemoj) aŭ ĝisdatigo de OVMF/SLOF-pako en la "
+"virtualmaŝina gastiganto. Tio eble malsukcesigos la ŝlosilan malsigeladon. "
+"(apriore: 7)"
+
+msgid ""
+"Set the bank of PCRs used to authorize key release: SHA1, SHA256, SHA384, or "
+"SHA512. (default: SHA256)"
+msgstr ""
+"Agordi la kofron de PCR-oj uzotaj por rajtigi ŝlosilan ellason: SHA1, "
+"SHA256, SHA384, aŭ SHA512. (apriore: SHA256)"
+
+msgid "Set the path to a file that contains the cleartext key to protect."
+msgstr ""
+"Agordi la vojon al dosiero, kiu enhavas la plattekstan ŝlosilon protektotan."
+
+msgid ""
+"Set the path to the file that will contain the key after sealing (must be "
+"accessible to GRUB during boot)."
+msgstr ""
+"Agordi la vojon al dosiero, kiu enhavos la ŝlosilon post la sigeladon "
+"( devas esti atingebla al GRUB dum ŝargado)."
+
+msgid "Set the SRK handle if the SRK is to be made persistent."
+msgstr "Agordi SRK-identigilon se la SRK estas faronta ĉiaman."
+
+msgid ""
+"Set the type of SRK: RSA (RSA2048) and ECC (ECC_NIST_P256).(default: ECC)"
+msgstr ""
+"Agordi la specon de SRK: RSA (RSA2048) kaj ECC (ECC_NIST_P256). (apriore: "
+"ECC)"
+
+msgid "Evict a previously persisted SRK from the TPM, if any."
+msgstr "Forigi antaŭe ĉiaman SRK-on de la TPM, se iun ajn."
+
+msgid "Use TPM 2.0 Key File format."
+msgstr "Uzu la ŝlosildosiero formato TPM2."
+
+msgid "Store the sealed key in a persistent or NV index handle."
+msgstr "Konservi la sigelitan ŝlosilon en ĉiaman aŭ NV-indeksan identigilon."
+
+#, c-format
+msgid "Could not send TPM command.\n"
+msgstr "Ne eblis sendi TPM-komandon.\n"
+
+#, c-format
+msgid "Could not read all the specified PCRs.\n"
+msgstr "Ne eblis legi ĉiujn specifitajn PCR-ojn.\n"
+
+#, c-format
+msgid "PCR concatenation buffer not big enough.\n"
+msgstr "PCR-kroĉada bufro ne sufiĉe grandas.\n"
+
+#, c-format
+msgid "Bad PCR value size: expected %llu bytes but got %u bytes.\n"
+msgstr "Fuŝa PCR-valora grando: atendis %llu bajtojn sed ricevis %u bajtojn.\n"
+
+#, c-format
+msgid "Could not allocate memory for the raw format key.\n"
+msgstr "Ne eblis generi la memoron por krudformata ŝlosilo.\n"
+
+#, c-format
+msgid "Invalid tpm2key size for TPM NV buffer\n"
+msgstr "Nevalida tpm2-ŝlosila grando por TPM-NV-bufro\n"
+
+#, c-format
+msgid "Input key size larger than %u bytes.\n"
+msgstr "Grando de eniga ŝlosilo pli grandas ol %u bajtoj.\n"
+
+#, c-format
+msgid "Could not export to TPM 2.0 Key File format\n"
+msgstr "Ne eblis eksporti al la ŝlosildosiera formato TPM2\n"
+
+#, c-format
+msgid "Could not export to the raw format\n"
+msgstr "Ne eblis eksporti al la kruda formato\n"
+
+#, c-format
+msgid "--tpm2-evict is invalid when --action is 'add'.\n"
+msgstr "--tpm2-evict nevalidas kiam --action estas 'add'.\n"
+
+#, c-format
+msgid "Persistent handle does not support TPM 2.0 Key File format.\n"
+msgstr "Ĉiama identigilo ne subtenas la dosierformatan formaton TPM2.\n"
+
+#, c-format
+msgid "--tpm2-nvindex must be a persistent or NV index handle.\n"
+msgstr "--tpm2-nvindex devas esti ĉiama aŭ NV-indeksa identigilo.\n"
+
+#, c-format
+msgid "--tpm2-nvindex and --tpm2-srk must be different.\n"
+msgstr "--tpm2-nvindex kaj --tpm2-srk devis esti malsamaj.\n"
+
+#, c-format
+msgid "--tpm2-srk must be a persistent handle, e.g. 0x81000000.\n"
+msgstr "--tpm2-srk devas esti ĉiama identigilo, ekz-e 0x81000000.\n"
+
+#, c-format
+msgid "--tpm2-asymmetric is invalid when --action is 'remove'.\n"
+msgstr "--tpm2-assymetric estas malvalida kiam --action estas 'remove'.\n"
+
+#, c-format
+msgid "--tpm2-bank is invalid when --action is 'remove'.\n"
+msgstr "--tpm2-bank estas malvalida kiam --action estas 'remove'.\n"
+
+#, c-format
+msgid "--tpm2-keyfile is invalid when --action is 'remove'.\n"
+msgstr "--tpm2-keyfile estas malvalida kiam --action estas 'remove'.\n"
+
+#, c-format
+msgid "--tpm2-outfile is invalid when --action is 'remove'.\n"
+msgstr "--tpm2-outfile estas malvalida kiam --action estas 'remove'.\n"
+
+#, c-format
+msgid "--tpm2-pcrs is invalid when --action is 'remove'.\n"
+msgstr "--tpm2-pcrs estas malvalida kiam --action estas 'remove'.\n"
+
+#, c-format
+msgid "missing --tpm2-srk or --tpm2-nvindex for --action 'remove'.\n"
+msgstr "mankantaj --tpm2-srk aŭ --tpm2-nvindex por --action 'remove'.\n"
+
+#, c-format
+msgid ""
+"The TPM2 key protector only supports the following actions: add, remove.\n"
+msgstr ""
+"La TPM2-ŝlosila protektilo nur komprenas la jenajn agojn: add, remove.\n"
+
+#, c-format
+msgid "--action|-a can only be specified once.\n"
+msgstr "--action|-a estas nur unufoje specifebla.\n"
+
+#, c-format
+msgid "--protector|-p can only be specified once.\n"
+msgstr "--protector|-p estas nur unufoje specifebla.\n"
+
+#, c-format
+msgid "'%s' is not a valid protector.\n"
+msgstr "'%s' ne estas valida protektilo.\n"
+
+#, c-format
+msgid "--tpm2-device can only be specified once.\n"
+msgstr "--tpm2-device estas nur unufoje specifebla.\n"
+
+#, c-format
+msgid "--tpm2-pcrs can only be specified once.\n"
+msgstr "--tpm2-pcrs estas nur unufoje specifebla.\n"
+
+#, c-format
+msgid "--tpm2-srk can only be specified once.\n"
+msgstr "--tpm2-srk estas nur unufoje specifebla.\n"
+
+#, c-format
+msgid "--tpm2-asymmetric can only be specified once.\n"
+msgstr "--tpm2-asymmetric estas nur unufoje specifebla.\n"
+
+#, c-format
+msgid "--tpm2-bank can only be specified once.\n"
+msgstr "--tpm2-bank estas nur unufoje specifebla.\n"
+
+#, c-format
+msgid "--tpm2-keyfile can only be specified once.\n"
+msgstr "--tpm2-keyfile estas nur unufoje specifebla.\n"
+
+#, c-format
+msgid "--tpm2-evict can only be specified once.\n"
+msgstr "--tpm2-evict estas nur unufoje specifebla.\n"
+
+#, c-format
+msgid "--tpm2-tpm2key can only be specified once.\n"
+msgstr "--tpm2-tpm2key estas nur unufoje specifebla.\n"
+
+#, c-format
+msgid "--tpm2-nvindex can only be specified once.\n"
+msgstr "--tpm2-nvindex estas nur unufoje specifebla.\n"
+
+#, c-format
+msgid "--action is mandatory.\n"
+msgstr "--action estas deviga.\n"
+
+#, c-format
+msgid "--protector is mandatory and only 'tpm2' is currently supported.\n"
+msgstr "--protector estas deviga kaj nur 'tpm2' estas nune komprenata.\n"
+
+msgid ""
+"Protect a cleartext key using a GRUB key protector that can retrieve the key "
+"during boot to unlock fully-encrypted disks automatically."
+msgstr ""
+"Protekti plattekstan ŝlosilon per GRUB-ŝlosila protektilo, kiu povas retrovi "
+"la ŝlosilon dum ŝargo por aŭtomate malŝlosi tute ĉifritajn diskojn."
+
+msgid ""
+"x509 public key can be support only to appended signature with powerpc-"
+"ieee1275 images"
+msgstr ""
+"Publika ŝlosilo x509 povas esti subteno nur al alkroĉita subskribo kun "
+"diskokopioj powerpc-ieee1275"
+
+msgid "SBAT data can be added only to EFI or powerpc-ieee1275 images"
+msgstr ""
+"SBAT-datumoj povas esti aldonitaj nur al diskokopioj EFI aŭ powerpc-ieee1275"
+
+msgid "appended signature can be support only to powerpc-ieee1275 images"
+msgstr ""
+"alkroĉita subskribo povas esti subteno nur al diskokopioj powerpc-ieee1275"
+
+#, c-format
+msgid ""
+"GRUB_OS_PROBER_SKIP_LIST contains deprecated <UUID>@/dev/* notation. The @/"
+"dev/* suffix is ignored."
+msgstr ""
+"GRUB_OS_PROBER_SKIP_LIST enhavas la malnovan notacion <UUID>@/dev/*. La "
+"sufikso @/dev/* estas ignorata."
+
+#, fuzzy
+#~ msgid "Show the list of trusted X.509 certificates from the db list"
+#~ msgstr "Montri la liston da fidindaj ŝlosiloj."
+
+#, fuzzy
+#~ msgid "Specify path to find UKI entries."
+#~ msgstr "Specifi uzendan haketon."
+
+#, fuzzy, c-format
+#~ msgid "duplicate file: `%s'"
+#~ msgstr "Ne eblas krei dosieron: %s"
+
+#, fuzzy
+#~ msgid "overflow detected creating argv list"
+#~ msgstr "malkovris superfluon"
+
+#, fuzzy, c-format
+#~ msgid "variable '%s' isn't set"
+#~ msgstr "variablo '%s' ne estas valorizita"
+
+#, fuzzy
+#~ msgid "memory reading is disabled in lockdown mode"
+#~ msgstr "memoro uzata estas pli granda ol memoro okupata"
+
+#, fuzzy
+#~ msgid "List memory regions."
+#~ msgstr "Listigi liberajn memorblokojn."
+
+#, fuzzy
+#~ msgid "Only probe encrypted disks."
+#~ msgstr "Sondi nur EFI-diskojn."
+
+#, fuzzy, c-format
+#~ msgid "could not open file: %s"
+#~ msgstr "ne eblas malfermi ŝlosilan dosieron %s"
+
+#, fuzzy, c-format
+#~ msgid "could not read file size: %s"
+#~ msgstr "ne eblas legi na '%s': %s"
+
+#, fuzzy, c-format
+#~ msgid "could not allocate buffer for %s"
+#~ msgstr "ne eblas okupi komandan bufron"
+
+#, fuzzy, c-format
+#~ msgid "could not retrieve file contents: %s"
+#~ msgstr "ne eblas atingi bloklistojn: %s"
+
+#, fuzzy
+#~ msgid "malformed TPM wire key file"
+#~ msgstr "malsukcesis legi ŝlosilan dosieron"
+
+#, fuzzy
+#~ msgid "malformed TPM 2.0 key file"
+#~ msgstr "malsukcesis legi ŝlosilan dosieron"
+
+#, fuzzy
+#~ msgid "key file not specified"
+#~ msgstr "Menuero ne specifita."
+
+#, fuzzy
+#~ msgid "Unknown Mode"
+#~ msgstr "Nekonata kodo"
+
+#, fuzzy
+#~ msgid "Invalid passphrase."
+#~ msgstr "nevalida parametro"
+
+#, fuzzy, c-format
+#~ msgid "unrecognized option: %s"
+#~ msgstr "Ne rekonata opcio '%s'\\n"
+
+#, fuzzy
+#~ msgid "disk name expected"
+#~ msgstr "atendis dosiernomon"
+
+#, fuzzy, c-format
+#~ msgid "invalid disk: %s"
+#~ msgstr "nevalida reĝimo %s"
+
+#, fuzzy, c-format
+#~ msgid "unrecognized disk: %s"
+#~ msgstr "ne rekonata ŝlosila grando"
+
+#, fuzzy, c-format
+#~ msgid "no such disk: %s"
+#~ msgstr "ne eblas malfermi diskon: %s"
+
+#, fuzzy
+#~ msgid "invalid JFS inode"
+#~ msgstr "nevalida reĝimo %s"
+
+#, fuzzy
+#~ msgid "invalid directory slot index"
+#~ msgstr "nevalida ĉifro %s aŭ reĝimo %s"
+
+#, fuzzy
+#~ msgid "zstd file corrupted or unsupported block options"
+#~ msgstr "kz-dosiero korputita aŭ nesubtenata bloko-opcioj"
+
+#, fuzzy
+#~ msgid "bad shim loader signature"
+#~ msgstr "malbona SHIM-subskribo"
+
+#, fuzzy
+#~ msgid "DEV"
+#~ msgstr "APARATO"
+
+#, fuzzy
+#~ msgid "set TPM device."
+#~ msgstr "Listigi PCI-aparatojn."
+
+#, fuzzy, c-format
+#~ msgid "cannot open TPM device '%s': %s"
+#~ msgstr "ne eblas malfermi aparaton: %s"
+
+#, fuzzy, c-format
+#~ msgid "cannot close TPM device: %s"
+#~ msgstr "ne eblas malfermi aparaton: %s"
+
+#, fuzzy
+#~ msgid "invalid partition number"
+#~ msgstr "nevalida parametro"
+
+#, fuzzy, c-format
+#~ msgid "cannot cap PCR %u"
+#~ msgstr "ne eblas krei savkopion de '%s': %s"
+
+#, fuzzy
+#~ msgid "No device tree found"
+#~ msgstr "Nevalida aparato-arbo"
+
+#, fuzzy
+#~ msgid "failed to retrieve the prop field"
+#~ msgstr "malsukcesis atingi la kampon de la strukturo"
+
+#, fuzzy
+#~ msgid "[-p] [--set variable]"
+#~ msgstr "Agordi variablojn."
+
+#, fuzzy
+#~ msgid "Retrieve device tree information."
+#~ msgstr "Ricevi aparatinformojn."
+
+#, fuzzy
+#~ msgid "filename too long"
+#~ msgstr "ĉeno tro longas"
+
 #, c-format
 #~ msgid "GNU GRUB  version %s"
 #~ msgstr "GNU GRUB  versio %s"
 
-#, c-format
-#~ msgid "cannot rename the file %s to %s: %m"
-#~ msgstr "ne eblas alinomi la dosieron %s al %s: %m"
+#, fuzzy
+#~ msgid "embed FILE as an x509 certificate for appended signature checking"
+#~ msgstr "enkorpigi DOSIERON kiel publikan ŝlosilon por kontroli subskribojn"
 
-#, c-format
-#~ msgid "%s, with Linux %s (recovery mode)"
-#~ msgstr "%s, kun Linukso %s (riparreĝimo)"
+#, fuzzy, c-format
+#~ msgid "cannot open device %s: %s"
+#~ msgstr "ne eblas malfermi aparaton: %s"
 
-#, c-format
-#~ msgid "%s, with Linux %s"
-#~ msgstr "%s, kun Linukso %s"
+#, fuzzy, c-format
+#~ msgid "cannot probe fs for %s: %s"
+#~ msgstr "ne eblas restarigi savkopion '%s': %s"
+
+#, fuzzy, c-format
+#~ msgid "non-numeric or invalid appended signature size `%s'"
+#~ msgstr "nenombra aŭ nevalida ŝlosildosiera grando '%s'"
+
+#, fuzzy
+#~ msgid "embed FILE as public key for PGP signature checking"
+#~ msgstr "enkorpigi DOSIERON kiel publikan ŝlosilon por kontroli subskribojn"
+
+#, fuzzy
+#~ msgid "option requires an argument"
+#~ msgstr "%s: opcio '%s%s' postulas parametron\n"
+
+#, fuzzy, c-format
+#~ msgid "Could not open file: %s\n"
+#~ msgstr "ne eblas malfermi ŝlosilan dosieron %s"
+
+#, fuzzy, c-format
+#~ msgid "Could not seek file: %s\n"
+#~ msgstr "Ne eblas krei dosieron: %s"
+
+#, fuzzy, c-format
+#~ msgid "Could not allocate memory for file: %s\n"
+#~ msgstr "Ne eblas trovi FPSWA-pelilon"
+
+#, fuzzy, c-format
+#~ msgid "Could not read file: %s\n"
+#~ msgstr "Ne eblas krei dosieron: %s"
+
+#, fuzzy, c-format
+#~ msgid "Could not get TPM response.\n"
+#~ msgstr "nesubtenata HTTP-respondo"
+
+#, fuzzy, c-format
+#~ msgid "Could not open TPM device (%s).\n"
+#~ msgstr "ne eblas malfermi aparaton: %s"
+
+#, fuzzy, c-format
+#~ msgid "Could not close TPM device (%s).\n"
+#~ msgstr "Ne eblas trovi FPSWA-pelilon"
+
+#, fuzzy, c-format
+#~ msgid "Could not write key file (%s).\n"
+#~ msgstr "ne eblas malfermi ŝlosilan dosieron %s"
+
+#, fuzzy, c-format
+#~ msgid "--tpm2-keyfile must be specified.\n"
+#~ msgstr "elig-dosiero estu specifita"
+
+#, fuzzy, c-format
+#~ msgid "--tpm2-outfile or --tpm2-nvindex must be specified.\n"
+#~ msgstr "elig-dosiero estu specifita"
+
+#, fuzzy, c-format
+#~ msgid "'%s' is not a valid action.\n"
+#~ msgstr "'%s' ne estas  loka disko"
+
+#, fuzzy, c-format
+#~ msgid "--tpm2-outfile can only be specified once.\n"
+#~ msgstr "elig-dosiero estu specifita"
+
+#, fuzzy, c-format
+#~ msgid "Could not parse arguments.\n"
+#~ msgstr "%s: Tro da parametroj\n"
 
 #, c-format
 #~ msgid ""
@@ -7954,6 +8819,18 @@ msgstr ""
 #~ "os-proer plenumiĝos por detekti aliajn praŝargeblajn subdiskojn.\\nĜia "
 #~ "eligo uziĝos por detekti praŝargeblajn aplikaĵojn en tiuj kaj por krei "
 #~ "novajn praŝargilaj menueroj."
+
+#, c-format
+#~ msgid "cannot rename the file %s to %s: %m"
+#~ msgstr "ne eblas alinomi la dosieron %s al %s: %m"
+
+#, c-format
+#~ msgid "%s, with Linux %s (recovery mode)"
+#~ msgstr "%s, kun Linukso %s (riparreĝimo)"
+
+#, c-format
+#~ msgid "%s, with Linux %s"
+#~ msgstr "%s, kun Linukso %s"
 
 #~ msgid ""
 #~ "Welcome to GRUB!\n"
@@ -8020,10 +8897,6 @@ msgstr ""
 #~ msgid "(PROGRAM ERROR) No version known!?"
 #~ msgstr "(PROGRAMERARO) Ĉu neniu eldono konata!?"
 
-#, c-format
-#~ msgid "%s: Too many arguments\n"
-#~ msgstr "%s: Tro da parametroj\n"
-
 #~ msgid "(PROGRAM ERROR) Option should have been recognized!?"
 #~ msgstr "(PROGRAMERARO) Ĉu opcio devus esti rekonata!?"
 
@@ -8042,10 +8915,6 @@ msgstr ""
 #, c-format
 #~ msgid "%s: option '%s%s' doesn't allow an argument\n"
 #~ msgstr "%s: opcio '%s%s' ne permesas parametron\n"
-
-#, c-format
-#~ msgid "%s: option '%s%s' requires an argument\n"
-#~ msgstr "%s: opcio '%s%s' postulas parametron\n"
 
 #, c-format
 #~ msgid "%s: invalid option -- '%c'\n"

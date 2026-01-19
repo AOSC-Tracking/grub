@@ -7921,26 +7921,976 @@ msgstr ""
 msgid "Adding boot menu entry for UEFI Firmware Settings ...\\n"
 msgstr "Lägger till startmenypost för fast programvara UEFI...\\n"
 
-#~ msgid "SOURCE|-u UUID|-a|-b"
-#~ msgstr "KÄLLA|-u UUID|-a|-b"
+msgid "hash file of the binary."
+msgstr "hash-fil för binären."
 
-#~ msgid "Linux not supported yet"
-#~ msgstr "Linux stöds ej ännu"
+msgid "hash file of the certificate."
+msgstr "hash-fil för certifikatet."
 
-#~ msgid "interpret is not supported"
+msgid "<SIGNED_FILE>"
+msgstr "<SIGNERAD_FIL>"
+
+msgid ""
+"Verify SIGNED_FILE against the trusted X.509 certificates in the db list"
+msgstr ""
+"Verifiera SIGNERAD_FIL mot de betrodda X.509-certifikaten i databaslistan"
+
+msgid "<X509_CERTIFICATE>"
+msgstr "<X509-CERTIFIKAT>"
+
+msgid "Add trusted X509_CERTIFICATE to the db list"
+msgstr "Lägg till betrott X509-CERTIFIKAT till db-listan"
+
+msgid "Add distrusted X509_CERTIFICATE to the dbx list"
+msgstr "Lägg till opålitligt X509-CERTIFIKAT till dbx-listan"
+
+msgid ""
+"Show the list of distrusted certificates and certificate/binary hashes from "
+"the dbx list"
+msgstr ""
+"Visa listan över opålitliga certifikat och certifikat-/binärhashar från dbx-"
+"listan"
+
+msgid "BINARY HASH FILE"
+msgstr "BINÄR HASH-FIL"
+
+msgid "Add trusted BINARY HASH to the db list."
+msgstr "Lägg till betrodd BINÄR HASH till databaslistan."
+
+msgid ""
+"[-b|--binary-hash] FILE [BINARY HASH FILE]\n"
+"[-c|--cert-hash] FILE [CERTFICATE HASH FILE]"
+msgstr ""
+"[-b|--binary-hash] FIL [BINÄR HASH-FIL]\n"
+"[-c|--cert-hash] FIL [CERTIFIKAT-HASH-FIL]"
+
+msgid "Add distrusted CERTFICATE/BINARY HASH to the dbx list."
+msgstr "Lägg till opålitligt CERTIFIKAT/BINÄR HASH till dbx-listan."
+
+msgid "Allow the default UKI entry to be added to the GRUB menu."
+msgstr "Tillåt att UKI-standardposten läggs till i GRUB-menyn."
+
+msgid "Allow the non-default UKI entries to be added to the GRUB menu."
+msgstr "Tillåt att icke-standardiserade UKI-poster läggs till i GRUB-menyn."
+
+msgid "Allow specificUKII entries to be added to the GRUB menu."
+msgstr "Tillåt att specifika UKII-poster läggs till i GRUB-menyn."
+
+msgid ""
+"[-p|--path] [-f|--enable-fallback] DIR [-d|--show-default] [-n|--show-non-"
+"default] [-e|--entry] FILE"
+msgstr ""
+"[-p|--path] [-f|--enable-fallback] KAT [-d|--show-default] [-n|--show-non-"
+"default] [-e|--entry] FIL"
+
+msgid "Import Boot Loader Specification snippets."
+msgstr "Importera kodsnuttar för Boot Loader Specification."
+
+msgid ""
+"[-p|--path] DIR [-f|--enable-fallback] [-d|--show-default] [-n|--show-non-"
+"default] [-e|--entry] FILE"
+msgstr ""
+"[-p|--path] KAT [-f|--enable-fallback] [-d|--show-default] [-n|--show-non-"
+"default] [-e|--entry] FIL"
+
+msgid "Import Unified Kernel Images"
+msgstr "Importera Unified Kernel Images"
+
+msgid "memory reading is disabled in lockdown mode"
+msgstr "minnesläsning är inaktiverad i nedlåst läge"
+
+msgid "Only probe encrypted disks."
+msgstr "Undersök endast krypterade diskar."
+
+msgid "max recursion depth exceeded"
+msgstr "maximalt rekursionsdjup överskridet"
+
+msgid "empty entry in PCR list"
+msgstr "tom post i PCR-listan"
+
+#, c-format
+msgid "entry '%s' in PCR list is not a number"
+msgstr "posten '%s' i PCR-listan är inte ett tal"
+
+#, c-format
+msgid ""
+"entry %llu in PCR list is too large to be a PCR number, PCR numbers range "
+"from 0 to %u"
+msgstr ""
+"posten %llu i PCR-lista är för stor för att vara ett PCR-nummer, PCR-nummer "
+"går från 0 till %u"
+
+msgid "trailing comma at the end of PCR list"
+msgstr "eftersläpande komma i slutet av PCR-listan"
+
+#, c-format
+msgid "too many PCRs in PCR list, the maximum number of PCRs is %u"
+msgstr "för många PCR:er i PCR-lista, maximalt antal PCR:er är %u"
+
+#, c-format
+msgid "value '%s' is not a valid asymmetric key type"
+msgstr "värdet '%s' är inte en giltig asymmetrisk nyckeltyp"
+
+#, c-format
+msgid "value '%s' is not a valid PCR bank"
+msgstr "värdet '%s' är inte en giltig PCR-bank"
+
+#, c-format
+msgid "TPM handle value '%s' is not a number"
+msgstr "TPM-handtagsvärdet '%s' är inte ett tal"
+
+#, c-format
+msgid ""
+"value %llu is too large to be a TPM handle, TPM handles are unsigned 32-bit "
+"integers"
+msgstr ""
+"värdet %llu är för stort för att vara ett TPM-handtag, TPM-handtag är "
+"osignerade 32-bitars heltal"
+
+msgid ""
+"Unseal key using SRK ('srk') (default) or retrieve it from an NV Index "
+"('nv')."
+msgstr ""
+"Lås upp nyckeln med SRK ('srk') (standard) eller hämta den från ett NV-index "
+"('nv')."
+
+msgid ""
+"Comma-separated list of PCRs used to authorize key release e.g., '7,11'. "
+"(default: 7)"
+msgstr ""
+"Kommaseparerad lista över PCR:er som används för att auktorisera "
+"nyckelutgivning, t.ex. '7,11'. (standard: 7)"
+
+msgid ""
+"Bank of PCRs used to authorize key release: SHA1, SHA256, SHA384 or SHA512. "
+"(default: SHA256)"
+msgstr ""
+"Bank med PCRer som används för att auktorisera nyckelutgivning: SHA1, "
+"SHA256, SHA384 eller SHA512. (standard: SHA256)"
+
+msgid ""
+"Comma-separated list of PCRs to be capped after key release e.g., '7,11'."
+msgstr ""
+"Kommaseparerad lista över PCRer som ska begränsas efter nyckelutgivning, "
+"t.ex. '7,11'."
+
+msgid ""
+"In SRK mode, path to the key file in the TPM 2.0 Key File format to unseal "
+"using the TPM (e.g., (hd0,gpt1)/boot/grub2/sealed.tpm)."
+msgstr ""
+"I SRK-läge, sökvägen till nyckelfilen i TPM 2.0-nyckelfilformat som ska "
+"öppnas med TPM (t.ex. (hd0,gpt1)/boot/grub2/sealed.tpm)."
+
+msgid ""
+"In SRK mode, path to the key file in the raw format to unseal using the TPM "
+"(e.g., (hd0,gpt1)/boot/grub2/sealed.key). (Mainly for backward "
+"compatibility. Please use '--tpm2key'.)"
+msgstr ""
+"I SRK-läge, sökvägen till nyckelfilen i råformat som ska öppnas med TPM "
+"(t.ex. (hd0,gpt1)/boot/grub2/sealed.key). (Främst för bakåtkompatibilitet. "
+"Använd '--tpm2key'.)"
+
+msgid "In SRK mode, the SRK handle if the SRK is persistent."
+msgstr "I SRK-läge, SRK-handtaget om SRK är bestående."
+
+msgid ""
+"In SRK mode, the type of SRK: RSA (RSA2048) and ECC (ECC_NIST_P256)(default: "
+"ECC)"
+msgstr ""
+"I SRK-läge, typen av SRK: RSA (RSA2048) och ECC (ECC_NIST_P256) (standard: "
+"ECC)"
+
+msgid ""
+"Required in NV Index mode, the NV handle to read which must readily exist on "
+"the TPM and which contains the key."
+msgstr ""
+"Krävs i NV-indexläge, NV-handtaget att läsa måste finnas på TPM och "
+"innehålla nyckeln."
+
+#, c-format
+msgid "sealed key larger than %llu bytes"
+msgstr "förseglad nyckel större än %llu byte"
+
+msgid "no memory left to allocate unlock key buffer"
+msgstr "inget minne kvar för att allokera upplåsning för nyckelbuffert"
+
+msgid ""
+"cannot use TPM2 key protector without initializing it, call "
+"tpm2_protector_init first"
+msgstr ""
+"kan inte använda TPM2-nyckelskyddet utan att initialisera det, anropa först "
+"tpm2_protector_init"
+
+msgid "in SRK mode, a key file must be specified: --tpm2key/-T or --keyfile/-k"
+msgstr "i SRK-läge, måste en nyckelfil anges: --tpm2key/-T eller --keyfile/-k"
+
+msgid ""
+"in SRK mode, please specify a key file with only --tpm2key/-T or --keyfile/-k"
+msgstr ""
+"i SRK-läge, ange en nyckelfil med endast --tpm2key/-T eller --keyfile/-k"
+
+msgid "in SRK mode, an NV Index cannot be specified"
+msgstr "i SRK-läge, ett NV Index kan inte anges"
+
+msgid "in NV Index mode, an NV Index must be specified: --nvindex or -n"
+msgstr "i NV Index-läge, ett NV Index måste anges: --nvindex eller -n"
+
+msgid "a key file cannot be specified when using NV index mode"
+msgstr "en nyckelfil kan inte anges när NV Index-läget används"
+
+msgid ""
+"an SRK cannot be specified when using NV index mode with a persistent handle"
+msgstr ""
+"en SRK kan inte anges när NV-indexläget används med ett bestående handtag"
+
+msgid ""
+"an NV index must be either a persistent handle or an NV index handle when "
+"using NV index mode"
+msgstr ""
+"ett NV-index måste vara antingen ett bestående handtag eller ett NV-"
+"indexhandtag när NV-indexläget används"
+
+msgid "no memory to duplicate file path"
+msgstr "inget minne för att duplicera filsökväg"
+
+#, c-format
+msgid "value '%s' is not a valid TPM2 key protector mode"
+msgstr "värdet '%s' är inte ett giltigt TPM2-nyckelskyddsläge"
+
+msgid ""
+"the TPM2 key protector does not accept any non-option arguments (i.e., like "
+"-o and/or --option only)"
+msgstr ""
+"TPM2-nyckelskyddet accepterar inga icke-flaggargument (dvs. endast -o och/"
+"eller --option)"
+
+msgid "tpm2_key_protector_clear accepts no arguments"
+msgstr "tpm2_key_protector_clear accepterar inga argument"
+
+msgid ""
+"[-m mode] [-p pcr_list] [-b pcr_bank] [-c pcr_list] [-T tpm2_key_file_path] "
+"[-k sealed_key_file_path] [-s srk_handle] [-a asymmetric_key_type] [-n "
+"nv_index]"
+msgstr ""
+"[-m läge] [-p pcr_lista] [-b pcr_bank] [-c pcr_lista] [-T "
+"tpm2_nyckelfil_sökväg] [-k förseglad_nyckelfil_sökväg] [-s srk_handtag] [-a "
+"asymmetrisk_nyckeltyp] [-n nv_index]"
+
+msgid "Initialize the TPM2 key protector."
+msgstr "Initialisera TPM2-nyckelskyddet."
+
+msgid "Clear the TPM2 key protector if previously initialized."
+msgstr "Rensa TPM2-nyckelskyddet om det tidigare har initialiserats."
+
+msgid "Dump TPM2 PCRs"
+msgstr "Dumpa TPM2 PCR:er"
+
+msgid "Print all PCRs of the specified TPM 2.0 bank"
+msgstr "Skriv ut alla PCR:er för angiven TPM 2.0-bank"
+
+msgid "Unlock volume(s) using key protector(s)."
+msgstr "Lås upp volym(er) med hjälp av nyckelskydd."
+
+msgid "Enable hardware acceleration."
+msgstr "Aktivera hårdvaruacceleration."
+
+#, c-format
+msgid "no key protector provided a usable key for %s%s%s (%s)"
+msgstr "inget nyckelskydd tillhandahöll en användbar nyckel för %s%s%s (%s)"
+
+#, c-format
+msgid "Invalid cryptodisk_passphrase_tries value `%s'. Defaulting to %lu.\n"
+msgstr ""
+"Ogiltigt värde för cryptodisk_passphrase_tries `%s'. Faller tillbaka på "
+"%lu.\n"
+
+msgid ""
+"[ [-p password] | [-k keyfile [-O keyoffset] [-S keysize] ] ] [-H file] [-P "
+"protector [-P protector ...]] | [-A] <SOURCE|-u UUID|-a|-b>"
+msgstr ""
+"[-p lösenord] | [-k nyckelfil [-O nyckeloffset] [-S nyckelstorlek] ] ] [-H "
+"fil] [-P skydd [-P skydd ...]] | [-A] <KÄLLA|-u UUID|-a|-b>"
+
+msgid "[--quiet] DEVICE"
+msgstr "[--quiet] ENHET"
+
+msgid "Check if a logical volume resides on encrypted disks."
+msgstr "Kontrollerar om en logisk volym finns på krypterade diskar."
+
+msgid "overflow detected while obtaining size of device name"
+msgstr "överflöde upptäcktes vid hämtning av storlek på enhetsnamn"
+
+msgid "overflow detected while obtaining encoding size"
+msgstr "överflöde upptäcktes vid hämtning av kodningsstorlek"
+
+msgid "overflow detected while obtaining size of canonical name"
+msgstr "överflöde upptäcktes vid hämtning av storlek på kanoniskt namn"
+
+msgid "overflow detected while obtaining size of device path"
+msgstr "överflöde upptäcktes vid hämtning av storlek på enhetssökväg"
+
+msgid "overflow detected while obtaining size of an open path"
+msgstr "överflöde upptäcktes vid hämtning av storlek på en öppen sökväg"
+
+msgid "overflow detected while obtaining bootpath size"
+msgstr "överflöde upptäcktes vid hämtning av bootpath-storlek"
+
+msgid "overflow detected while allocating size of password buffer"
+msgstr "överflöde upptäcktes vid allokering av storlek på lösenordsbuffert"
+
+msgid "link target length overflow"
+msgstr "överflöde i länkmålets längd"
+
+msgid "directory item size overflow"
+msgstr "överflöde i katalogobjektets storlek"
+
+msgid "buffer size overflow"
+msgstr "överflöde i buffertstorlek"
+
+msgid "directory element size overflow"
+msgstr "överflöde i katalogelementets storlek"
+
+msgid "data size overflow"
+msgstr "överflöde i datastorlek"
+
+msgid "mtime overflow"
+msgstr "överflöde i mtime"
+
+msgid "mode overflow"
+msgstr "överflöde i mode"
+
+msgid "namesize overflow"
+msgstr "överflöde i namnstorlek"
+
+msgid "file name size overflow"
+msgstr "överflöde i filnamnets storlek"
+
+msgid "target data size overflow"
+msgstr "överflöde i måldatastorlek"
+
+msgid "symlink size overflow"
+msgstr "överflöde i symlink-storlek"
+
+msgid "directory entry name length overflow"
+msgstr "överflöde i längden på katalogpostens namn"
+
+msgid "compression buffer size overflow"
+msgstr "överflöde i komprimeringsbuffertens storlek"
+
+msgid "symlink name length overflow"
+msgstr "överflöde i symlink-namnlängd"
+
+msgid "name length overflow"
+msgstr "överflöde i namnlängd"
+
+msgid "name size overflow"
+msgstr "överflöde i namnstorlek"
+
+msgid "link size overflow"
+msgstr "överflöde i länkstorlek"
+
+msgid "long name size overflow"
+msgstr "överflöde i långt namn-storlek"
+
+msgid "directory data size overflow"
+msgstr "överflöde i katalogdatastorlek"
+
+msgid "path buffer size overflow"
+msgstr "överflöde i sökvägsbuffertens storlek"
+
+msgid "elemsize overflow"
+msgstr "överflöde i elemsize"
+
+msgid "Get property."
+msgstr "Hämta egenskap."
+
+msgid "prop"
+msgstr "egen"
+
+#, c-format
+msgid "use '%s %s' to force a system restart"
+msgstr "använd '%s %s' för att tvinga en systemomstart"
+
+msgid "tag length overflow"
+msgstr "överflöde i tagglängd"
+
+msgid "overflow detected while obatining size of ofdata path"
+msgstr "överflöde upptäcktes vid hämtning av storleken på ofdata-sökvägen"
+
+msgid "overflow detected while obtaining length of host"
+msgstr "överflöde upptäcktes vid hämtning av värdens längd"
+
+msgid "filename too long"
+msgstr "filnamnet är för långt"
+
+msgid "maximum recursion depth exceeded"
+msgstr "maximalt rekursionsdjup överskridet"
+
+msgid "disabled command line interface access"
+msgstr "inaktiverad åtkomst till kommandoradsgränssnitt"
+
+msgid "Add a note segment reserving SIZE bytes for an appended signature"
+msgstr ""
+"Lägg till ett anteckningssegment som reserverar STORLEK byte för en bifogad "
+"signatur"
+
+msgid "can't set env_block as it's read-only"
+msgstr "kan inte ställa in env_block eftersom den är skrivskyddad"
+
+msgid "zfs-bootfs ZFS_DATASET"
+msgstr "zfs-bootfs ZFS_DATASET"
+
+msgid "Compute ZFS dataset bootpath."
+msgstr "Beräkna uppstartssökvägen för ZFS-datauppsättning."
+
+#, c-format
+msgid "appended signature size `%s', and it should not be zero"
+msgstr "lade till signaturstorlek `%s', och den ska inte vara noll"
+
+msgid "disable command line interface access"
+msgstr "inaktivera åtkomst till kommandoradsgränssnitt"
+
+msgid "Add or remove a key protector to or from a key."
+msgstr "Lägg till eller ta bort ett nyckelskydd på en nyckel."
+
+msgid "Set key protector to use (only tpm2 is currently supported)."
+msgstr "Ställ in nyckelskydd att använda (endast tpm2 stöds för närvarande)."
+
+msgid "Set the path to the TPM2 device. (default: /dev/tpm0)"
+msgstr "Ställ in sökvägen till TPM2-enheten. (standard: /dev/tpm0)"
+
+msgid ""
+"Set a comma-separated list of PCRs used to authorize key release e.g., "
+"'7,11'. Please be aware that PCR 0~7 are used by the firmware and the "
+"measurement result may change after a firmware update (for baremetal "
+"systems) or a package (OVMF/SLOF) update in the VM host. This may lead to "
+"the failure of key unsealing. (default: 7)"
+msgstr ""
+"Ange en kommaseparerad lista över PCR:er som används för att auktorisera "
+"nyckelutgivning, t.ex. '7,11'. Observera att PCR 0~7 används av fasta "
+"programvaran och att mätresultatet kan ändras efter en uppdatering av den "
+"fasta programvaran (för baremetal-system) eller en paketuppdatering (OVMF/"
+"SLOF) i VM-värden. Detta kan leda till att nyckelutgivningen misslyckas. "
+"(standard: 7)"
+
+msgid ""
+"Set the bank of PCRs used to authorize key release: SHA1, SHA256, SHA384, or "
+"SHA512. (default: SHA256)"
+msgstr ""
+"Ställ in den PCR-bank som används för att auktorisera nyckelutgivning: SHA1, "
+"SHA256, SHA384 eller SHA512. (standard: SHA256)"
+
+msgid "Set the path to a file that contains the cleartext key to protect."
+msgstr ""
+"Ange sökvägen till en fil som innehåller den klartextnyckel som ska skyddas."
+
+msgid ""
+"Set the path to the file that will contain the key after sealing (must be "
+"accessible to GRUB during boot)."
+msgstr ""
+"Ange sökvägen till filen som kommer att innehålla nyckeln efter förseglingen "
+"(måste vara tillgänglig för GRUB under uppstarten)."
+
+msgid "Set the SRK handle if the SRK is to be made persistent."
+msgstr "Ställ in SRK-handtaget om SRK ska göras bestående."
+
+msgid ""
+"Set the type of SRK: RSA (RSA2048) and ECC (ECC_NIST_P256).(default: ECC)"
+msgstr ""
+"Ställ in typen av SRK: RSA (RSA2048) och ECC (ECC_NIST_P256). (standard: ECC)"
+
+msgid "Evict a previously persisted SRK from the TPM, if any."
+msgstr "Avlägsna en tidigare bestående SRK från TPM, om sådan finns."
+
+msgid "Use TPM 2.0 Key File format."
+msgstr "Använd TPM 2.0-nyckelfilformat."
+
+msgid "Store the sealed key in a persistent or NV index handle."
+msgstr "Lagra den förseglade nyckeln i ett bestående eller NV-indexhandtag."
+
+#, c-format
+msgid "Could not send TPM command.\n"
+msgstr "Kunde inte skicka TPM-kommando.\n"
+
+#, c-format
+msgid "Could not read all the specified PCRs.\n"
+msgstr "Det gick inte att läsa alla angivna PCR:er.\n"
+
+#, c-format
+msgid "PCR concatenation buffer not big enough.\n"
+msgstr "PCR-konkateneringsbuffert inte tillräckligt stor.\n"
+
+#, c-format
+msgid "Bad PCR value size: expected %llu bytes but got %u bytes.\n"
+msgstr "Felaktig PCR-värdestorlek: förväntade %llu byte men fick %u byte.\n"
+
+#, c-format
+msgid "Could not allocate memory for the raw format key.\n"
+msgstr "Det gick inte att allokera minne för nyckeln för råformatet.\n"
+
+#, c-format
+msgid "Invalid tpm2key size for TPM NV buffer\n"
+msgstr "Ogiltig storlek för tpm2key för TPM NV-buffert\n"
+
+#, c-format
+msgid "Input key size larger than %u bytes.\n"
+msgstr "Storlek för inmatningsnyckel större än %u byte.\n"
+
+#, c-format
+msgid "Could not export to TPM 2.0 Key File format\n"
+msgstr "Kunde inte exportera till TPM 2.0-nyckelfilformat\n"
+
+#, c-format
+msgid "Could not export to the raw format\n"
+msgstr "Kunde inte exportera till råformatet\n"
+
+#, c-format
+msgid "--tpm2-evict is invalid when --action is 'add'.\n"
+msgstr "--tpm2-evict är ogiltig när --action är 'add'.\n"
+
+#, c-format
+msgid "Persistent handle does not support TPM 2.0 Key File format.\n"
+msgstr "Bestående handtag saknar stöd för TPM 2.0-nyckelfilformat.\n"
+
+#, c-format
+msgid "--tpm2-nvindex must be a persistent or NV index handle.\n"
+msgstr "--tpm2-nvindex måste vara ett bestående eller NV-indexhandtag.\n"
+
+#, c-format
+msgid "--tpm2-nvindex and --tpm2-srk must be different.\n"
+msgstr "--tpm2-nvindex och --tpm2-srk måste vara olika.\n"
+
+#, c-format
+msgid "--tpm2-srk must be a persistent handle, e.g. 0x81000000.\n"
+msgstr "--tpm2-srk måste vara ett bestående handtag, t.ex. 0x81000000.\n"
+
+#, c-format
+msgid "--tpm2-asymmetric is invalid when --action is 'remove'.\n"
+msgstr "--tpm2-asymmetric är ogiltig när --action är 'remove'.\n"
+
+#, c-format
+msgid "--tpm2-bank is invalid when --action is 'remove'.\n"
+msgstr "--tpm2-bank är ogiltig när --action är 'remove'.\n"
+
+#, c-format
+msgid "--tpm2-keyfile is invalid when --action is 'remove'.\n"
+msgstr "--tpm2-keyfile är ogiltig när --action är 'remove'.\n"
+
+#, c-format
+msgid "--tpm2-outfile is invalid when --action is 'remove'.\n"
+msgstr "--tpm2-outfile är ogiltig när --action är 'remove'.\n"
+
+#, c-format
+msgid "--tpm2-pcrs is invalid when --action is 'remove'.\n"
+msgstr "--tpm2-pcrs är ogiltig när --action är 'remove'.\n"
+
+#, c-format
+msgid "missing --tpm2-srk or --tpm2-nvindex for --action 'remove'.\n"
+msgstr "saknar --tpm2-srk eller --tpm2-nvindex för --action 'remove'.\n"
+
+#, c-format
+msgid ""
+"The TPM2 key protector only supports the following actions: add, remove.\n"
+msgstr ""
+"TPM2-nyckelskyddet har endast stöd för följande åtgärder: add, remove.\n"
+
+#, c-format
+msgid "--action|-a can only be specified once.\n"
+msgstr "--action|-a kan endast anges en gång.\n"
+
+#, c-format
+msgid "--protector|-p can only be specified once.\n"
+msgstr "--protector|-p kan endast anges en gång.\n"
+
+#, c-format
+msgid "'%s' is not a valid protector.\n"
+msgstr "'%s' är inte en giltig skyddsfunktion.\n"
+
+#, c-format
+msgid "--tpm2-device can only be specified once.\n"
+msgstr "--tpm2-device kan endast anges en gång.\n"
+
+#, c-format
+msgid "--tpm2-pcrs can only be specified once.\n"
+msgstr "--tpm2-pcrs kan endast anges en gång.\n"
+
+#, c-format
+msgid "--tpm2-srk can only be specified once.\n"
+msgstr "--tpm2-srk kan endast anges en gång.\n"
+
+#, c-format
+msgid "--tpm2-asymmetric can only be specified once.\n"
+msgstr "--tpm2-asymmetric kan endast anges en gång.\n"
+
+#, c-format
+msgid "--tpm2-bank can only be specified once.\n"
+msgstr "--tpm2-bank kan endast anges en gång.\n"
+
+#, c-format
+msgid "--tpm2-keyfile can only be specified once.\n"
+msgstr "--tpm2-keyfile kan endast anges en gång.\n"
+
+#, c-format
+msgid "--tpm2-evict can only be specified once.\n"
+msgstr "--tpm2-evict kan endast anges en gång.\n"
+
+#, c-format
+msgid "--tpm2-tpm2key can only be specified once.\n"
+msgstr "--tpm2-tpm2key kan endast anges en gång.\n"
+
+#, c-format
+msgid "--tpm2-nvindex can only be specified once.\n"
+msgstr "--tpm2-nvindex kan endast anges en gång.\n"
+
+#, c-format
+msgid "--action is mandatory.\n"
+msgstr "--action är obligatorisk.\n"
+
+#, c-format
+msgid "--protector is mandatory and only 'tpm2' is currently supported.\n"
+msgstr "--protector är obligatoriskt och endast 'tpm2' stöds för närvarande.\n"
+
+msgid ""
+"Protect a cleartext key using a GRUB key protector that can retrieve the key "
+"during boot to unlock fully-encrypted disks automatically."
+msgstr ""
+"Skydda en klartextnyckel med hjälp av ett GRUB-nyckelskydd som kan hämta "
+"nyckeln under uppstarten för att automatiskt låsa upp helt krypterade diskar."
+
+msgid ""
+"x509 public key can be support only to appended signature with powerpc-"
+"ieee1275 images"
+msgstr ""
+"publik x509-nyckel kan ges stöd endast för signaturer som bifogats med "
+"powerpc-ieee1275-avbilder"
+
+msgid "SBAT data can be added only to EFI or powerpc-ieee1275 images"
+msgstr "SBAT-data kan endast läggas till EFI- eller powerpc-ieee1275-avbilder"
+
+msgid "appended signature can be support only to powerpc-ieee1275 images"
+msgstr "bifogad signatur kan endast stödja powerpc-ieee1275-avbilder"
+
+#, c-format
+msgid ""
+"GRUB_OS_PROBER_SKIP_LIST contains deprecated <UUID>@/dev/* notation. The @/"
+"dev/* suffix is ignored."
+msgstr ""
+"GRUB_OS_PROBER_SKIP_LIST innehåller föråldrad notation <UUID>@/dev/*. "
+"Suffixet @/dev/* ignoreras."
+
+msgid "EFI variables are not supported on this system."
+msgstr "EFI-variabler stöds inte på det här systemet."
+
+msgid "Cannot read EFI Boot* variables"
+msgstr "Kan inte läsa EFI Boot*-variabler"
+
+msgid "GRUB was not built with efivar support; cannot register EFI boot entry"
+msgstr ""
+"GRUB byggdes inte med efivar-stöd; kan inte registrera EFI-uppstartspost"
+
+msgid ""
+"install an image usable with UEFI Secure Boot. This option is only available "
+"on EFI and if the grub-efi-amd64-signed package is installed."
+msgstr ""
+"installera en avbild som kan användas med UEFI Secure Boot. Alternativet är "
+"bara tillgängligt för EFI, och om paketet grub-efi-amd64-signed är "
+"installerat."
+
+msgid ""
+"do not install an image usable with UEFI Secure Boot, even if the system was "
+"currently started using it. This option is only available on EFI."
+msgstr ""
+"installera inte en avbild som kan användas med UEFI Secure Boot även om "
+"systemet för närvarande började använda det. Det här valet är endast "
+"tillgängligt för EFI."
+
+msgid "efi_suffix not set"
+msgstr "efi_suffix inte satt"
+
+msgid "efi_suffix_upper not set"
+msgstr "efi_suffix_upper är inte inställt"
+
+#, c-format
+msgid "couldn't configure http protocol, reason: %d"
+msgstr "kunde inte konfigurera http-protokoll, orsak: %d"
+
+#, c-format
+msgid "unsupported uefi http status code 0x%x"
+msgstr "uefi http-statuskod som inte stöds: 0x%x"
+
+msgid "Set Address Failed"
+msgstr "Ange adress misslyckades"
+
+msgid "couldn't open efi service binding protocol"
+msgstr "kunde inte öppna protokollet för efi-tjänstbindning"
+
+msgid "Welcome to lua, press the escape key to exit."
+msgstr "Välkommen till lua, tryck escape-tangenten för att avsluta."
+
+msgid "Run lua script FILE or start interactive lua shell"
+msgstr "Kör skript-filen för lua eller starta ett interaktivt lua-skal"
+
+msgid "MATCHES-FILE CLASS"
+msgstr "MOTSVARAR-FILENS KLASS"
+
+msgid ""
+"[-m mode] [-p pcr_list] [-b pcr_bank] [-T tpm2_key_file_path] [-k "
+"sealed_key_file_path] [-s srk_handle] [-a asymmetric_key_type] [-n nv_index]"
+msgstr ""
+"[-m läge] [-p pcr_list] [-b pcr_bank] [-T tpm2_key_file_path] [-k "
+"sealed_key_file_path] [-s srk_handle] [-a asymmetric_key_type] [-n nv_index]"
+
+#, c-format
+msgid ""
+"Usage: %s [OPTION]...\n"
+"\n"
+"Generate a device map file automatically.\n"
+"\n"
+"  -n, --no-floppy           do not probe any floppy drive\n"
+"  -s, --probe-second-floppy probe the second floppy drive\n"
+"  -m, --device-map=FILE     use FILE as the device map [default=%s]\n"
+"  -h, --help                display this message and exit\n"
+"  -V, --version             print version information and exit\n"
+"  -v, --verbose             print verbose messages\n"
+"\n"
+"Report bugs to <%s>.\n"
+msgstr ""
+"Användningsområde: %s [ALTERNATIV]...\n"
+"\n"
+"Generera en kartfil för enheten automatiskt.\n"
+"\n"
+"  -n,--no-floppy sondera inte någon diskettstation\n"
+"  -s,--probe-second-floppy sondera den andra diskettstationen\n"
+"  -m,--device-map=FIL använd FIL som en enhetskarta [standard=%s]\n"
+"  -h,--help visa det här meddelandet och avsluta\n"
+"  -V,--version skriv ut information om versionen och avsluta\n"
+"  -v,--verbose skriv ut detaljerade meddelanden\n"
+"\n"
+"Rapportera buggar till <%s>.\n"
+
+#, fuzzy
+#~ msgid "Show the list of trusted X.509 certificates from the db list"
+#~ msgstr "Visa listan över pålitliga nycklar."
+
+#, fuzzy
+#~ msgid "Specify path to find UKI entries."
+#~ msgstr "Ange hash att använda."
+
+#, fuzzy, c-format
+#~ msgid "duplicate file: `%s'"
+#~ msgstr "Kunde inte skapa filen: %s"
+
+#, fuzzy
+#~ msgid "overflow detected creating argv list"
+#~ msgstr "stackspill upptäcktes"
+
+#, fuzzy, c-format
+#~ msgid "variable '%s' isn't set"
+#~ msgstr "variabeln ”%s” är inte inställd"
+
+#, fuzzy
+#~ msgid "RDMSR is unsupported"
 #~ msgstr "interpret stöds ej"
+
+#, fuzzy
+#~ msgid "WRMSR is unsupported"
+#~ msgstr "interpret stöds ej"
+
+#, fuzzy
+#~ msgid "List memory regions."
+#~ msgstr "Lista enheter eller filer."
+
+#, fuzzy, c-format
+#~ msgid "could not open file: %s"
+#~ msgstr "kan inte öppna OS-filen ”%s”: %s"
+
+#, fuzzy, c-format
+#~ msgid "could not read file size: %s"
+#~ msgstr "kan inte läsa ”%s”: %s"
+
+#, fuzzy, c-format
+#~ msgid "could not allocate buffer for %s"
+#~ msgstr "det går inte att allokera kommandobuffert"
+
+#, fuzzy, c-format
+#~ msgid "could not retrieve file contents: %s"
+#~ msgstr "kan inte hämta blocklistor: %s"
+
+#, fuzzy
+#~ msgid "malformed TPM wire key file"
+#~ msgstr "misslyckades med att erhålla FDT"
+
+#, fuzzy
+#~ msgid "malformed TPM 2.0 key file"
+#~ msgstr "misslyckades med att erhålla FDT"
+
+#, fuzzy
+#~ msgid "key file not specified"
+#~ msgstr "Menypost inte angiven."
+
+#, fuzzy
+#~ msgid "Unknown Mode"
+#~ msgstr "Okänd teckenkodning"
+
+#, fuzzy
+#~ msgid "Invalid passphrase."
+#~ msgstr "Ogiltig parameter"
+
+#, fuzzy, c-format
+#~ msgid "unrecognized option: %s"
+#~ msgstr "Okänd flagga ”%s”\\n"
+
+#, fuzzy
+#~ msgid "disk name expected"
+#~ msgstr "filnamn förväntades"
+
+#, fuzzy, c-format
+#~ msgid "invalid disk: %s"
+#~ msgstr "ogiltig modinfofil ”%s”"
+
+#, fuzzy, c-format
+#~ msgid "unrecognized disk: %s"
+#~ msgstr "okänt nummer"
+
+#, fuzzy, c-format
+#~ msgid "no such disk: %s"
+#~ msgstr "kan inte öppna ”%s”: %s"
+
+#, fuzzy
+#~ msgid "invalid JFS inode"
+#~ msgstr "ogiltig modinfofil ”%s”"
+
+#, fuzzy
+#~ msgid "invalid directory slot index"
+#~ msgstr "ogiltigt radformat: %s"
+
+#, fuzzy
+#~ msgid "zstd file corrupted or unsupported block options"
+#~ msgstr "xzfil korrupt eller har blockalternativ som inte stöds"
+
+#, fuzzy
+#~ msgid "bad shim loader signature"
+#~ msgstr "dålig shim-signatur"
+
+#, fuzzy
+#~ msgid "DEV"
+#~ msgstr "ENHET"
+
+#, fuzzy
+#~ msgid "set TPM device."
+#~ msgstr "Lista PCI-enheter."
+
+#, fuzzy, c-format
+#~ msgid "cannot open TPM device '%s': %s"
+#~ msgstr "kan inte öppna ”%s”: %s"
+
+#, fuzzy, c-format
+#~ msgid "cannot close TPM device: %s"
+#~ msgstr "kan inte öppna ”%s”: %s"
+
+#, fuzzy
+#~ msgid "invalid partition number"
+#~ msgstr "Ogiltig parameter"
+
+#, fuzzy, c-format
+#~ msgid "cannot cap PCR %u"
+#~ msgstr "kan inte läsa ”%s”: %s"
+
+#, fuzzy
+#~ msgid "No device tree found"
+#~ msgstr "ogiltigt enhetsträd"
+
+#, fuzzy
+#~ msgid "failed to retrieve the prop field"
+#~ msgstr "misslyckades med att läsa strukturfältet"
+
+#, fuzzy
+#~ msgid "[-p] [--set variable]"
+#~ msgstr "Ställ in variabler."
+
+#, fuzzy
+#~ msgid "Retrieve device tree information."
+#~ msgstr "Hämta enhetsinfo."
 
 #, c-format
 #~ msgid "GNU GRUB  version %s"
 #~ msgstr "GNU GRUB  version %s"
 
-#, c-format
-#~ msgid "%s, with Linux %s (recovery mode)"
-#~ msgstr "%s, med Linux %s (återställningsläge)"
+#, fuzzy
+#~ msgid "embed FILE as an x509 certificate for appended signature checking"
+#~ msgstr "bädda in FIL som öppen nyckel för signaturkontroll"
 
-#, c-format
-#~ msgid "%s, with Linux %s"
-#~ msgstr "%s, med Linux %s"
+#, fuzzy, c-format
+#~ msgid "cannot open device %s: %s"
+#~ msgstr "kan inte öppna ”%s”: %s"
+
+#, fuzzy, c-format
+#~ msgid "cannot probe fs for %s: %s"
+#~ msgstr "kan inte skriva till ”%s”: %s"
+
+#, fuzzy, c-format
+#~ msgid "non-numeric or invalid appended signature size `%s'"
+#~ msgstr "ogiltigt filnamn ”%s”"
+
+#, fuzzy
+#~ msgid "embed FILE as public key for PGP signature checking"
+#~ msgstr "bädda in FIL som öppen nyckel för signaturkontroll"
+
+#, fuzzy
+#~ msgid "option requires an argument"
+#~ msgstr "%s: flaggan ”%s%s” kräver ett argument\n"
+
+#, fuzzy, c-format
+#~ msgid "Could not open file: %s\n"
+#~ msgstr "kan inte öppna OS-filen ”%s”: %s"
+
+#, fuzzy, c-format
+#~ msgid "Could not seek file: %s\n"
+#~ msgstr "Kunde inte skapa filen: %s"
+
+#, fuzzy, c-format
+#~ msgid "Could not allocate memory for file: %s\n"
+#~ msgstr "Kunde inte hitta FPSWA-drivrutin"
+
+#, fuzzy, c-format
+#~ msgid "Could not read file: %s\n"
+#~ msgstr "Kunde inte skapa filen: %s"
+
+#, fuzzy, c-format
+#~ msgid "Could not get TPM response.\n"
+#~ msgstr "HTTP-svaret stöds ej"
+
+#, fuzzy, c-format
+#~ msgid "Could not open TPM device (%s).\n"
+#~ msgstr "kan inte öppna ”%s”: %s"
+
+#, fuzzy, c-format
+#~ msgid "Could not close TPM device (%s).\n"
+#~ msgstr "Kunde inte hitta FPSWA-drivrutin"
+
+#, fuzzy, c-format
+#~ msgid "Could not write key file (%s).\n"
+#~ msgstr "kan inte öppna OS-filen ”%s”: %s"
+
+#, fuzzy, c-format
+#~ msgid "--tpm2-keyfile must be specified.\n"
+#~ msgstr "utmatningsfil måste anges"
+
+#, fuzzy, c-format
+#~ msgid "--tpm2-outfile or --tpm2-nvindex must be specified.\n"
+#~ msgstr "utmatningsfil måste anges"
+
+#, fuzzy, c-format
+#~ msgid "'%s' is not a valid action.\n"
+#~ msgstr "”%s” är inte en lokal disk"
+
+#, fuzzy, c-format
+#~ msgid "--tpm2-outfile can only be specified once.\n"
+#~ msgstr "utmatningsfil måste anges"
+
+#, fuzzy, c-format
+#~ msgid "Could not parse arguments.\n"
+#~ msgstr "%s: För många argument\n"
 
 #, c-format
 #~ msgid ""
@@ -7961,6 +8911,76 @@ msgstr "Lägger till startmenypost för fast programvara UEFI...\\n"
 #~ "os-prober kommer att köras för att identifiera startbara partitioner."
 #~ "\\nDess utdata kommer att användas för att identifiera startbara binärer "
 #~ "och skapa nya startposter."
+
+#, fuzzy, c-format
+#~ msgid ""
+#~ "`nvram' failed. \n"
+#~ "You will have to set `boot-device' variable manually.  At the IEEE1275 "
+#~ "prompt, type:\n"
+#~ "  %s\n"
+#~ msgstr ""
+#~ "”nvsetenv” misslyckades. \n"
+#~ "Du behöver sätta ”boot-device”-variabeln manuellt.  Vid IEEE1275 "
+#~ "prompten, skriv:\n"
+#~ "  %s\n"
+
+#, fuzzy, c-format
+#~ msgid "Cannot set EFI variable %s"
+#~ msgstr "Ställ in variabler."
+
+#, fuzzy, c-format
+#~ msgid "Cannot delete EFI variable %s"
+#~ msgstr "Ta bort variabler."
+
+#, fuzzy, c-format
+#~ msgid "failed to register the EFI boot entry: %s"
+#~ msgstr "efibootmgr misslyckades med att registrera uppstartsposten: %s"
+
+#, fuzzy
+#~ msgid "DHCPv6 packet size too small"
+#~ msgstr "storleken på ”%s” är för liten"
+
+#, fuzzy
+#~ msgid "perform a DHCPv6 autoconfiguration"
+#~ msgstr "genomför en DHCP-autokonfiguration"
+
+#, fuzzy
+#~ msgid "Failed to create child device of http service 0x%"
+#~ msgstr "Misslyckades med att skapa ”device-mapper”-träd"
+
+#, fuzzy, c-format
+#~ msgid "disk `%s' no route found"
+#~ msgstr "disken ”%s” hittades inte"
+
+#, fuzzy
+#~ msgid "[FILE]"
+#~ msgstr "[-f FIL]"
+
+#, fuzzy
+#~ msgid "Match PCI devices."
+#~ msgstr "Lista PCI-enheter."
+
+#, fuzzy, c-format
+#~ msgid "cannot open %s"
+#~ msgstr "kan inte öppna ”%s”: %s"
+
+#, fuzzy, c-format
+#~ msgid "Try `%s --help' for more information.\n"
+#~ msgstr "Prova ”%s --help” eller ”%s --usage” för mer information.\n"
+
+#~ msgid "SOURCE|-u UUID|-a|-b"
+#~ msgstr "KÄLLA|-u UUID|-a|-b"
+
+#~ msgid "Linux not supported yet"
+#~ msgstr "Linux stöds ej ännu"
+
+#, c-format
+#~ msgid "%s, with Linux %s (recovery mode)"
+#~ msgstr "%s, med Linux %s (återställningsläge)"
+
+#, c-format
+#~ msgid "%s, with Linux %s"
+#~ msgstr "%s, med Linux %s"
 
 #~ msgid "Slot \"%"
 #~ msgstr "Plats \"%"
@@ -8002,9 +9022,6 @@ msgstr "Lägger till startmenypost för fast programvara UEFI...\\n"
 #~ msgid " [OPTION...]"
 #~ msgstr " [FLAGGA…]"
 
-#~ msgid "Try '%s --help' or '%s --usage' for more information.\n"
-#~ msgstr "Prova ”%s --help” eller ”%s --usage” för mer information.\n"
-
 #~ msgid "Report bugs to %s.\n"
 #~ msgstr ""
 #~ "Rapportera fel till %s.\n"
@@ -8031,9 +9048,6 @@ msgstr "Lägger till startmenypost för fast programvara UEFI...\\n"
 #~ msgid "(PROGRAM ERROR) No version known!?"
 #~ msgstr "(PROGRAMFEL) Ingen version!?"
 
-#~ msgid "%s: Too many arguments\n"
-#~ msgstr "%s: För många argument\n"
-
 #~ msgid "(PROGRAM ERROR) Option should have been recognized!?"
 #~ msgstr "(PROGRAMFEL) Flaggan borde ha känts igen!?"
 
@@ -8048,9 +9062,6 @@ msgstr "Lägger till startmenypost för fast programvara UEFI...\\n"
 
 #~ msgid "%s: option '%s%s' doesn't allow an argument\n"
 #~ msgstr "%s: flaggan ”%s%s” tillåter inte argument\n"
-
-#~ msgid "%s: option '%s%s' requires an argument\n"
-#~ msgstr "%s: flaggan ”%s%s” kräver ett argument\n"
 
 #~ msgid "%s: invalid option -- '%c'\n"
 #~ msgstr "%s: ogiltig flagga -- ”%c”\n"

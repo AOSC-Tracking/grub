@@ -7718,9 +7718,238 @@ msgstr ""
 msgid "Adding boot menu entry for UEFI Firmware Settings ...\\n"
 msgstr ""
 
+msgid ""
+"[-p|--path] [-f|--enable-fallback] DIR [-d|--show-default] [-n|--show-non-"
+"default] [-e|--entry] FILE"
+msgstr ""
+"[-p|--path] [-f|--enable-fallback] სქღლდ [-d|--show-default] [-n|--show-non-"
+"default] [-e|--entry] ფაილი"
+
+msgid ""
+"[-p|--path] DIR [-f|--enable-fallback] [-d|--show-default] [-n|--show-non-"
+"default] [-e|--entry] FILE"
+msgstr ""
+"[-p|--path] სქღლდ [-f|--enable-fallback] [-d|--show-default] [-n|--show-non-"
+"default] [-e|--entry] ფაილი"
+
+msgid "[--quiet] DEVICE"
+msgstr "[--quiet] მოწყობილობა"
+
+#, fuzzy
+#~ msgid "Show the list of trusted X.509 certificates from the db list"
+#~ msgstr "სანდო გასაღებების სიის ჩვენება."
+
+#, fuzzy
+#~ msgid "Specify path to find UKI entries."
+#~ msgstr "მიუთითეთ გამოსაყენებელი ჰეში."
+
+#, fuzzy, c-format
+#~ msgid "duplicate file: `%s'"
+#~ msgstr "ფაილის შექმნა შეუძლებელია: %s"
+
+#, fuzzy
+#~ msgid "overflow detected creating argv list"
+#~ msgstr "ნაპოვნია გადავსება"
+
+#, fuzzy, c-format
+#~ msgid "variable '%s' isn't set"
+#~ msgstr "გარემოს ცვლადი დაყენებული არაა: %s"
+
+#, fuzzy
+#~ msgid "RDMSR is unsupported"
+#~ msgstr "ინტერპრეტირება მხარდაუჭერელია"
+
+#, fuzzy
+#~ msgid "WRMSR is unsupported"
+#~ msgstr "ინტერპრეტირება მხარდაუჭერელია"
+
+#, fuzzy
+#~ msgid "List memory regions."
+#~ msgstr "თავისუფალი მეხსიერების ბლოკების სია."
+
+#, fuzzy
+#~ msgid "Only probe encrypted disks."
+#~ msgstr "მხოლოდ EFI დისკების ძებნა."
+
+#, fuzzy, c-format
+#~ msgid "could not open file: %s"
+#~ msgstr "გასაღების ფაილის %s გახსნა შეუძლებელია"
+
+#, fuzzy, c-format
+#~ msgid "could not read file size: %s"
+#~ msgstr "%s-დან წაკითხვის შეცდომა: %s"
+
+#, fuzzy, c-format
+#~ msgid "could not allocate buffer for %s"
+#~ msgstr "ბრძანების ბუფერის გამოყოფის შეცდომა"
+
+#, fuzzy, c-format
+#~ msgid "could not retrieve file contents: %s"
+#~ msgstr "ბლოკების სიის მიღების შეცდომა: %s"
+
+#, fuzzy
+#~ msgid "malformed TPM wire key file"
+#~ msgstr "გასაღების ფაილის წაკითხვა ჩავარდა"
+
+#, fuzzy
+#~ msgid "malformed TPM 2.0 key file"
+#~ msgstr "გასაღების ფაილის წაკითხვა ჩავარდა"
+
+#, fuzzy
+#~ msgid "key file not specified"
+#~ msgstr "მენიუს პუნქტი მითითებული არაა."
+
+#, fuzzy
+#~ msgid "Unknown Mode"
+#~ msgstr "უცნობი კოდირება"
+
+#, fuzzy
+#~ msgid "Invalid passphrase."
+#~ msgstr "არასწორი პარამეტრი"
+
+#, fuzzy, c-format
+#~ msgid "unrecognized option: %s"
+#~ msgstr "უცნობი პარამეტრი: %s\\n"
+
+#, fuzzy
+#~ msgid "disk name expected"
+#~ msgstr "მოველოდით ფაილის სახელს"
+
+#, fuzzy, c-format
+#~ msgid "invalid disk: %s"
+#~ msgstr "არასწორი რეჟიმი: %s"
+
+#, fuzzy, c-format
+#~ msgid "unrecognized disk: %s"
+#~ msgstr "უცნობი გასაღების ზომა"
+
+#, fuzzy, c-format
+#~ msgid "no such disk: %s"
+#~ msgstr "დისკის გახსნის შეცდომა: %s"
+
+#, fuzzy
+#~ msgid "invalid JFS inode"
+#~ msgstr "არასწორი რეჟიმი: %s"
+
+#, fuzzy
+#~ msgid "invalid directory slot index"
+#~ msgstr "არასწორი შიფრი %s ან რეჟიმი %s"
+
+#, fuzzy
+#~ msgid "zstd file corrupted or unsupported block options"
+#~ msgstr "xz ფაილის დაზიანებული ან მხარდაუჭერელი ბლოკის პარამეტრებ"
+
+#, fuzzy
+#~ msgid "bad shim loader signature"
+#~ msgstr "shim-ის არასწორი ხელმოწერა"
+
+#, fuzzy
+#~ msgid "DEV"
+#~ msgstr "მოწყობილობა"
+
+#, fuzzy
+#~ msgid "set TPM device."
+#~ msgstr "PCI მოწყობილობების სია."
+
+#, fuzzy, c-format
+#~ msgid "cannot open TPM device '%s': %s"
+#~ msgstr "მოწყობილობის გახსნის შეცდომა: '%s'"
+
+#, fuzzy, c-format
+#~ msgid "cannot close TPM device: %s"
+#~ msgstr "მოწყობილობის გახსნის შეცდომა: '%s'"
+
+#, fuzzy
+#~ msgid "invalid partition number"
+#~ msgstr "არასწორი პარამეტრი"
+
+#, fuzzy, c-format
+#~ msgid "cannot cap PCR %u"
+#~ msgstr "'%s'-ის მარქაფის შეცდომა: %s"
+
+#, fuzzy
+#~ msgid "No device tree found"
+#~ msgstr "მოწყობილობების არასწორი ხე"
+
+#, fuzzy
+#~ msgid "failed to retrieve the prop field"
+#~ msgstr "სტრუქტურის ველის მნიშვნელობის მიღების შეცდომა"
+
+#, fuzzy
+#~ msgid "[-p] [--set variable]"
+#~ msgstr "ცვლადების დაყენება."
+
+#, fuzzy
+#~ msgid "Retrieve device tree information."
+#~ msgstr "მოწყობილობის ინფორმაციის გამოთხვა."
+
+#, fuzzy
+#~ msgid "filename too long"
+#~ msgstr "სტრიქონი მეტისმეტად გრძელია"
+
 #, c-format
 #~ msgid "GNU GRUB  version %s"
 #~ msgstr "GNU GRUB-ის ვერსია %s"
+
+#, fuzzy, c-format
+#~ msgid "cannot open device %s: %s"
+#~ msgstr "მოწყობილობის გახსნის შეცდომა: '%s'"
+
+#, fuzzy, c-format
+#~ msgid "cannot probe fs for %s: %s"
+#~ msgstr "'%s'-ის აღდგენის შეცდომა: %s"
+
+#, fuzzy, c-format
+#~ msgid "non-numeric or invalid appended signature size `%s'"
+#~ msgstr "არარიცხვითი ან არასწორი გასაღების ფაილის ზომა '%s'"
+
+#, fuzzy, c-format
+#~ msgid "Could not open file: %s\n"
+#~ msgstr "გასაღების ფაილის %s გახსნა შეუძლებელია"
+
+#, fuzzy, c-format
+#~ msgid "Could not seek file: %s\n"
+#~ msgstr "ფაილის შექმნა შეუძლებელია: %s"
+
+#, fuzzy, c-format
+#~ msgid "Could not allocate memory for file: %s\n"
+#~ msgstr "FPSWA-ის დრაივერი არ არსებობს"
+
+#, fuzzy, c-format
+#~ msgid "Could not read file: %s\n"
+#~ msgstr "ფაილის შექმნა შეუძლებელია: %s"
+
+#, fuzzy, c-format
+#~ msgid "Could not get TPM response.\n"
+#~ msgstr "მხარდაუჭერელი HTTP პასუხი"
+
+#, fuzzy, c-format
+#~ msgid "Could not open TPM device (%s).\n"
+#~ msgstr "მოწყობილობის გახსნის შეცდომა: '%s'"
+
+#, fuzzy, c-format
+#~ msgid "Could not close TPM device (%s).\n"
+#~ msgstr "FPSWA-ის დრაივერი არ არსებობს"
+
+#, fuzzy, c-format
+#~ msgid "Could not write key file (%s).\n"
+#~ msgstr "გასაღების ფაილის %s გახსნა შეუძლებელია"
+
+#, fuzzy, c-format
+#~ msgid "--tpm2-keyfile must be specified.\n"
+#~ msgstr "გამოტანის ფაილის მითითება აუცილებელია"
+
+#, fuzzy, c-format
+#~ msgid "--tpm2-outfile or --tpm2-nvindex must be specified.\n"
+#~ msgstr "გამოტანის ფაილის მითითება აუცილებელია"
+
+#, fuzzy, c-format
+#~ msgid "'%s' is not a valid action.\n"
+#~ msgstr "'%s' ლოკალური დისკი არაა"
+
+#, fuzzy, c-format
+#~ msgid "--tpm2-outfile can only be specified once.\n"
+#~ msgstr "გამოტანის ფაილის მითითება აუცილებელია"
 
 #, c-format
 #~ msgid "%s, with Linux %s (recovery mode)"
@@ -7735,6 +7964,3 @@ msgstr ""
 
 #~ msgid "Linux not supported yet"
 #~ msgstr "ლინუქსი ჯერ მხარდაჭერილი არაა"
-
-#~ msgid "interpret is not supported"
-#~ msgstr "ინტერპრეტირება მხარდაუჭერელია"

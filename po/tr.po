@@ -7817,12 +7817,10 @@ msgstr "UEFI Firmware Ayarları için açılış menüsü girişi ekleniyor...\\
 #~ msgstr "Henüz Linux desteklenmiyor"
 
 #, fuzzy
-#~| msgid "16-bit protected interface supported\n"
 #~ msgid "interpret is not supported"
 #~ msgstr "16-bit korunmuş arayüz destekleniyor\n"
 
 #, fuzzy
-#~| msgid "overflow is detected"
 #~ msgid "overflow is detected."
 #~ msgstr "taşma belirlendi"
 

@@ -8155,17 +8155,930 @@ msgstr ""
 "Se adaugă o intrare în meniul de pornire pentru configurările firmware "
 "UEFI...\\n"
 
+msgid "hash file of the binary."
+msgstr "fișierul de rezumat(hash) al fișierului binar."
+
+msgid "hash file of the certificate."
+msgstr "fișierul de rezumat (hash) al certificatului."
+
+msgid "<SIGNED_FILE>"
+msgstr "<FIȘIER_SEMNAT>"
+
+msgid ""
+"Verify SIGNED_FILE against the trusted X.509 certificates in the db list"
+msgstr ""
+"Verifică FIȘIERul_SEMNAT în raport cu certificatele X.509 de încredere din "
+"lista db"
+
+msgid "<X509_CERTIFICATE>"
+msgstr "<CERTIFICAT_X509>"
+
+msgid "Add trusted X509_CERTIFICATE to the db list"
+msgstr "Adăugați certificatul CERTIFICAT_X509 de încredere la lista db"
+
+msgid "Add distrusted X509_CERTIFICATE to the dbx list"
+msgstr "Adaugă certificatul CERTIFICAT_X509 de neîncredere la lista dbx"
+
+msgid ""
+"Show the list of distrusted certificates and certificate/binary hashes from "
+"the dbx list"
+msgstr ""
+"Afișează lista certificatelor de neîncredere și rezumatele (hash-urile) "
+"certificatelor/fișierelor binare din lista dbx."
+
+msgid "BINARY HASH FILE"
+msgstr "FIȘIER HASH BINAR"
+
+msgid "Add trusted BINARY HASH to the db list."
+msgstr "Adaugă HASH BINAR de încredere la lista bazei de date."
+
+msgid ""
+"[-b|--binary-hash] FILE [BINARY HASH FILE]\n"
+"[-c|--cert-hash] FILE [CERTFICATE HASH FILE]"
+msgstr ""
+"[-b|--binary-hash] FIȘIER [FIȘIER HASH BINAR]\n"
+"[-c|--cert-hash] FIȘIER [FIȘIER HASH CERTFICAT]"
+
+msgid "Add distrusted CERTFICATE/BINARY HASH to the dbx list."
+msgstr "Adaugă HASH-UL de CERTFICAT/BINAR de neîncredere la lista dbx."
+
+msgid "Allow the default UKI entry to be added to the GRUB menu."
+msgstr "Permiteți ca intrarea UKI implicită să fie adăugată la meniul GRUB."
+
+msgid "Allow the non-default UKI entries to be added to the GRUB menu."
+msgstr "Permite ca intrările UKI ne-implicite să fie adăugate la meniul GRUB."
+
+msgid "Allow specificUKII entries to be added to the GRUB menu."
+msgstr "Permite adăugarea intrărilor UKII specifice în meniul GRUB."
+
+msgid ""
+"[-p|--path] [-f|--enable-fallback] DIR [-d|--show-default] [-n|--show-non-"
+"default] [-e|--entry] FILE"
+msgstr ""
+"[-p|--path] [-f|--enable-fallback] DIRECTOR [-d|--show-default] [-n|--show-"
+"non-default] [-e|--entry] FIȘIER"
+
+msgid "Import Boot Loader Specification snippets."
+msgstr "Importă fragmente din specificațiile încărcătorului de pornire."
+
+msgid ""
+"[-p|--path] DIR [-f|--enable-fallback] [-d|--show-default] [-n|--show-non-"
+"default] [-e|--entry] FILE"
+msgstr ""
+"[-p|--path] DIRECTOR [-f|--enable-fallback] [-d|--show-default] [-n|--show-"
+"non-default] [-e|--entry] FIȘIER"
+
+msgid "Import Unified Kernel Images"
+msgstr "Importă imagini de nucleu unificate"
+
+msgid "max recursion depth exceeded"
+msgstr "adâncimea maximă de recursivitate a fost depășită"
+
+msgid "empty entry in PCR list"
+msgstr "intrare goală în lista PCR"
+
+#, c-format
+msgid "entry '%s' in PCR list is not a number"
+msgstr "intrarea „%s” din lista PCR nu este un număr"
+
+#, c-format
+msgid ""
+"entry %llu in PCR list is too large to be a PCR number, PCR numbers range "
+"from 0 to %u"
+msgstr ""
+"Intrarea %llu din lista PCR este prea mare pentru a fi un număr PCR; "
+"numerele PCR variază între 0 și %u."
+
+msgid "trailing comma at the end of PCR list"
+msgstr "virgulă la sfârșitul listei PCR"
+
+#, c-format
+msgid "too many PCRs in PCR list, the maximum number of PCRs is %u"
+msgstr "prea multe PCR-uri în lista PCR, numărul maxim de PCR-uri este de %u"
+
+#, c-format
+msgid "value '%s' is not a valid asymmetric key type"
+msgstr "valoarea „%s” nu este un tip valid de cheie asimetrică"
+
+#, c-format
+msgid "value '%s' is not a valid PCR bank"
+msgstr "valoarea „%s” nu este un banc PCR valid"
+
+#, c-format
+msgid "TPM handle value '%s' is not a number"
+msgstr "valoarea gestionarului (handle) TPM „%s” nu este un număr"
+
+#, c-format
+msgid ""
+"value %llu is too large to be a TPM handle, TPM handles are unsigned 32-bit "
+"integers"
+msgstr ""
+"valoarea %llu este prea mare pentru a fi un identificator (handle) TPM, "
+"identificatorii TPM sunt numere întregi fără semn pe 32 de biți"
+
+msgid ""
+"Unseal key using SRK ('srk') (default) or retrieve it from an NV Index "
+"('nv')."
+msgstr ""
+"Desface sigiliul cheii folosind SRK („srk”) (implicit) sau îl recuperează "
+"dintr-un index NV („nv”)."
+
+msgid ""
+"Comma-separated list of PCRs used to authorize key release e.g., '7,11'. "
+"(default: 7)"
+msgstr ""
+"Listă separată prin virgule a PCR-urilor utilizate pentru autorizarea "
+"eliberării cheii, de exemplu, „7,11”. (implicit: 7)"
+
+msgid ""
+"Bank of PCRs used to authorize key release: SHA1, SHA256, SHA384 or SHA512. "
+"(default: SHA256)"
+msgstr ""
+"Bancul de PCR-uri utilizate pentru autorizarea eliberării cheii: SHA1, "
+"SHA256, SHA384 sau SHA512. (implicit: SHA256)"
+
+msgid ""
+"Comma-separated list of PCRs to be capped after key release e.g., '7,11'."
+msgstr ""
+"Listă separată prin virgule a PCR-urilor care vor fi limitate după "
+"eliberarea cheii, de exemplu, „7,11”."
+
+msgid ""
+"In SRK mode, path to the key file in the TPM 2.0 Key File format to unseal "
+"using the TPM (e.g., (hd0,gpt1)/boot/grub2/sealed.tpm)."
+msgstr ""
+"În modul SRK, ruta către fișierul de cheie în formatul TPM 2.0 Key File "
+"pentru a-l desigila utilizând TPM (de exemplu, (hd0,gpt1)/boot/grub2/"
+"sealed.tpm)."
+
+msgid ""
+"In SRK mode, path to the key file in the raw format to unseal using the TPM "
+"(e.g., (hd0,gpt1)/boot/grub2/sealed.key). (Mainly for backward "
+"compatibility. Please use '--tpm2key'.)"
+msgstr ""
+"În modul SRK, ruta către fișierul de cheie în format brut pentru a fi "
+"desigilat folosind TPM (de exemplu, (hd0,gpt1)/boot/grub2/sealed.key). (În "
+"principal pentru compatibilitate cu versiunile anterioare. Vă rugăm să "
+"utilizați «--tpm2key».)"
+
+msgid "In SRK mode, the SRK handle if the SRK is persistent."
+msgstr "În modul SRK, SRK gestionează dacă SRK este persistent."
+
+msgid ""
+"In SRK mode, the type of SRK: RSA (RSA2048) and ECC (ECC_NIST_P256)(default: "
+"ECC)"
+msgstr ""
+"În modul SRK, tipul SRK: RSA (RSA2048) și ECC (ECC_NIST_P256) (implicit: ECC)"
+
+msgid ""
+"Required in NV Index mode, the NV handle to read which must readily exist on "
+"the TPM and which contains the key."
+msgstr ""
+"Necesar în modul index NV, identificatorul (handle) NV pentru citire trebuie "
+"să existe deja pe TPM și să conțină cheia."
+
+#, c-format
+msgid "sealed key larger than %llu bytes"
+msgstr "cheie sigilată mai mare de %llu octeți"
+
+msgid "no memory left to allocate unlock key buffer"
+msgstr ""
+"nu mai există memorie disponibilă pentru alocarea tamponului pentru cheia de "
+"deblocare"
+
+msgid ""
+"cannot use TPM2 key protector without initializing it, call "
+"tpm2_protector_init first"
+msgstr ""
+"nu se poate utiliza protectorul de chei TPM2 fără a-l inițializa, apelați "
+"mai întâi tpm2_protector_init"
+
+msgid "in SRK mode, a key file must be specified: --tpm2key/-T or --keyfile/-k"
+msgstr ""
+"în modul SRK, trebuie specificat un fișier de cheie: „--tpm2key/-T” sau „--"
+"keyfile/-k”"
+
+msgid ""
+"in SRK mode, please specify a key file with only --tpm2key/-T or --keyfile/-k"
+msgstr ""
+"în modul SRK, specificați un fișier de cheie numai cu „--tpm2key/-T” sau „--"
+"keyfile/-k”"
+
+msgid "in SRK mode, an NV Index cannot be specified"
+msgstr "în modul SRK, nu se poate specifica un index NV"
+
+msgid "in NV Index mode, an NV Index must be specified: --nvindex or -n"
+msgstr ""
+"în modul index NV, trebuie specificat un index NV: „--nvindex” sau „-n”"
+
+msgid "a key file cannot be specified when using NV index mode"
+msgstr ""
+"nu se poate specifica un fișier de cheie atunci când se utilizează modul "
+"index NV"
+
+msgid ""
+"an SRK cannot be specified when using NV index mode with a persistent handle"
+msgstr ""
+"un SRK nu poate fi specificat atunci când se utilizează modul index NV cu un "
+"identificator (handle) persistent"
+
+msgid ""
+"an NV index must be either a persistent handle or an NV index handle when "
+"using NV index mode"
+msgstr ""
+"un index NV trebuie să fie, fie un identificator persistent, fie un "
+"identificator de index NV atunci când se utilizează modul index NV"
+
+msgid "no memory to duplicate file path"
+msgstr "nu există memorie pentru duplicarea rutei fișierului"
+
+#, c-format
+msgid "value '%s' is not a valid TPM2 key protector mode"
+msgstr "valoarea „%s” nu este un mod valid de protector de cheie TPM2"
+
+msgid ""
+"the TPM2 key protector does not accept any non-option arguments (i.e., like "
+"-o and/or --option only)"
+msgstr ""
+"protectorul de chei TPM2 nu acceptă argumente care nu sunt opțiuni (adică, "
+"doar -o și/sau --option)"
+
+msgid "tpm2_key_protector_clear accepts no arguments"
+msgstr "tpm2_key_protector_clear nu acceptă argumente"
+
+msgid ""
+"[-m mode] [-p pcr_list] [-b pcr_bank] [-c pcr_list] [-T tpm2_key_file_path] "
+"[-k sealed_key_file_path] [-s srk_handle] [-a asymmetric_key_type] [-n "
+"nv_index]"
+msgstr ""
+"[-m modul] [-p listă-pcr] [-b banc-pcr] [-c listă-pcr] [-T rută-fișier-cheie-"
+"tpm2] [-k rută-fișier-cheie-sigilată] [-s identificator(handle)-sdk] [-a tip-"
+"cheie-asimetric] [-n index-nv]"
+
+msgid "Initialize the TPM2 key protector."
+msgstr "Inițializează protectorul cheii TPM2."
+
+msgid "Clear the TPM2 key protector if previously initialized."
+msgstr "Șterge protectorul cheii TPM2 dacă a fost inițializat anterior."
+
+msgid "Dump TPM2 PCRs"
+msgstr "Descarcă (dump) PCR-uri TPM2"
+
+msgid "Print all PCRs of the specified TPM 2.0 bank"
+msgstr "Imprimă toate PCR-urile din bancul TPM 2.0 specificat"
+
+msgid "Unlock volume(s) using key protector(s)."
+msgstr ""
+"Deblochează volumul (volumele) folosind protectorul (protectorii) pentru "
+"chei."
+
+msgid "Enable hardware acceleration."
+msgstr "Activează accelerarea hardware."
+
+#, c-format
+msgid "no key protector provided a usable key for %s%s%s (%s)"
+msgstr ""
+"niciun protector de cheie nu a furnizat o cheie utilizabilă pentru %s%s%s "
+"(%s)"
+
+#, c-format
+msgid "Invalid cryptodisk_passphrase_tries value `%s'. Defaulting to %lu.\n"
+msgstr ""
+"Valoare nevalidă cryptodisk_passphrase_tries „%s”. Valoarea implicită este "
+"%lu.\n"
+
+msgid "[--quiet] DEVICE"
+msgstr "[--quiet] DISPOZITIV"
+
+msgid "Check if a logical volume resides on encrypted disks."
+msgstr "Verifică dacă un volum logic se află pe discuri criptate."
+
+msgid "overflow detected while obtaining size of device name"
+msgstr ""
+"s-a detectat depășirea în timpul obținerii dimensiuni numelui dispozitivului"
+
+msgid "overflow detected while obtaining encoding size"
+msgstr "s-a detectat depășirea în timpul obținerii dimensiunii codificării"
+
+msgid "overflow detected while obtaining size of canonical name"
+msgstr ""
+"s-a detectat depășirea în timpul obținerii dimensiunii unui nume canonic"
+
+msgid "overflow detected while obtaining size of device path"
+msgstr ""
+"s-a detectat depășirea în timpul obținerii dimensiunii rutei dispozitivului"
+
+msgid "overflow detected while obtaining size of an open path"
+msgstr ""
+"s-a detectat depășirea în timpul obținerii dimensiunii unei rute deschise"
+
+msgid "overflow detected while obtaining bootpath size"
+msgstr ""
+"s-a detectat o depășire în timpul obținerii dimensiunii rutei de pornire"
+
+msgid "overflow detected while allocating size of password buffer"
+msgstr ""
+"s-a detectat depășirea în timpul alocării dimensiunii tamponului pentru "
+"parolă"
+
+msgid "link target length overflow"
+msgstr "depășire a lungimii țintei legăturii"
+
+msgid "directory item size overflow"
+msgstr "depășire a dimensiunii elementului de director"
+
+msgid "buffer size overflow"
+msgstr "depășire a dimensiunii tamponului"
+
+msgid "directory element size overflow"
+msgstr "depășire a dimensiunii elementului directorului"
+
+msgid "data size overflow"
+msgstr "depășire a dimensiunii datelor"
+
+msgid "mtime overflow"
+msgstr "depășire a timpului de modificare (mtime)"
+
+msgid "mode overflow"
+msgstr "depășire a modului"
+
+msgid "namesize overflow"
+msgstr "depășire a dimensiunii numelui"
+
+msgid "file name size overflow"
+msgstr "depășire a dimensiunii numelui fișierului"
+
+msgid "target data size overflow"
+msgstr "depășire a dimensiunii datelor țintei"
+
+msgid "symlink size overflow"
+msgstr "depășire a dimensiunii legăturii simbolice"
+
+msgid "directory entry name length overflow"
+msgstr "depășire a lungimii numelui a intrării de director"
+
+msgid "compression buffer size overflow"
+msgstr "depășire a dimensiunii tamponului de comprimare"
+
+msgid "symlink name length overflow"
+msgstr "depășire a lungimii numelui legăturii simbolice"
+
+msgid "name length overflow"
+msgstr "depășire a lungimii numelui"
+
+msgid "name size overflow"
+msgstr "depășire a dimensiunii numelui"
+
+msgid "link size overflow"
+msgstr "depășire a dimensiunii legăturii"
+
+msgid "long name size overflow"
+msgstr "depășire a dimensiunii numelui lung"
+
+msgid "directory data size overflow"
+msgstr "depășire a dimensiunii datelor din director"
+
+msgid "path buffer size overflow"
+msgstr "depășire a dimensiunii tamponului de rută"
+
+msgid "elemsize overflow"
+msgstr "depășire a dimensiunii elementului"
+
+msgid "Get property."
+msgstr "Obține proprietatea."
+
+msgid "prop"
+msgstr "proprietate"
+
+#, c-format
+msgid "use '%s %s' to force a system restart"
+msgstr "utilizați „%s %s” pentru a forța repornirea sistemului"
+
+msgid "tag length overflow"
+msgstr "depășirea lungimii etichetei"
+
+msgid "overflow detected while obatining size of ofdata path"
+msgstr "s-a detectat o depășire în timpul obținerii dimensiunii rutei de date"
+
+msgid "overflow detected while obtaining length of host"
+msgstr "s-a detectat o depășire în timpul obținerii lungimii gazdei"
+
+msgid "maximum recursion depth exceeded"
+msgstr "adâncimea maximă de recursivitate a fost depășită"
+
+msgid "disabled command line interface access"
+msgstr "dezactivează accesul la interfața liniei de comandă"
+
+msgid "Add a note segment reserving SIZE bytes for an appended signature"
+msgstr ""
+"Adaugă un segment de notă care rezervă DIMENSIUNEA octeți pentru o semnătură "
+"adăugată"
+
+msgid "can't set env_block as it's read-only"
+msgstr "nu se poate defini env_block, deoarece este numai-pentru-citire"
+
+msgid "zfs-bootfs ZFS_DATASET"
+msgstr "zfs-bootfs ZFS_DATASET"
+
+msgid "Compute ZFS dataset bootpath."
+msgstr "Calculează ruta de pornire a setului de date ZFS."
+
+#, c-format
+msgid "appended signature size `%s', and it should not be zero"
+msgstr "dimensiunea semnăturii adăugate „%s” și nu trebuie să fie zero"
+
+msgid "disable command line interface access"
+msgstr "dezactivează accesul la interfața liniei de comandă"
+
+msgid "Add or remove a key protector to or from a key."
+msgstr "Adaugă sau elimină un protector de cheie de pe o cheie."
+
+msgid "Set key protector to use (only tpm2 is currently supported)."
+msgstr ""
+"Stabilește protectorul de cheie de utilizat (în prezent este acceptat numai "
+"tpm2)."
+
+msgid "Set the path to the TPM2 device. (default: /dev/tpm0)"
+msgstr "Definește ruta către dispozitivul TPM2. (implicit: /dev/tpm0)"
+
+msgid ""
+"Set a comma-separated list of PCRs used to authorize key release e.g., "
+"'7,11'. Please be aware that PCR 0~7 are used by the firmware and the "
+"measurement result may change after a firmware update (for baremetal "
+"systems) or a package (OVMF/SLOF) update in the VM host. This may lead to "
+"the failure of key unsealing. (default: 7)"
+msgstr ""
+"Definește o listă separată prin virgule de PCR-uri utilizate pentru "
+"autorizarea eliberării cheii, de exemplu, „7,11”. Rețineți că PCR 0~7 sunt "
+"utilizate de firmware și că rezultatul măsurătorii se poate modifica după o "
+"actualizare a firmware-ului (pentru sistemele „baremetal)” sau o actualizare "
+"a pachetului (OVMF/SLOF) în gazda Mașinii Virtuale. Acest lucru poate duce "
+"la eșecul desigilării cheii. (implicit: 7)"
+
+msgid ""
+"Set the bank of PCRs used to authorize key release: SHA1, SHA256, SHA384, or "
+"SHA512. (default: SHA256)"
+msgstr ""
+"Stabilește bancul de PCR-uri utilizat pentru autorizarea eliberării cheii: "
+"SHA1, SHA256, SHA384 sau SHA512. (implicit: SHA256)"
+
+msgid "Set the path to a file that contains the cleartext key to protect."
+msgstr ""
+"Definește ruta către un fișier care conține cheia în text clar de protejat."
+
+msgid ""
+"Set the path to the file that will contain the key after sealing (must be "
+"accessible to GRUB during boot)."
+msgstr ""
+"Definește ruta către fișierul care va conține cheia după sigilare (trebuie "
+"să fie accesibil pentru GRUB în timpul pornirii)."
+
+msgid "Set the SRK handle if the SRK is to be made persistent."
+msgstr ""
+"Definește gestionarul SRK în cazul în care SRK trebuie să fie persistent."
+
+msgid ""
+"Set the type of SRK: RSA (RSA2048) and ECC (ECC_NIST_P256).(default: ECC)"
+msgstr ""
+"Stabilește tipul de SRK: RSA (RSA2048) și ECC (ECC_NIST_P256).(implicit: ECC)"
+
+msgid "Evict a previously persisted SRK from the TPM, if any."
+msgstr "Evacuează un SRK persistent anterior din TPM, dacă există."
+
+msgid "Use TPM 2.0 Key File format."
+msgstr "Utilizează formatul de fișier de chei TPM 2.0."
+
+msgid "Store the sealed key in a persistent or NV index handle."
+msgstr ""
+"Stochează cheia sigilată într-un identificator (handle) persistent sau un "
+"index NV."
+
+#, c-format
+msgid "Could not send TPM command.\n"
+msgstr "Nu s-a putut trimite comanda TPM.\n"
+
+#, c-format
+msgid "Could not read all the specified PCRs.\n"
+msgstr "Nu s-au putut citi toate PCR-urile specificate.\n"
+
+#, c-format
+msgid "PCR concatenation buffer not big enough.\n"
+msgstr "Memoria tampon pentru concatenarea PCR nu este suficient de mare.\n"
+
+#, c-format
+msgid "Bad PCR value size: expected %llu bytes but got %u bytes.\n"
+msgstr ""
+"Dimensiune valoare PCR incorectă: se așteptau %llu octeți, dar s-au obținut "
+"%u octeți.\n"
+
+#, c-format
+msgid "Could not allocate memory for the raw format key.\n"
+msgstr "Nu s-a putut aloca memorie pentru cheia formatului brut.\n"
+
+#, c-format
+msgid "Invalid tpm2key size for TPM NV buffer\n"
+msgstr "Dimensiune tpm2key nevalidă pentru tamponul NV TPM\n"
+
+#, c-format
+msgid "Input key size larger than %u bytes.\n"
+msgstr "Dimensiunea cheii de intrare este mai mare de %u octeți.\n"
+
+#, c-format
+msgid "Could not export to TPM 2.0 Key File format\n"
+msgstr "Nu s-a putut exporta în formatul de fișier de chei TPM 2.0\n"
+
+#, c-format
+msgid "Could not export to the raw format\n"
+msgstr "Nu s-a putut exporta în formatul brut\n"
+
+#, c-format
+msgid "--tpm2-evict is invalid when --action is 'add'.\n"
+msgstr "„--tpm2-evict” nu este validă atunci când „--action” este 'add'.\n"
+
+#, c-format
+msgid "Persistent handle does not support TPM 2.0 Key File format.\n"
+msgstr ""
+"Identificatorul (handle) persistent nu acceptă formatul de fișier cheie TPM "
+"2.0.\n"
+
+#, c-format
+msgid "--tpm2-nvindex must be a persistent or NV index handle.\n"
+msgstr ""
+"argumentul opțiunii „--tpm2-nvindex” trebuie să fie un identificator "
+"persistent sau un index NV.\n"
+
+#, c-format
+msgid "--tpm2-nvindex and --tpm2-srk must be different.\n"
+msgstr "„--tpm2-nvindex” și „--tpm2-srk” trebuie să fie diferite.\n"
+
+#, c-format
+msgid "--tpm2-srk must be a persistent handle, e.g. 0x81000000.\n"
+msgstr ""
+"argumentul opțiunii i „--tpm2-srk” trebuie să fie un identificator (handle) "
+"persistent, de exemplu 0x81000000.\n"
+
+#, c-format
+msgid "--tpm2-asymmetric is invalid when --action is 'remove'.\n"
+msgstr "„--tpm2-asymmetric” nu este validă când „--action” este 'remove'.\n"
+
+#, c-format
+msgid "--tpm2-bank is invalid when --action is 'remove'.\n"
+msgstr "„--tpm2-bank” nu este validă când „--action” este 'remove'.\n"
+
+#, c-format
+msgid "--tpm2-keyfile is invalid when --action is 'remove'.\n"
+msgstr "„--tpm2-keyfile” nu este validă când „--action” este 'remove'.\n"
+
+#, c-format
+msgid "--tpm2-outfile is invalid when --action is 'remove'.\n"
+msgstr "„--tpm2-outfile” nu este validă când „--action” este 'remove'.\n"
+
+#, c-format
+msgid "--tpm2-pcrs is invalid when --action is 'remove'.\n"
+msgstr "„--tpm2-pcrs” nu este validă când „--action” este 'remove'.\n"
+
+#, c-format
+msgid "missing --tpm2-srk or --tpm2-nvindex for --action 'remove'.\n"
+msgstr ""
+"lipsește „--tpm2-srk” sau „--tpm2-nvindex” pentru „--action 'remove'”.\n"
+
+#, c-format
+msgid ""
+"The TPM2 key protector only supports the following actions: add, remove.\n"
+msgstr ""
+"Protectorul de chei TPM2 acceptă doar următoarele acțiuni: „add” (adăugare), "
+"„remove” (eliminare).\n"
+
+#, c-format
+msgid "--action|-a can only be specified once.\n"
+msgstr "opțiunea „--action|-a” poate fi specificată o singură dată.\n"
+
+#, c-format
+msgid "--protector|-p can only be specified once.\n"
+msgstr "opțiunea „--protector|-p” poate fi specificată o singură dată.\n"
+
+#, c-format
+msgid "'%s' is not a valid protector.\n"
+msgstr "„%s” nu este un protector valid.\n"
+
+#, c-format
+msgid "--tpm2-device can only be specified once.\n"
+msgstr "opțiunea „--tpm2-device” poate fi specificată o singură dată.\n"
+
+#, c-format
+msgid "--tpm2-pcrs can only be specified once.\n"
+msgstr "opțiunea „--tpm2-pcrs” poate fi specificată o singură dată.\n"
+
+#, c-format
+msgid "--tpm2-srk can only be specified once.\n"
+msgstr "opțiunea „--tpm2-srk” poate fi specificată o singură dată.\n"
+
+#, c-format
+msgid "--tpm2-asymmetric can only be specified once.\n"
+msgstr "opțiunea „--tpm2-asymmetric” poate fi specificată o singură dată.\n"
+
+#, c-format
+msgid "--tpm2-bank can only be specified once.\n"
+msgstr "opțiunea „--tpm2-bank” poate fi specificată o singură dată.\n"
+
+#, c-format
+msgid "--tpm2-keyfile can only be specified once.\n"
+msgstr "opțiunea „--tpm2-keyfile” poate fi specificată o singură dată.\n"
+
+#, c-format
+msgid "--tpm2-evict can only be specified once.\n"
+msgstr "opțiunea „--tpm2-evict” poate fi specificată o singură dată.\n"
+
+#, c-format
+msgid "--tpm2-tpm2key can only be specified once.\n"
+msgstr "opțiunea „--tpm2-tpm2key” poate fi specificată o singură dată.\n"
+
+#, c-format
+msgid "--tpm2-nvindex can only be specified once.\n"
+msgstr "opțiunea „--tpm2-nvindex” poate fi specificată o singură dată.\n"
+
+#, c-format
+msgid "--action is mandatory.\n"
+msgstr "opțiunea „--action” este obligatorie.\n"
+
+#, c-format
+msgid "--protector is mandatory and only 'tpm2' is currently supported.\n"
+msgstr ""
+"opțiunea „--protector” este obligatorie și în prezent este acceptat doar "
+"argumentul „tpm2”.\n"
+
+msgid ""
+"Protect a cleartext key using a GRUB key protector that can retrieve the key "
+"during boot to unlock fully-encrypted disks automatically."
+msgstr ""
+"Protejează o cheie în clar folosind un protector de cheie GRUB care poate "
+"prelua cheia în timpul pornirii pentru a debloca automat discurile complet "
+"criptate."
+
+#, c-format
+msgid "Could not parse arguments.\n"
+msgstr "Nu s-au putut analiza argumentele.\n"
+
+msgid ""
+"x509 public key can be support only to appended signature with powerpc-"
+"ieee1275 images"
+msgstr ""
+"cheia publică x509 poate fi acceptată numai pentru semnătura adăugată cu "
+"imagini powerpc-ieee1275"
+
+msgid "SBAT data can be added only to EFI or powerpc-ieee1275 images"
+msgstr ""
+"Datele SBAT pot fi adăugate numai la imaginile EFI sau powerpc-ieee1275"
+
+msgid "appended signature can be support only to powerpc-ieee1275 images"
+msgstr ""
+"semnătura adăugată poate fi acceptată numai pentru imaginile powerpc-ieee1275"
+
+#, c-format
+msgid ""
+"GRUB_OS_PROBER_SKIP_LIST contains deprecated <UUID>@/dev/* notation. The @/"
+"dev/* suffix is ignored."
+msgstr ""
+"GRUB_OS_PROBER_SKIP_LIST conține notația învechită <UUID>@/dev/*. Sufixul @/"
+"dev/* este ignorat."
+
+#, fuzzy
+#~ msgid "Show the list of trusted X.509 certificates from the db list"
+#~ msgstr "Afișează lista cu cheile de încredere."
+
+#, fuzzy
+#~ msgid "Specify path to find UKI entries."
+#~ msgstr "Specifică suma de control de utilizat."
+
+#, fuzzy, c-format
+#~ msgid "duplicate file: `%s'"
+#~ msgstr "Nu se poate crea fișierul: %s"
+
+#, fuzzy
+#~ msgid "overflow detected creating argv list"
+#~ msgstr "s-a detectat o depășire"
+
+#, fuzzy, c-format
+#~ msgid "variable '%s' isn't set"
+#~ msgstr "variabila „%s” nu este definită"
+
+#, fuzzy
+#~ msgid "memory reading is disabled in lockdown mode"
+#~ msgstr "memoria care se stabilește este mai mare decât memoria alocată"
+
+#, fuzzy
+#~ msgid "RDMSR is unsupported"
+#~ msgstr "interpretarea nu este implementată"
+
+#, fuzzy
+#~ msgid "WRMSR is unsupported"
+#~ msgstr "interpretarea nu este implementată"
+
+#, fuzzy
+#~ msgid "List memory regions."
+#~ msgstr "Listează blocurile de memorie libere."
+
+#, fuzzy
+#~ msgid "Only probe encrypted disks."
+#~ msgstr "Sondează numai discurile EFI."
+
+#, fuzzy, c-format
+#~ msgid "could not open file: %s"
+#~ msgstr "nu se poate deschide fișierul de cheie %s"
+
+#, fuzzy, c-format
+#~ msgid "could not read file size: %s"
+#~ msgstr "nu se poate citi „%s”: %s"
+
+#, fuzzy, c-format
+#~ msgid "could not allocate buffer for %s"
+#~ msgstr "nu s-a putut aloca memorie tampon pentru comandă"
+
+#, fuzzy, c-format
+#~ msgid "could not retrieve file contents: %s"
+#~ msgstr "nu se pot obține listele de blocuri: %s"
+
+#, fuzzy
+#~ msgid "malformed TPM wire key file"
+#~ msgstr "nu s-a reușit să se citească fișierul de cheie"
+
+#, fuzzy
+#~ msgid "malformed TPM 2.0 key file"
+#~ msgstr "nu s-a reușit să se citească fișierul de cheie"
+
+#, fuzzy
+#~ msgid "key file not specified"
+#~ msgstr "Nu s-a specificat o intrare de meniu."
+
+#, fuzzy
+#~ msgid "Unknown Mode"
+#~ msgstr "Codificare necunoscută"
+
+#, fuzzy
+#~ msgid "Invalid passphrase."
+#~ msgstr "parametru nevalid"
+
+#, fuzzy, c-format
+#~ msgid "unrecognized option: %s"
+#~ msgstr "Opțiune nerecunoscută „%s”\\n"
+
+#, fuzzy
+#~ msgid "disk name expected"
+#~ msgstr "nume de fișier era așteptat"
+
+#, fuzzy, c-format
+#~ msgid "invalid disk: %s"
+#~ msgstr "mod nevalid %s"
+
+#, fuzzy, c-format
+#~ msgid "unrecognized disk: %s"
+#~ msgstr "dimensiunea cheii nerecunoscută"
+
+#, fuzzy, c-format
+#~ msgid "no such disk: %s"
+#~ msgstr "nu se poate deschide discul: %s"
+
+#, fuzzy
+#~ msgid "invalid JFS inode"
+#~ msgstr "mod nevalid %s"
+
+#, fuzzy
+#~ msgid "invalid directory slot index"
+#~ msgstr "cifrul %s sau modul %s nu este valid"
+
+#, fuzzy
+#~ msgid "zstd file corrupted or unsupported block options"
+#~ msgstr "fișier xz corupt sau opțiuni bloc neacceptate"
+
+#, fuzzy
+#~ msgid "bad shim loader signature"
+#~ msgstr "semnătură shim greșită"
+
+#, fuzzy
+#~ msgid "DEV"
+#~ msgstr "DISPOZITIV"
+
+#, fuzzy
+#~ msgid "set TPM device."
+#~ msgstr "Listează dispozitivele PCI."
+
+#, fuzzy, c-format
+#~ msgid "cannot open TPM device '%s': %s"
+#~ msgstr "nu poate deschide dispozitivul: %s"
+
+#, fuzzy, c-format
+#~ msgid "cannot close TPM device: %s"
+#~ msgstr "nu poate deschide dispozitivul: %s"
+
+#, fuzzy
+#~ msgid "invalid partition number"
+#~ msgstr "parametru nevalid"
+
+#, fuzzy, c-format
+#~ msgid "cannot cap PCR %u"
+#~ msgstr "nu se poate crea copia de rezervă „%s”: %s"
+
+#, fuzzy
+#~ msgid "No device tree found"
+#~ msgstr "arbore de dispozitive nevalid"
+
+#, fuzzy
+#~ msgid "failed to retrieve the prop field"
+#~ msgstr "nu s-a putut prelua câmpul de structură"
+
+#, fuzzy
+#~ msgid "[-p] [--set variable]"
+#~ msgstr "Definește variabile."
+
+#, fuzzy
+#~ msgid "Retrieve device tree information."
+#~ msgstr "Obține informații despre dispozitiv."
+
+#, fuzzy
+#~ msgid "filename too long"
+#~ msgstr "șir prea lung"
+
 #, c-format
 #~ msgid "GNU GRUB  version %s"
 #~ msgstr "GNU GRUB  versiunea %s"
 
-#, c-format
-#~ msgid "%s, with Linux %s (recovery mode)"
-#~ msgstr "%s, cu Linux %s (mod de recuperare)"
+#, fuzzy
+#~ msgid "embed FILE as an x509 certificate for appended signature checking"
+#~ msgstr ""
+#~ "încorporează FIȘIERUL drept cheie publică pentru verificarea semnăturii"
 
-#, c-format
-#~ msgid "%s, with Linux %s"
-#~ msgstr "%s, cu Linux %s"
+#, fuzzy, c-format
+#~ msgid "cannot open device %s: %s"
+#~ msgstr "nu poate deschide dispozitivul: %s"
+
+#, fuzzy, c-format
+#~ msgid "cannot probe fs for %s: %s"
+#~ msgstr "nu se poate restaura „%s”: %s"
+
+#, fuzzy, c-format
+#~ msgid "non-numeric or invalid appended signature size `%s'"
+#~ msgstr "dimensiune nenumerică sau nevalidă a fișierului de cheie „%s”"
+
+#, fuzzy
+#~ msgid "embed FILE as public key for PGP signature checking"
+#~ msgstr ""
+#~ "încorporează FIȘIERUL drept cheie publică pentru verificarea semnăturii"
+
+#, fuzzy
+#~ msgid "option requires an argument"
+#~ msgstr "%s: opțiunea necesită un argument -- „%s”\\n"
+
+#, fuzzy, c-format
+#~ msgid "Could not open file: %s\n"
+#~ msgstr "nu se poate deschide fișierul de cheie %s"
+
+#, fuzzy, c-format
+#~ msgid "Could not seek file: %s\n"
+#~ msgstr "Nu se poate crea fișierul: %s"
+
+#, fuzzy, c-format
+#~ msgid "Could not get file length: %s\n"
+#~ msgstr "nu s-a putut strndup cifrul de lungime „%"
+
+#, fuzzy, c-format
+#~ msgid "Could not allocate memory for file: %s\n"
+#~ msgstr "Nu s-a putut localiza controlorul FPSWA"
+
+#, fuzzy, c-format
+#~ msgid "Could not read file: %s\n"
+#~ msgstr "Nu se poate crea fișierul: %s"
+
+#, fuzzy, c-format
+#~ msgid "Could not get TPM response.\n"
+#~ msgstr "răspuns HTTP neacceptat"
+
+#, fuzzy, c-format
+#~ msgid "Could not open TPM device (%s).\n"
+#~ msgstr "nu poate deschide dispozitivul: %s"
+
+#, fuzzy, c-format
+#~ msgid "Could not close TPM device (%s).\n"
+#~ msgstr "Nu s-a putut localiza controlorul FPSWA"
+
+#, fuzzy, c-format
+#~ msgid "Could not write key file (%s).\n"
+#~ msgstr "nu se poate deschide fișierul de cheie %s"
+
+#, fuzzy, c-format
+#~ msgid "--tpm2-keyfile must be specified.\n"
+#~ msgstr "fișierul de ieșire trebuie să fie specificat"
+
+#, fuzzy, c-format
+#~ msgid "--tpm2-outfile or --tpm2-nvindex must be specified.\n"
+#~ msgstr "fișierul de ieșire trebuie să fie specificat"
+
+#, fuzzy, c-format
+#~ msgid "'%s' is not a valid action.\n"
+#~ msgstr "„%s” nu este un disc local"
+
+#, fuzzy, c-format
+#~ msgid "--tpm2-outfile can only be specified once.\n"
+#~ msgstr "fișierul de ieșire trebuie să fie specificat"
 
 #, c-format
 #~ msgid ""
@@ -8188,11 +9101,16 @@ msgstr ""
 #~ "Ieșirea sa va fi folosită pentru a detecta fișierele binare de pornire de "
 #~ "pe ele,\\n și pentru a crea noi intrări de pornire în meniul de GRUB."
 
+#, c-format
+#~ msgid "%s, with Linux %s (recovery mode)"
+#~ msgstr "%s, cu Linux %s (mod de recuperare)"
+
+#, c-format
+#~ msgid "%s, with Linux %s"
+#~ msgstr "%s, cu Linux %s"
+
 #~ msgid "SOURCE|-u UUID|-a|-b"
 #~ msgstr "SURSA|-u UUID|-a|-b"
 
 #~ msgid "Linux not supported yet"
 #~ msgstr "Linux nu este încă acceptat"
-
-#~ msgid "interpret is not supported"
-#~ msgstr "interpretarea nu este implementată"

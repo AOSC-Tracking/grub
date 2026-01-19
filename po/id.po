@@ -7972,6 +7972,37 @@ msgstr ""
 msgid "Adding boot menu entry for UEFI Firmware Settings ...\\n"
 msgstr ""
 
+#, c-format
+msgid ""
+"os-prober will not be executed to detect other bootable partitions."
+"\\nSystems on them will not be added to the GRUB boot configuration.\\nCheck "
+"GRUB_DISABLE_OS_PROBER documentation entry."
+msgstr ""
+"os-prober tidak akan dijalankan untuk mendeteksi partisi yang dapat di-boot "
+"lainnya.\\nSistem di dalamnya tidak akan ditambahkan ke konfigurasi boot "
+"GRUB.\\nPeriksa entri dokumentasi GRUB_DISABLE_OS_PROBER."
+
+#, c-format
+msgid ""
+"os-prober will be executed to detect other bootable partitions.\\nIts output "
+"will be used to detect bootable binaries on them and create new boot entries."
+msgstr ""
+"os-prober akan dieksekusi untuk mendeteksi partisi bootable lainnya."
+"\\nKeluarannnya akan digunakan untuk mendeteksi biner bootable di dalamnya "
+"dan membuat entri boot baru."
+
+#, c-format
+#~ msgid "GNU GRUB  version %s"
+#~ msgstr "GNU GRUB  versi %s"
+
+#, c-format
+#~ msgid "%s, with Linux %s (recovery mode)"
+#~ msgstr "%s, dengan Linux %s (mode penyembuhan)"
+
+#, c-format
+#~ msgid "%s, with Linux %s"
+#~ msgstr "%s, dengan Linux %s"
+
 #, fuzzy
 #~| msgid "[PATTERN ...]"
 #~ msgid " [OPTION...]"
@@ -7996,16 +8027,6 @@ msgstr ""
 #~| msgid "Invalid node - %s\n"
 #~ msgid "Invalid range end"
 #~ msgstr "Node tidak valid -%s\n"
-
-#, c-format
-#~ msgid "GNU GRUB  version %s"
-#~ msgstr "GNU GRUB  versi %s"
-
-#~ msgid "%s, with Linux %s (recovery mode)"
-#~ msgstr "%s, dengan Linux %s (mode penyembuhan)"
-
-#~ msgid "%s, with Linux %s"
-#~ msgstr "%s, dengan Linux %s"
 
 #~ msgid "Fake BIOS."
 #~ msgstr "Palsukan BIOS."

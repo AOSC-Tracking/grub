@@ -7987,18 +7987,186 @@ msgstr ""
 msgid "Adding boot menu entry for UEFI Firmware Settings ...\\n"
 msgstr ""
 
+#, c-format
+msgid "Could not send TPM command.\n"
+msgstr "Kan TPM-opdracht niet zenden.\n"
+
+#, fuzzy
+#~ msgid "overflow detected creating argv list"
+#~ msgstr "overloop is gedetecteerd"
+
+#, fuzzy, c-format
+#~ msgid "variable '%s' isn't set"
+#~ msgstr "variabele '%s' is niet ingesteld"
+
+#, fuzzy
+#~ msgid "RDMSR is unsupported"
+#~ msgstr "'interpret' wordt niet ondersteund"
+
+#, fuzzy
+#~ msgid "WRMSR is unsupported"
+#~ msgstr "'interpret' wordt niet ondersteund"
+
+#, fuzzy
+#~ msgid "List memory regions."
+#~ msgstr "Apparaten of bestanden tonen."
+
+#, fuzzy, c-format
+#~ msgid "could not open file: %s"
+#~ msgstr "kan %s niet openen"
+
+#, fuzzy, c-format
+#~ msgid "could not read file size: %s"
+#~ msgstr "kan '%s' niet lezen: %s"
+
+#, fuzzy, c-format
+#~ msgid "could not allocate buffer for %s"
+#~ msgstr "kan geen geheugen reserveren voor opdrachtenbuffer"
+
+#, fuzzy, c-format
+#~ msgid "could not retrieve file contents: %s"
+#~ msgstr "kan bloklijsten niet verkrijgen: %s"
+
+#, fuzzy
+#~ msgid "Invalid passphrase."
+#~ msgstr "ongeldige parameter"
+
+#, fuzzy, c-format
+#~ msgid "unrecognized option: %s"
+#~ msgstr "Onbekende optie '%s'\\n"
+
+#, fuzzy
+#~ msgid "disk name expected"
+#~ msgstr "bestandsnaam werd verwacht"
+
+#, fuzzy, c-format
+#~ msgid "invalid disk: %s"
+#~ msgstr "ongeldig 'modinfo'-bestand '%s'"
+
+#, fuzzy, c-format
+#~ msgid "unrecognized disk: %s"
+#~ msgstr "niet-herkend getal"
+
+#, fuzzy, c-format
+#~ msgid "no such disk: %s"
+#~ msgstr "kan '%s' niet openen: %s"
+
+#, fuzzy
+#~ msgid "invalid JFS inode"
+#~ msgstr "ongeldig 'modinfo'-bestand '%s'"
+
+#, fuzzy
+#~ msgid "invalid directory slot index"
+#~ msgstr "ongeldige regelopmaak: %s"
+
+#, fuzzy
+#~ msgid "zstd file corrupted or unsupported block options"
+#~ msgstr "XZ-bestand is beschadigd of gebruikt niet-ondersteunde blokopties"
+
+#, fuzzy
+#~ msgid "bad shim loader signature"
+#~ msgstr "slechte shim-handtekening"
+
+#~ msgid "DEV"
+#~ msgstr "APP"
+
+#, fuzzy
+#~ msgid "set TPM device."
+#~ msgstr "PCI-apparaten tonen."
+
+#, fuzzy, c-format
+#~ msgid "cannot open TPM device '%s': %s"
+#~ msgstr "kan %s niet openen"
+
+#, fuzzy, c-format
+#~ msgid "cannot close TPM device: %s"
+#~ msgstr "kan %s niet openen"
+
+#, fuzzy
+#~ msgid "invalid partition number"
+#~ msgstr "ongeldige parameter"
+
+#, fuzzy, c-format
+#~ msgid "cannot cap PCR %u"
+#~ msgstr "kan '%s' niet lezen: %s"
+
+#, fuzzy
+#~ msgid "No device tree found"
+#~ msgstr "ongeldige apparatenboom"
+
+#, fuzzy
+#~ msgid "[-p] [--set variable]"
+#~ msgstr "Variabelen instellen."
+
+#, fuzzy
+#~ msgid "Retrieve device tree information."
+#~ msgstr "Apparaatinformatie ophalen."
+
+#, fuzzy
+#~ msgid "filename too long"
+#~ msgstr "Tekenreeks voor Voorbereider is te lang\n"
+
+#, c-format
+#~ msgid "GNU GRUB  version %s"
+#~ msgstr "GNU GRUB  versie %s"
+
+#, fuzzy
+#~ msgid "embed FILE as an x509 certificate for appended signature checking"
+#~ msgstr "BESTAND inbedden als publieke sleutel voor vingerafdrukcontrole"
+
+#, fuzzy, c-format
+#~ msgid "cannot open device %s: %s"
+#~ msgstr "kan %s niet openen"
+
+#, fuzzy, c-format
+#~ msgid "cannot probe fs for %s: %s"
+#~ msgstr "kan niet schrijven naar '%s': %s"
+
+#, fuzzy
+#~ msgid "embed FILE as public key for PGP signature checking"
+#~ msgstr "BESTAND inbedden als publieke sleutel voor vingerafdrukcontrole"
+
+#, fuzzy
+#~ msgid "option requires an argument"
+#~ msgstr "%s: optie vereist een argument -- '%s'"
+
+#, fuzzy, c-format
+#~ msgid "Could not open file: %s\n"
+#~ msgstr "kan logbestand %s niet openen\n"
+
+#, fuzzy, c-format
+#~ msgid "Could not seek file: %s\n"
+#~ msgstr "Kan geen bestand aanmaken: %s"
+
+#, fuzzy, c-format
+#~ msgid "Could not read file: %s\n"
+#~ msgstr "Kan geen bestand aanmaken: %s"
+
+#, fuzzy, c-format
+#~ msgid "Could not get TPM response.\n"
+#~ msgstr "niet-ondersteund HTTP-antwoord"
+
+#, fuzzy, c-format
+#~ msgid "Could not open TPM device (%s).\n"
+#~ msgstr "kan %s niet openen"
+
+#, fuzzy, c-format
+#~ msgid "Could not close TPM device (%s).\n"
+#~ msgstr "Kan FPSWA-stuurprogramma niet vinden"
+
+#, fuzzy, c-format
+#~ msgid "'%s' is not a valid action.\n"
+#~ msgstr "'%s' is geen lokale schijf"
+
+#, fuzzy, c-format
+#~ msgid "Could not parse arguments.\n"
+#~ msgstr "%s: Te veel argumenten\n"
+
 #~ msgid "SOURCE|-u UUID|-a|-b"
 #~ msgstr "BRON|-u UUID|-a|-b"
 
 #~ msgid "Linux not supported yet"
 #~ msgstr "Linux wordt nog niet ondersteund"
-
-#~ msgid "interpret is not supported"
-#~ msgstr "'interpret' wordt niet ondersteund"
-
-#, c-format
-#~ msgid "GNU GRUB  version %s"
-#~ msgstr "GNU GRUB  versie %s"
 
 #, c-format
 #~ msgid "%s, with Linux %s (recovery mode)"
@@ -8061,9 +8229,6 @@ msgstr ""
 
 #~ msgid "(PROGRAM ERROR) No version known!?"
 #~ msgstr "**Interne programmafout**: geen versie bekend!?"
-
-#~ msgid "%s: Too many arguments\n"
-#~ msgstr "%s: Te veel argumenten\n"
 
 #~ msgid "(PROGRAM ERROR) Option should have been recognized!?"
 #~ msgstr "**Interne programmafout**: optie had herkend moeten worden!?"
@@ -8289,17 +8454,11 @@ msgstr ""
 #~ msgid "cryptomount command fails: %s"
 #~ msgstr "het 'cryptomount'-commando is mislukt: %s"
 
-#~ msgid "%s: option requires an argument -- `%s'"
-#~ msgstr "%s: optie vereist een argument -- '%s'"
-
 #~ msgid "Make GRUB rescue image."
 #~ msgstr "Een noodhulpafbeelding van GRUB maken."
 
 #~ msgid "Show v2 and v3 tablesv only."
 #~ msgstr "Alleen de v2- en v3-tabellen tonen."
-
-#~ msgid "Unknown "
-#~ msgstr "(onbekend) "
 
 #~ msgid "Try `%s --help' for more information.\n"
 #~ msgstr "Typ '%s --help' voor meer informatie.\n"
@@ -8433,9 +8592,6 @@ msgstr ""
 #~ msgstr ""
 #~ "inbedding is niet mogelijk, maar dit is wel vereist als het root-device "
 #~ "op een RAID-array of LVM-volumen staat"
-
-#~ msgid "DEV"
-#~ msgstr "APP"
 
 #~ msgid "Use DEV as the root device [default=guessed]"
 #~ msgstr "APP als root-apparaat gebruiken [standaard is raden (guessed)]"
@@ -8585,9 +8741,6 @@ msgstr ""
 #~ msgid "Bibliographic filename string too long\n"
 #~ msgstr "Tekenreeks voor Bibliografische bestandsnaam is te lang\n"
 
-#~ msgid "Copyright filename string too long\n"
-#~ msgstr "Tekenreeks voor Copyright-bestandsnaam is te lang\n"
-
 #~ msgid "Publisher string too long\n"
 #~ msgstr "Tekenreeks voor Uitgever is te lang\n"
 
@@ -8619,9 +8772,6 @@ msgstr ""
 
 #~ msgid "re-directing all messages to %s\n"
 #~ msgstr "alle meldingen worden doorgestuurd naar %s\n"
-
-#~ msgid "can't open logfile: %s\n"
-#~ msgstr "kan logbestand %s niet openen\n"
 
 #~ msgid "Unable to open previous session image %s\n"
 #~ msgstr "Openen van vorige sessieafbeelding %s is mislukt\n"
@@ -8757,3 +8907,9 @@ msgstr ""
 
 #~ msgid "Path table size(bytes): %d\n"
 #~ msgstr "Grootte van padtabel (bytes): %d\n"
+
+#~ msgid "Unknown "
+#~ msgstr "(onbekend) "
+
+#~ msgid "Copyright filename string too long\n"
+#~ msgstr "Tekenreeks voor Copyright-bestandsnaam is te lang\n"

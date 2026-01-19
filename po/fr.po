@@ -8058,17 +8058,918 @@ msgstr ""
 "Ajout de l'entrée du menu d'amorçage pour les paramètres du firmware UEFI …"
 "\\n"
 
+msgid "hash file of the binary."
+msgstr "fichier de hachage du binaire."
+
+msgid "hash file of the certificate."
+msgstr "fichier de hachage du certificat."
+
+msgid "<SIGNED_FILE>"
+msgstr "<FICHIER_SIGNÉ>"
+
+msgid ""
+"Verify SIGNED_FILE against the trusted X.509 certificates in the db list"
+msgstr ""
+"Vérifier le FICHIER_SIGNÉ avec les certificats de confiance X.509 dans la "
+"liste de la base de données"
+
+msgid "<X509_CERTIFICATE>"
+msgstr "<CERTIFICAT_X509>"
+
+msgid "Add trusted X509_CERTIFICATE to the db list"
+msgstr ""
+"Ajouter le CERTIFICAT_X509 de confiance à la liste de la base de données"
+
+msgid "Add distrusted X509_CERTIFICATE to the dbx list"
+msgstr ""
+"Ajouter le CERTIFICAT_X509 répudié à la liste de la base de données dbx"
+
+msgid ""
+"Show the list of distrusted certificates and certificate/binary hashes from "
+"the dbx list"
+msgstr ""
+"Montrer la liste des certificats répudiés et des hachages des certificats/"
+"binaires de la liste de la base de données dbx"
+
+msgid "BINARY HASH FILE"
+msgstr "FICHIER HACHAGE BINAIRE"
+
+msgid "Add trusted BINARY HASH to the db list."
+msgstr ""
+"Ajouter le HACHAGE BINAIRE de confiance à la liste de la base de données."
+
+msgid ""
+"[-b|--binary-hash] FILE [BINARY HASH FILE]\n"
+"[-c|--cert-hash] FILE [CERTFICATE HASH FILE]"
+msgstr ""
+"[-b|--binary-hash] FILE [FICHIER HACHAGE BINAIRE]\n"
+"[-c|--cert-hash] FILE [FICHIER HACHAGE CERTIFICAT]"
+
+msgid "Add distrusted CERTFICATE/BINARY HASH to the dbx list."
+msgstr ""
+"Ajouter le CERTIFICAT/HACHAGE BINAIRE répudié à la liste de la base de "
+"données dbx."
+
+msgid "Allow the default UKI entry to be added to the GRUB menu."
+msgstr "Autoriser l'entrée UKI par défaut à être ajoutée au menu de GRUB."
+
+msgid "Allow the non-default UKI entries to be added to the GRUB menu."
+msgstr "Autoriser l'entrée UKI pas par défaut à être ajoutée au menu de GRUB."
+
+msgid "Allow specificUKII entries to be added to the GRUB menu."
+msgstr "Autoriser les entrées spécifiques UKI à être ajoutées au menu de GRUB."
+
+msgid ""
+"[-p|--path] [-f|--enable-fallback] DIR [-d|--show-default] [-n|--show-non-"
+"default] [-e|--entry] FILE"
+msgstr ""
+"[-p|--path] [-f|--enable-fallback] RÉP [-d|--show-default] [-n|--show-non-"
+"default] [-e|--entry] FICHIER"
+
+msgid "Import Boot Loader Specification snippets."
+msgstr "Importer les fragments de spécification du Boot Loader"
+
+msgid ""
+"[-p|--path] DIR [-f|--enable-fallback] [-d|--show-default] [-n|--show-non-"
+"default] [-e|--entry] FILE"
+msgstr ""
+"[-p|--path] RÉP [-f|--enable-fallback] [-d|--show-default] [-n|--show-non-"
+"default] [-e|--entry] FICHIER"
+
+msgid "Import Unified Kernel Images"
+msgstr "Importer les images du noyau unifié (UKI)"
+
+msgid "max recursion depth exceeded"
+msgstr "profondeur de récursion maximale dépassée"
+
+msgid "empty entry in PCR list"
+msgstr "entrée vide dans la liste PCR"
+
+#, c-format
+msgid "entry '%s' in PCR list is not a number"
+msgstr "l'entrée « %s » dans la liste PCR n'est pas un nombre"
+
+#, c-format
+msgid ""
+"entry %llu in PCR list is too large to be a PCR number, PCR numbers range "
+"from 0 to %u"
+msgstr ""
+"l'entrée %llu dans la liste PCR est trop grande pour être un nombre PCR, les "
+"nombres PCR sont entre 0 et %u"
+
+msgid "trailing comma at the end of PCR list"
+msgstr "virgule en trop à la fin de la liste PCR"
+
+#, c-format
+msgid "too many PCRs in PCR list, the maximum number of PCRs is %u"
+msgstr "trop de PCR dans la liste PCR, le nombre maximum de PCR est %u"
+
+#, c-format
+msgid "value '%s' is not a valid asymmetric key type"
+msgstr "la valeur « %s » n'est pas un type de clé asymétrique valable"
+
+#, c-format
+msgid "value '%s' is not a valid PCR bank"
+msgstr "la valeur « %s » n'est pas une banque PCR valable"
+
+#, c-format
+msgid "TPM handle value '%s' is not a number"
+msgstr "la valeur de l'identificateur TPM « %s » n'est pas un nombre"
+
+#, c-format
+msgid ""
+"value %llu is too large to be a TPM handle, TPM handles are unsigned 32-bit "
+"integers"
+msgstr ""
+"la valeur %llu est trop grande pour être un identificateur TPM, les "
+"identificateurs TPM sont des entiers de 32 bits"
+
+msgid ""
+"Unseal key using SRK ('srk') (default) or retrieve it from an NV Index "
+"('nv')."
+msgstr ""
+"Désceller la clé SRK (« srk ») (défaut) ou la récupérer depuis un Index NV "
+"(« nv »)."
+
+msgid ""
+"Comma-separated list of PCRs used to authorize key release e.g., '7,11'. "
+"(default: 7)"
+msgstr ""
+"Liste, séparée par une virgule, des PCR utilisés pour libérer la clé "
+"d'autorisation, par ex. « 7,11 ». (défaut : 7)"
+
+msgid ""
+"Bank of PCRs used to authorize key release: SHA1, SHA256, SHA384 or SHA512. "
+"(default: SHA256)"
+msgstr ""
+"Banque de PCR utilisée pour libérer la clé d'autorisation : SHA1, SHA256, "
+"SHA384 ou SHA512. (défaut : SHA256)"
+
+msgid ""
+"Comma-separated list of PCRs to be capped after key release e.g., '7,11'."
+msgstr ""
+"Liste, séparée par une virgule, des PCR à couvrir après la libération de la "
+"clé par ex. « 7,11 »."
+
+msgid ""
+"In SRK mode, path to the key file in the TPM 2.0 Key File format to unseal "
+"using the TPM (e.g., (hd0,gpt1)/boot/grub2/sealed.tpm)."
+msgstr ""
+"En mode SRK, chemin du fichier de clé dans le format de fichier de clé TPM "
+"2.0 à désceller en utilisant le TPM (par ex. (hd0,gpt1)/boot/grub2/"
+"sealed.tpm)."
+
+msgid ""
+"In SRK mode, path to the key file in the raw format to unseal using the TPM "
+"(e.g., (hd0,gpt1)/boot/grub2/sealed.key). (Mainly for backward "
+"compatibility. Please use '--tpm2key'.)"
+msgstr ""
+"En mode SRK, le chemin vers le fichier de clé dans le format brut à "
+"désceller en utilisant le TPM (par ex. (hd0,gpt1)/boot/grub2/sealed.key). "
+"(Principalement pour rétrocompatibilité. Veuillez utiliser « --tpm2key ».)"
+
+msgid "In SRK mode, the SRK handle if the SRK is persistent."
+msgstr "En mode SRK, l'identificateur SRK si le SRK est persistant."
+
+msgid ""
+"In SRK mode, the type of SRK: RSA (RSA2048) and ECC (ECC_NIST_P256)(default: "
+"ECC)"
+msgstr ""
+"En mode SRK, le type de SRK : RSA (RSA2048) et ECC (ECC_NIST_P256)(défaut : "
+"ECC)"
+
+msgid ""
+"Required in NV Index mode, the NV handle to read which must readily exist on "
+"the TPM and which contains the key."
+msgstr ""
+"Requis en mode NV Index, l'identifiant NV à lire qui doit déjà exister sur "
+"le TPM et qui contient la clé."
+
+#, c-format
+msgid "sealed key larger than %llu bytes"
+msgstr "la clé scellée est plus grande que %llu octets"
+
+msgid "no memory left to allocate unlock key buffer"
+msgstr ""
+"plus de mémoire restante pour allouer le tampon pour la clé de déverrouillage"
+
+msgid ""
+"cannot use TPM2 key protector without initializing it, call "
+"tpm2_protector_init first"
+msgstr ""
+"le protecteur de clé TPM2 ne peut pas être utilisé sans avoir été "
+"initialisé, appelez d'abord tpm2_protector_init"
+
+msgid "in SRK mode, a key file must be specified: --tpm2key/-T or --keyfile/-k"
+msgstr ""
+"en mode SRK, un fichier de clé doit être spécifié : --tpm2key/-T ou --"
+"keyfile/-k"
+
+msgid ""
+"in SRK mode, please specify a key file with only --tpm2key/-T or --keyfile/-k"
+msgstr ""
+"en mode SRK, veuillez spécifier un fichier de clé avec uniquement --tpm2key/-"
+"T ou --keyfile/-k"
+
+msgid "in SRK mode, an NV Index cannot be specified"
+msgstr "en mode SRK, un index NV ne peut pas être indiqué"
+
+msgid "in NV Index mode, an NV Index must be specified: --nvindex or -n"
+msgstr "en mode index NV, un index NV doit être spécifié : --nvindex ou -n"
+
+msgid "a key file cannot be specified when using NV index mode"
+msgstr ""
+"un fichier de clé ne peut pas être indiqué lorsque le mode index NV est "
+"utilisé"
+
+msgid ""
+"an SRK cannot be specified when using NV index mode with a persistent handle"
+msgstr ""
+"un SRK ne peut pas être spécifié lorsque le mode index NV est utilisé avec "
+"un identificateur persistant"
+
+msgid ""
+"an NV index must be either a persistent handle or an NV index handle when "
+"using NV index mode"
+msgstr ""
+"un index NV doit être soit un identificateur persistant ou soit un "
+"identificateur d'index NV en utilisant le mode d'index NV"
+
+msgid "no memory to duplicate file path"
+msgstr "pas de mémoire pour dupliquer un chemin de fichier"
+
+#, c-format
+msgid "value '%s' is not a valid TPM2 key protector mode"
+msgstr "la valeur « %s » n'est pas un mode de protection de clé TPM2 valide"
+
+msgid ""
+"the TPM2 key protector does not accept any non-option arguments (i.e., like "
+"-o and/or --option only)"
+msgstr ""
+"le protecteur de clé TPM2 n'accepte pas n'importe quels arguments sans "
+"options (par ex., tel que -o ou --option uniquement)"
+
+msgid "tpm2_key_protector_clear accepts no arguments"
+msgstr "tpm2_key_protector_clear n'accepte aucun argument"
+
+msgid ""
+"[-m mode] [-p pcr_list] [-b pcr_bank] [-c pcr_list] [-T tpm2_key_file_path] "
+"[-k sealed_key_file_path] [-s srk_handle] [-a asymmetric_key_type] [-n "
+"nv_index]"
+msgstr ""
+"[-m mode] [-p liste_pcr] [-b banque_pcr] [-c liste_pcr] [-T "
+"chemin_fichier_clé_tpm2] [-k chemin_fichier_clé_scellée] [-s "
+"identificateur_srk] [-a type_clé_asymétrique] [-n index_nv]"
+
+msgid "Initialize the TPM2 key protector."
+msgstr "Initialiser le protecteur de clé TPM2."
+
+msgid "Clear the TPM2 key protector if previously initialized."
+msgstr "Effacer le protecteur de clé TPM2 si précédemment initialisé."
+
+msgid "Dump TPM2 PCRs"
+msgstr "Vidanger les PCR de TPM2"
+
+msgid "Print all PCRs of the specified TPM 2.0 bank"
+msgstr "Afficher tous les PCR de la banque TPM 2.0 spécifiée"
+
+msgid "Unlock volume(s) using key protector(s)."
+msgstr ""
+"Déverrouiller le ou les volume(s) en utilisant le ou les protecteur(s) de "
+"clé."
+
+msgid "Enable hardware acceleration."
+msgstr "Activer l'accélération matérielle."
+
+#, c-format
+msgid "no key protector provided a usable key for %s%s%s (%s)"
+msgstr "aucun protecteur de clé n'a fourni de clé utilisable pour %s%s%s (%s)"
+
+#, c-format
+msgid "Invalid cryptodisk_passphrase_tries value `%s'. Defaulting to %lu.\n"
+msgstr ""
+"La valeur « %s » de cryptodisk_passphrase_tries est invalide. Utilisation de "
+"la valeur par défaut %lu.\n"
+
+msgid "[--quiet] DEVICE"
+msgstr "[--quiet] PÉRIPHÉRIQUE"
+
+msgid "Check if a logical volume resides on encrypted disks."
+msgstr "Vérifier si un volume logique réside sur des disques chiffrés."
+
+msgid "overflow detected while obtaining size of device name"
+msgstr "débordement détecté en obtenant la taille du nom du périphérique"
+
+msgid "overflow detected while obtaining encoding size"
+msgstr "débordement détecté en obtenant la taille encodée"
+
+msgid "overflow detected while obtaining size of canonical name"
+msgstr "débordement détecté en obtenant la taille du nom canonique"
+
+msgid "overflow detected while obtaining size of device path"
+msgstr "débordement détecté en obtenant la taille du chemin du périphérique"
+
+msgid "overflow detected while obtaining size of an open path"
+msgstr "débordement détecté en obtenant la taille d'un chemin ouvert"
+
+msgid "overflow detected while obtaining bootpath size"
+msgstr "débordement détecté en obtenant la taille du chemin de démarrage"
+
+msgid "overflow detected while allocating size of password buffer"
+msgstr "débordement détecté en allouant la taille du tampon du mot de passe"
+
+msgid "link target length overflow"
+msgstr "débordement de la longueur de la cible du lien"
+
+msgid "directory item size overflow"
+msgstr "débordement de la taille de l'élément du répertoire"
+
+msgid "buffer size overflow"
+msgstr "débordement de la taille du tampon"
+
+msgid "directory element size overflow"
+msgstr "débordement de la taille de l'élément du répertoire"
+
+msgid "data size overflow"
+msgstr "débordement de la taille des données"
+
+msgid "mtime overflow"
+msgstr "débordement du temps de dernière modification"
+
+msgid "mode overflow"
+msgstr "débordement du mode"
+
+msgid "namesize overflow"
+msgstr "débordement de la taille du nom"
+
+msgid "file name size overflow"
+msgstr "débordement de la taille du nom du fichier"
+
+msgid "target data size overflow"
+msgstr "débordement de la taille des données cibles"
+
+msgid "symlink size overflow"
+msgstr "débordement de la taille du lien symbolique"
+
+msgid "directory entry name length overflow"
+msgstr "débordement de la longueur du nom de l'entrée du répertoire"
+
+msgid "compression buffer size overflow"
+msgstr "débordement de la taille du tampon de compression"
+
+msgid "symlink name length overflow"
+msgstr "débordement de la longueur du nom du lien symbolique"
+
+msgid "name length overflow"
+msgstr "débordement de la longueur du nom"
+
+msgid "name size overflow"
+msgstr "débordement de la taille du nom"
+
+msgid "link size overflow"
+msgstr "débordement de la taille du lien"
+
+msgid "long name size overflow"
+msgstr "débordement de la taille du nom long"
+
+msgid "directory data size overflow"
+msgstr "débordement de la taille des données du répertoire"
+
+msgid "path buffer size overflow"
+msgstr "débordement de la taille du tampon du chemin"
+
+msgid "elemsize overflow"
+msgstr "débordement de la taille de l'élément"
+
+msgid "Get property."
+msgstr "Obtenir la propriété."
+
+msgid "prop"
+msgstr "prop"
+
+#, c-format
+msgid "use '%s %s' to force a system restart"
+msgstr "utilisez « %s %s » pour forcer le redémarrage du système"
+
+msgid "tag length overflow"
+msgstr "débordement de la longueur de l'étiquette"
+
+msgid "overflow detected while obatining size of ofdata path"
+msgstr "débordement détecté en obtenant la taille du chemin des données"
+
+msgid "overflow detected while obtaining length of host"
+msgstr "débordement détecté en obtenant la longueur de l'hôte"
+
+msgid "maximum recursion depth exceeded"
+msgstr "profondeur maximale de récursion dépassée"
+
+msgid "disabled command line interface access"
+msgstr "désactiver l'accès à la l'interface en ligne de commande"
+
+msgid "Add a note segment reserving SIZE bytes for an appended signature"
+msgstr ""
+"Ajouter un segment de note pour réserver TAILLE octets pour une signature "
+"ajoutée"
+
+msgid "can't set env_block as it's read-only"
+msgstr "impossible de définir env_block car il est en lecture seule"
+
+msgid "zfs-bootfs ZFS_DATASET"
+msgstr "zfs-bootfs ZFS_DATASET"
+
+msgid "Compute ZFS dataset bootpath."
+msgstr "Calculer l'ensemble de donnée du chemin de démarrage ZFS."
+
+#, c-format
+msgid "appended signature size `%s', and it should not be zero"
+msgstr "taille de la signature ajoutée « %s » et elle devrait être zéro"
+
+msgid "disable command line interface access"
+msgstr "désactiver l'accès à l'interface en ligne de commande"
+
+msgid "Add or remove a key protector to or from a key."
+msgstr "Ajouter ou retirer un protecteur de clé à ou depuis une clé."
+
+msgid "Set key protector to use (only tpm2 is currently supported)."
+msgstr ""
+"Définir le protecteur de clé à utiliser (seul tpm2 est actuellement "
+"supporté)."
+
+msgid "Set the path to the TPM2 device. (default: /dev/tpm0)"
+msgstr "Définir le chemin vers le périphérique TPM2. (défaut : /dev/tpm0)"
+
+msgid ""
+"Set a comma-separated list of PCRs used to authorize key release e.g., "
+"'7,11'. Please be aware that PCR 0~7 are used by the firmware and the "
+"measurement result may change after a firmware update (for baremetal "
+"systems) or a package (OVMF/SLOF) update in the VM host. This may lead to "
+"the failure of key unsealing. (default: 7)"
+msgstr ""
+"Définir une liste séparée par une virgule des PCR à utiliser pour autoriser "
+"la libération d'une clé, par ex. « 7,11 ». Notez que les PCR 0~7 sont "
+"utilisés par le microprogramme et le résultat de la mesure peut changer "
+"après une mise à jour du microprogramme (pour les systèmes « baremetal ») ou "
+"la mise à jour d'un paquet (OVMF/SLOF) dans la VM hôte. Cela peut conduire à "
+"l'échec de déscellement de la clé. (par défaut : 7)"
+
+msgid ""
+"Set the bank of PCRs used to authorize key release: SHA1, SHA256, SHA384, or "
+"SHA512. (default: SHA256)"
+msgstr ""
+"Définir la banque de PCR à utiliser pour autoriser la libération d'une clé : "
+"SHA1, SHA256, SHA384 ou SHA512. (défaut : SHA256)"
+
+msgid "Set the path to a file that contains the cleartext key to protect."
+msgstr ""
+"Définir le chemin vers un fichier qui contient le texte en clair à protéger."
+
+msgid ""
+"Set the path to the file that will contain the key after sealing (must be "
+"accessible to GRUB during boot)."
+msgstr ""
+"Définir le chemin vers le fichier qui contiendra la clé après scellement "
+"(doit être accessible par GRUB durant le démarrage)."
+
+msgid "Set the SRK handle if the SRK is to be made persistent."
+msgstr "Définir l'identifiant SRK si le SRK es rendu persistant."
+
+msgid ""
+"Set the type of SRK: RSA (RSA2048) and ECC (ECC_NIST_P256).(default: ECC)"
+msgstr ""
+"Définir le type de SRK : RSA (RSA2048) et ECC (ECC_NIST_P256). (défaut : ECC)"
+
+msgid "Evict a previously persisted SRK from the TPM, if any."
+msgstr "Évincer un SRK précédemment persisté hors du TPM, s'il y en a un."
+
+msgid "Use TPM 2.0 Key File format."
+msgstr "Utiliser le format de fichier de clé TPM 2.0."
+
+msgid "Store the sealed key in a persistent or NV index handle."
+msgstr "Stocker la clé scellée dans un identifiant persistant ou un index NV."
+
+#, c-format
+msgid "Could not send TPM command.\n"
+msgstr "Impossible d'envoyer la commande TPM.\n"
+
+#, c-format
+msgid "Could not read all the specified PCRs.\n"
+msgstr "Impossible de lire tous les PCR spécifiés.\n"
+
+#, c-format
+msgid "PCR concatenation buffer not big enough.\n"
+msgstr "Le tampon de concaténation PCR n'est pas assez grand.\n"
+
+#, c-format
+msgid "Bad PCR value size: expected %llu bytes but got %u bytes.\n"
+msgstr ""
+"Mauvaise taille de valeur PCR : %llu octets sont attendus mais %u octets ont "
+"été obtenus.\n"
+
+#, c-format
+msgid "Could not allocate memory for the raw format key.\n"
+msgstr "Impossible d'allouer la mémoire pour la clé au format brut.\n"
+
+#, c-format
+msgid "Invalid tpm2key size for TPM NV buffer\n"
+msgstr "Taille tpm2key invalide pour le tampon TPM NV\n"
+
+#, c-format
+msgid "Input key size larger than %u bytes.\n"
+msgstr "La taille de la clé d'entrée est plus grande que %u octets.\n"
+
+#, c-format
+msgid "Could not export to TPM 2.0 Key File format\n"
+msgstr "Impossible d'exporter vers le format de fichier de clé TPM 2.0\n"
+
+#, c-format
+msgid "Could not export to the raw format\n"
+msgstr "Impossible d'exporter vers le format brut\n"
+
+#, c-format
+msgid "--tpm2-evict is invalid when --action is 'add'.\n"
+msgstr "--tpm2-evict est invalide quand --action est « add ».\n"
+
+#, c-format
+msgid "Persistent handle does not support TPM 2.0 Key File format.\n"
+msgstr ""
+"L'identifiant persistant ne supporte pas le format de fichier de clé TPM "
+"2.0.\n"
+
+#, c-format
+msgid "--tpm2-nvindex must be a persistent or NV index handle.\n"
+msgstr "--tpm2-nvindex doit être un identifiant persistant ou un index NV.\n"
+
+#, c-format
+msgid "--tpm2-nvindex and --tpm2-srk must be different.\n"
+msgstr "--tpm2-nvindex et --tpm2-srk doivent être différents.\n"
+
+#, c-format
+msgid "--tpm2-srk must be a persistent handle, e.g. 0x81000000.\n"
+msgstr "--tpm2-srk doit être un identifiant persistant, par ex. 0x81000000.\n"
+
+#, c-format
+msgid "--tpm2-asymmetric is invalid when --action is 'remove'.\n"
+msgstr "--tpm2-asymmetric est invalide quand --action est « remove ».\n"
+
+#, c-format
+msgid "--tpm2-bank is invalid when --action is 'remove'.\n"
+msgstr "--tpm2-bank est invalide quand --action est « remove ».\n"
+
+#, c-format
+msgid "--tpm2-keyfile is invalid when --action is 'remove'.\n"
+msgstr "--tpm2-keyfile est invalide quand --action est « remove ».\n"
+
+#, c-format
+msgid "--tpm2-outfile is invalid when --action is 'remove'.\n"
+msgstr "--tpm2-outfile est invalide quand --action est « remove ».\n"
+
+#, c-format
+msgid "--tpm2-pcrs is invalid when --action is 'remove'.\n"
+msgstr "--tpm2-pcrs est invalide quand --action est « remove ».\n"
+
+#, c-format
+msgid "missing --tpm2-srk or --tpm2-nvindex for --action 'remove'.\n"
+msgstr "--tpm2-srk ou --tpm2-nvindex manquant pour --action « remove ».\n"
+
+#, c-format
+msgid ""
+"The TPM2 key protector only supports the following actions: add, remove.\n"
+msgstr ""
+"Le protecteur de clé TPM2 ne supporte que les actions suivantes : add, "
+"remove.\n"
+
+#, c-format
+msgid "--action|-a can only be specified once.\n"
+msgstr "--action|-a ne peut être indiqué qu'une seule fois\n"
+
+#, c-format
+msgid "--protector|-p can only be specified once.\n"
+msgstr "--protector|-p ne peut être indiqué qu'une seule fois.\n"
+
+#, c-format
+msgid "'%s' is not a valid protector.\n"
+msgstr "« %s » n'est pas un protecteur valide.\n"
+
+#, c-format
+msgid "--tpm2-device can only be specified once.\n"
+msgstr "--tpm2-device ne peut être spécifié qu'une seule fois.\n"
+
+#, c-format
+msgid "--tpm2-pcrs can only be specified once.\n"
+msgstr "--tpm2-pcrs ne peut être spécifié qu'une seule fois.\n"
+
+#, c-format
+msgid "--tpm2-srk can only be specified once.\n"
+msgstr "--tpm2-srk ne peut être spécifié qu'une seule fois.\n"
+
+#, c-format
+msgid "--tpm2-asymmetric can only be specified once.\n"
+msgstr "--tpm2-asymmetric ne peut être spécifié qu'une seule fois.\n"
+
+#, c-format
+msgid "--tpm2-bank can only be specified once.\n"
+msgstr "--tpm2-bank ne peut être spécifié qu'une seule fois.\n"
+
+#, c-format
+msgid "--tpm2-keyfile can only be specified once.\n"
+msgstr "--tpm2-keyfile ne peut être spécifié qu'une seule fois.\n"
+
+#, c-format
+msgid "--tpm2-evict can only be specified once.\n"
+msgstr "--tpm-evict ne peut être spécifié qu'une seule fois.\n"
+
+#, c-format
+msgid "--tpm2-tpm2key can only be specified once.\n"
+msgstr "--tpm2-tpm2key ne peut être spécifié qu'une seule fois.\n"
+
+#, c-format
+msgid "--tpm2-nvindex can only be specified once.\n"
+msgstr "--tpm2-nvindex ne peut être spécifié qu'une seule fois.\n"
+
+#, c-format
+msgid "--action is mandatory.\n"
+msgstr "--action est obligatoire.\n"
+
+#, c-format
+msgid "--protector is mandatory and only 'tpm2' is currently supported.\n"
+msgstr ""
+"--protector est obligatoire et seul « tpm2 » est actuellement supporté.\n"
+
+msgid ""
+"Protect a cleartext key using a GRUB key protector that can retrieve the key "
+"during boot to unlock fully-encrypted disks automatically."
+msgstr ""
+"Protège une clé en texte clair en utilisant un protecteur de clé de GRUB qui "
+"peut récupérer le clé durant le démarrage pour déverrouiller automatiquement "
+"les disques complètement chiffrés."
+
+msgid ""
+"x509 public key can be support only to appended signature with powerpc-"
+"ieee1275 images"
+msgstr ""
+"la clé publique x509 n'est supportée que lors de l'ajout de signatures avec "
+"des images powerpc-ieee1275"
+
+msgid "SBAT data can be added only to EFI or powerpc-ieee1275 images"
+msgstr ""
+"les données SBAT peuvent uniquement être ajoutées à des images EFI ou "
+"powerpc-ieee1275"
+
+msgid "appended signature can be support only to powerpc-ieee1275 images"
+msgstr ""
+"la signature ajoutée peut uniquement être supportée par des images powerpc-"
+"ieee1275"
+
+#, c-format
+msgid ""
+"GRUB_OS_PROBER_SKIP_LIST contains deprecated <UUID>@/dev/* notation. The @/"
+"dev/* suffix is ignored."
+msgstr ""
+"GRUB_OS_PROBER_SKIP_LIST contient la notation dépréciée <UUID>@/dev/*. Le "
+"suffixe @/dev/* est ignoré."
+
+#, fuzzy
+#~ msgid "Show the list of trusted X.509 certificates from the db list"
+#~ msgstr "Afficher la liste des clés de confiance."
+
+#, fuzzy
+#~ msgid "Specify path to find UKI entries."
+#~ msgstr "Indiquer le hachage à utiliser."
+
+#, fuzzy, c-format
+#~ msgid "duplicate file: `%s'"
+#~ msgstr "Impossible de créer le fichier : %s"
+
+#, fuzzy
+#~ msgid "overflow detected creating argv list"
+#~ msgstr "un dépassement est détectée"
+
+#, fuzzy, c-format
+#~ msgid "variable '%s' isn't set"
+#~ msgstr "la variable « %s » n'est pas définie"
+
+#, fuzzy
+#~ msgid "memory reading is disabled in lockdown mode"
+#~ msgstr ""
+#~ "la mémoire en cours de définition est plus grande que la mémoire allouée"
+
+#, fuzzy
+#~ msgid "RDMSR is unsupported"
+#~ msgstr "l'interprétation n'est pas prise en charge"
+
+#, fuzzy
+#~ msgid "WRMSR is unsupported"
+#~ msgstr "l'interprétation n'est pas prise en charge"
+
+#, fuzzy
+#~ msgid "List memory regions."
+#~ msgstr "Lister les blocs mémoire libres."
+
+#, fuzzy
+#~ msgid "Only probe encrypted disks."
+#~ msgstr "Sonder uniquement les disques EFI."
+
+#, fuzzy, c-format
+#~ msgid "could not open file: %s"
+#~ msgstr "impossible d'ouvrir le fichier de clé %s"
+
+#, fuzzy, c-format
+#~ msgid "could not read file size: %s"
+#~ msgstr "impossible de lire « %s » : %s"
+
+#, fuzzy, c-format
+#~ msgid "could not allocate buffer for %s"
+#~ msgstr "impossible d'allouer le tampon de commande"
+
+#, fuzzy, c-format
+#~ msgid "could not retrieve file contents: %s"
+#~ msgstr "impossible de récupérer les listes de blocs : %s"
+
+#, fuzzy
+#~ msgid "malformed TPM wire key file"
+#~ msgstr "impossible de lire le fichier de clé"
+
+#, fuzzy
+#~ msgid "malformed TPM 2.0 key file"
+#~ msgstr "impossible de lire le fichier de clé"
+
+#, fuzzy
+#~ msgid "key file not specified"
+#~ msgstr "Aucune entrée de menu indiquée."
+
+#, fuzzy
+#~ msgid "Unknown Mode"
+#~ msgstr "Encodage inconnu"
+
+#, fuzzy
+#~ msgid "Invalid passphrase."
+#~ msgstr "paramètre incorrect"
+
+#, fuzzy, c-format
+#~ msgid "unrecognized option: %s"
+#~ msgstr "Option « %s » non reconnue\\n"
+
+#, fuzzy
+#~ msgid "disk name expected"
+#~ msgstr "nom de fichier attendu"
+
+#, fuzzy, c-format
+#~ msgid "invalid disk: %s"
+#~ msgstr "mode %s invalide"
+
+#, fuzzy, c-format
+#~ msgid "unrecognized disk: %s"
+#~ msgstr "taille de clé non reconnue"
+
+#, fuzzy, c-format
+#~ msgid "no such disk: %s"
+#~ msgstr "impossible d'ouvrir le disque : %s"
+
+#, fuzzy
+#~ msgid "invalid JFS inode"
+#~ msgstr "mode %s invalide"
+
+#, fuzzy
+#~ msgid "invalid directory slot index"
+#~ msgstr "chiffrement %s ou mode %s invalide"
+
+#, fuzzy
+#~ msgid "zstd file corrupted or unsupported block options"
+#~ msgstr "fichier XZ corrompu ou options de bloc non prises en charge"
+
+#, fuzzy
+#~ msgid "bad shim loader signature"
+#~ msgstr "mauvaise signature du « shim »"
+
+#, fuzzy
+#~ msgid "DEV"
+#~ msgstr "PÉRIPHÉRIQUE"
+
+#, fuzzy
+#~ msgid "set TPM device."
+#~ msgstr "Afficher les périphériques PCI."
+
+#, fuzzy, c-format
+#~ msgid "cannot open TPM device '%s': %s"
+#~ msgstr "impossible d'ouvrir le périphérique : %s"
+
+#, fuzzy, c-format
+#~ msgid "cannot close TPM device: %s"
+#~ msgstr "impossible d'ouvrir le périphérique : %s"
+
+#, fuzzy
+#~ msgid "invalid partition number"
+#~ msgstr "paramètre incorrect"
+
+#, fuzzy, c-format
+#~ msgid "cannot cap PCR %u"
+#~ msgstr "impossible de créer une copie de sauvegarde de « %s » : %s"
+
+#, fuzzy
+#~ msgid "No device tree found"
+#~ msgstr "arborescence de périphériques incorrecte"
+
+#, fuzzy
+#~ msgid "failed to retrieve the prop field"
+#~ msgstr "échec de la récupération du champ de la structure"
+
+#, fuzzy
+#~ msgid "[-p] [--set variable]"
+#~ msgstr "Définir les variables."
+
+#, fuzzy
+#~ msgid "Retrieve device tree information."
+#~ msgstr "Récupérer les renseignements du périphérique."
+
+#, fuzzy
+#~ msgid "filename too long"
+#~ msgstr "chaîne trop longue"
+
 #, c-format
 #~ msgid "GNU GRUB  version %s"
 #~ msgstr "GNU GRUB  version %s"
 
-#, c-format
-#~ msgid "%s, with Linux %s (recovery mode)"
-#~ msgstr "%s, avec Linux %s (mode de dépannage)"
+#, fuzzy
+#~ msgid "embed FILE as an x509 certificate for appended signature checking"
+#~ msgstr ""
+#~ "embarquer FICHIER comme clé publique pour la vérification de signatures"
 
-#, c-format
-#~ msgid "%s, with Linux %s"
-#~ msgstr "%s, avec Linux %s"
+#, fuzzy, c-format
+#~ msgid "cannot open device %s: %s"
+#~ msgstr "impossible d'ouvrir le périphérique : %s"
+
+#, fuzzy, c-format
+#~ msgid "cannot probe fs for %s: %s"
+#~ msgstr "impossible de récupérer « %s » : %s"
+
+#, fuzzy, c-format
+#~ msgid "non-numeric or invalid appended signature size `%s'"
+#~ msgstr "taille du fichier de clé « %s » non numérique ou invalide"
+
+#, fuzzy
+#~ msgid "embed FILE as public key for PGP signature checking"
+#~ msgstr ""
+#~ "embarquer FICHIER comme clé publique pour la vérification de signatures"
+
+#, fuzzy
+#~ msgid "option requires an argument"
+#~ msgstr "%s : l'option nécessite un argument — « %s »"
+
+#, fuzzy, c-format
+#~ msgid "Could not open file: %s\n"
+#~ msgstr "impossible d'ouvrir le fichier de clé %s"
+
+#, fuzzy, c-format
+#~ msgid "Could not seek file: %s\n"
+#~ msgstr "Impossible de créer le fichier : %s"
+
+#, fuzzy, c-format
+#~ msgid "Could not get file length: %s\n"
+#~ msgstr "impossible de dupliquer le chiffrement de longueur « % avec strndup"
+
+#, fuzzy, c-format
+#~ msgid "Could not allocate memory for file: %s\n"
+#~ msgstr "Impossible de trouver le pilote FPSWA"
+
+#, fuzzy, c-format
+#~ msgid "Could not read file: %s\n"
+#~ msgstr "Impossible de créer le fichier : %s"
+
+#, fuzzy, c-format
+#~ msgid "Could not get TPM response.\n"
+#~ msgstr "réponse HTTP non prise en charge"
+
+#, fuzzy, c-format
+#~ msgid "Could not open TPM device (%s).\n"
+#~ msgstr "impossible d'ouvrir le périphérique : %s"
+
+#, fuzzy, c-format
+#~ msgid "Could not close TPM device (%s).\n"
+#~ msgstr "Impossible de trouver le pilote FPSWA"
+
+#, fuzzy, c-format
+#~ msgid "Could not write key file (%s).\n"
+#~ msgstr "impossible d'ouvrir le fichier de clé %s"
+
+#, fuzzy, c-format
+#~ msgid "--tpm2-keyfile must be specified.\n"
+#~ msgstr "le fichier de destination doit être indiqué"
+
+#, fuzzy, c-format
+#~ msgid "--tpm2-outfile or --tpm2-nvindex must be specified.\n"
+#~ msgstr "le fichier de destination doit être indiqué"
+
+#, fuzzy, c-format
+#~ msgid "'%s' is not a valid action.\n"
+#~ msgstr "« %s » n'est pas un disque local"
+
+#, fuzzy, c-format
+#~ msgid "--tpm2-outfile can only be specified once.\n"
+#~ msgstr "le fichier de destination doit être indiqué"
+
+#, fuzzy, c-format
+#~ msgid "Could not parse arguments.\n"
+#~ msgstr "%s : trop d'arguments\n"
 
 #, c-format
 #~ msgid ""
@@ -8092,14 +8993,19 @@ msgstr ""
 #~ "binaires amorçables qu'elles contiennent et créer de nouvelles entrées "
 #~ "d'amorçage."
 
+#, c-format
+#~ msgid "%s, with Linux %s (recovery mode)"
+#~ msgstr "%s, avec Linux %s (mode de dépannage)"
+
+#, c-format
+#~ msgid "%s, with Linux %s"
+#~ msgstr "%s, avec Linux %s"
+
 #~ msgid "SOURCE|-u UUID|-a|-b"
 #~ msgstr "SOURCE|-u UUID|-a|-b"
 
 #~ msgid "Linux not supported yet"
 #~ msgstr "Linux n'est pas encore supporté"
-
-#~ msgid "interpret is not supported"
-#~ msgstr "l'interprétation n'est pas prise en charge"
 
 #~ msgid "Slot \"%"
 #~ msgstr "Emplacement \"%"
@@ -8172,9 +9078,6 @@ msgstr ""
 
 #~ msgid "(PROGRAM ERROR) No version known!?"
 #~ msgstr "(Erreur du programme) version inconnue."
-
-#~ msgid "%s: Too many arguments\n"
-#~ msgstr "%s : trop d'arguments\n"
 
 #~ msgid "(PROGRAM ERROR) Option should have been recognized!?"
 #~ msgstr "(Erreur du programme) l'option aurait due être reconnue."
@@ -8436,6 +9339,3 @@ msgstr ""
 
 #~ msgid "cryptomount command fails: %s"
 #~ msgstr "échec de la commande cryptomount : %s"
-
-#~ msgid "%s: option requires an argument -- `%s'"
-#~ msgstr "%s : l'option nécessite un argument — « %s »"

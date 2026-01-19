@@ -7889,14 +7889,6 @@ msgstr "UEFI 設定介面"
 msgid "Adding boot menu entry for UEFI Firmware Settings ...\\n"
 msgstr ""
 
-#, c-format
-#~ msgid "%s, with Linux %s (recovery mode)"
-#~ msgstr "%s，採用 Linux %s (復原模式)"
-
-#, c-format
-#~ msgid "%s, with Linux %s"
-#~ msgstr "%s，採用 Linux %s"
-
 #~ msgid "Expose v1 tables."
 #~ msgstr "顯露 v1 表。"
 
@@ -8043,3 +8035,11 @@ msgstr ""
 
 #~ msgid "cannot guess the root device. Specify the option `--root-device'"
 #~ msgstr "無法猜測根裝置。請指定「--root-device」選項"
+
+#, c-format
+#~ msgid "%s, with Linux %s (recovery mode)"
+#~ msgstr "%s，採用 Linux %s (復原模式)"
+
+#, c-format
+#~ msgid "%s, with Linux %s"
+#~ msgstr "%s，採用 Linux %s"

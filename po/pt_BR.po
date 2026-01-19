@@ -7952,12 +7952,10 @@ msgstr ""
 #~ msgstr "ORIGEM|-u UUID|-a|-b"
 
 #, fuzzy
-#~| msgid "List of supported video modes:"
 #~ msgid "Linux not supported yet"
 #~ msgstr "Lista dos modos de vídeo suportados:"
 
 #, fuzzy
-#~| msgid "16-bit protected interface supported\n"
 #~ msgid "interpret is not supported"
 #~ msgstr "Interface 16 bits protegida suportada\n"
 

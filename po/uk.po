@@ -8003,17 +8003,911 @@ msgstr ""
 msgid "Adding boot menu entry for UEFI Firmware Settings ...\\n"
 msgstr "Додаємо пункт меню завантаження для параметрів мікрокоду UEFI ...\\n"
 
+msgid "hash file of the binary."
+msgstr "файл хешів виконуваного файла."
+
+msgid "hash file of the certificate."
+msgstr "файл хешів сертифіката."
+
+msgid "<SIGNED_FILE>"
+msgstr "<ПІДПИСАНИЙ_ФАЙЛ>"
+
+msgid ""
+"Verify SIGNED_FILE against the trusted X.509 certificates in the db list"
+msgstr ""
+"Перевірити ПІДПИСАНИЙ_ФАЙЛ за допомогою надійних сертифікатів X.509 у списку "
+"db"
+
+msgid "<X509_CERTIFICATE>"
+msgstr "<СЕРТИФІКАТ_X509>"
+
+msgid "Add trusted X509_CERTIFICATE to the db list"
+msgstr "Додати надійний СЕРТИФІКАТ_X509 до списку db"
+
+msgid "Add distrusted X509_CERTIFICATE to the dbx list"
+msgstr "Додати ненадійний СЕРТИФІКАТ_X509 до списку dbx"
+
+msgid ""
+"Show the list of distrusted certificates and certificate/binary hashes from "
+"the dbx list"
+msgstr ""
+"Вивести список ненадійних сертифікатів та двійкових хешів сертифікатів зі "
+"списку dbx"
+
+msgid "BINARY HASH FILE"
+msgstr "ФАЙЛ ДВІЙКОВОГО ХЕШУ"
+
+msgid "Add trusted BINARY HASH to the db list."
+msgstr "Додати надійний ДВІЙКОВИЙ ХЕШ до списку db."
+
+msgid ""
+"[-b|--binary-hash] FILE [BINARY HASH FILE]\n"
+"[-c|--cert-hash] FILE [CERTFICATE HASH FILE]"
+msgstr ""
+"[-b|--binary-hash] ФАЙЛ [ФАЙЛ ДВІЙКОВИХ ХЕШІВ]\n"
+"[-c|--cert-hash] ФАЙЛ [ФАЙЛ ХЕШІВ СЕРТИФІКАТІВ]"
+
+msgid "Add distrusted CERTFICATE/BINARY HASH to the dbx list."
+msgstr "Додати ненадійний СЕРТИФІКАТ або ДВІЙКОВИЙ ХЕШ до списку dbx."
+
+msgid "Allow the default UKI entry to be added to the GRUB menu."
+msgstr "Дозволити додавання типового запису UKI до меню GRUB."
+
+msgid "Allow the non-default UKI entries to be added to the GRUB menu."
+msgstr "Дозволити додавання нетипових записів UKI до меню GRUB."
+
+msgid "Allow specificUKII entries to be added to the GRUB menu."
+msgstr "Дозволити додавання вказаних записів UKII до меню GRUB."
+
+msgid ""
+"[-p|--path] [-f|--enable-fallback] DIR [-d|--show-default] [-n|--show-non-"
+"default] [-e|--entry] FILE"
+msgstr ""
+"[-p|--path] [-f|--enable-fallback] КАТАЛОГ [-d|--show-default] [-n|--show-"
+"non-default] [-e|--entry] ФАЙЛ"
+
+msgid "Import Boot Loader Specification snippets."
+msgstr "Імпортувати фрагменти специфікації завантажувача."
+
+msgid ""
+"[-p|--path] DIR [-f|--enable-fallback] [-d|--show-default] [-n|--show-non-"
+"default] [-e|--entry] FILE"
+msgstr ""
+"[-p|--path] КАТАЛОГ [-f|--enable-fallback] [-d|--show-default] [-n|--show-"
+"non-default] [-e|--entry] ФАЙЛ"
+
+msgid "Import Unified Kernel Images"
+msgstr "Імпортувати образи уніфікованого ядра"
+
+msgid "max recursion depth exceeded"
+msgstr "перевищено максимальну глибину вкладеності"
+
+msgid "empty entry in PCR list"
+msgstr "порожній запис у списку PCR"
+
+#, c-format
+msgid "entry '%s' in PCR list is not a number"
+msgstr "запис «%s» у списку PCR не є числом"
+
+#, c-format
+msgid ""
+"entry %llu in PCR list is too large to be a PCR number, PCR numbers range "
+"from 0 to %u"
+msgstr ""
+"запис %llu у списку PCR є надто великим, що бути номером PCR; діапазон "
+"номерів PCR — від 0 до %u"
+
+msgid "trailing comma at the end of PCR list"
+msgstr "зайва кома наприкінці списку PCR"
+
+#, c-format
+msgid "too many PCRs in PCR list, the maximum number of PCRs is %u"
+msgstr "забагато PCR у списку PCR, максимальною кількістю PCR є %u"
+
+#, c-format
+msgid "value '%s' is not a valid asymmetric key type"
+msgstr "значення «%s» не є коректним типом асиметричного ключа"
+
+#, c-format
+msgid "value '%s' is not a valid PCR bank"
+msgstr "значення «%s» не є коректним банком PCR"
+
+#, c-format
+msgid "TPM handle value '%s' is not a number"
+msgstr "Значення дескриптора TPM «%s» не є числом"
+
+#, c-format
+msgid ""
+"value %llu is too large to be a TPM handle, TPM handles are unsigned 32-bit "
+"integers"
+msgstr ""
+"значення %llu є надто великим для дескриптора TPM, дескриптори TPM є 32-"
+"бітовими цілими числами без знаку"
+
+msgid ""
+"Unseal key using SRK ('srk') (default) or retrieve it from an NV Index "
+"('nv')."
+msgstr ""
+"Розпечатати ключ за допомогою SRK ('srk') (типовий варіант) або отримати "
+"його з покажчика NV ('nv')."
+
+msgid ""
+"Comma-separated list of PCRs used to authorize key release e.g., '7,11'. "
+"(default: 7)"
+msgstr ""
+"Список відокремлених комами PCR для уповноваження випуску ключа, наприклад, "
+"'7,11'. (типове значення: 7)"
+
+msgid ""
+"Bank of PCRs used to authorize key release: SHA1, SHA256, SHA384 or SHA512. "
+"(default: SHA256)"
+msgstr ""
+"Банк PCR, які використовують для уповноваження випуску ключа: SHA1, SHA256, "
+"SHA384 або SHA512. (типове значення: SHA256)"
+
+msgid ""
+"Comma-separated list of PCRs to be capped after key release e.g., '7,11'."
+msgstr ""
+"Список відокремлених комами PCR для закриття після випуску ключа, наприклад, "
+"'7,11'."
+
+msgid ""
+"In SRK mode, path to the key file in the TPM 2.0 Key File format to unseal "
+"using the TPM (e.g., (hd0,gpt1)/boot/grub2/sealed.tpm)."
+msgstr ""
+"У режимі SRK шлях до файла ключа у форматі файлів ключів TPM 2.0 для "
+"розпечатування за допомогою TPM (наприклад (hd0,gpt1)/boot/grub2/sealed.tpm)."
+
+msgid ""
+"In SRK mode, path to the key file in the raw format to unseal using the TPM "
+"(e.g., (hd0,gpt1)/boot/grub2/sealed.key). (Mainly for backward "
+"compatibility. Please use '--tpm2key'.)"
+msgstr ""
+"У режимі SRK шлях до файла ключа у простому форматі для розпечатування за "
+"допомогою TPM (наприклад (hd0,gpt1)/boot/grub2/sealed.key). (В основному, "
+"для зворотної сумісності. Будь ласка, скористайтеся натомість '--tpm2key'.)"
+
+msgid "In SRK mode, the SRK handle if the SRK is persistent."
+msgstr "У режимі SRK дескриптор SRK, якщо SRK є сталим."
+
+msgid ""
+"In SRK mode, the type of SRK: RSA (RSA2048) and ECC (ECC_NIST_P256)(default: "
+"ECC)"
+msgstr ""
+"У режимі SRK тип SRK: RSA (RSA2048) і ECC (ECC_NIST_P256) (типове значення: "
+"ECC)"
+
+msgid ""
+"Required in NV Index mode, the NV handle to read which must readily exist on "
+"the TPM and which contains the key."
+msgstr ""
+"Є обов'язковим у режимі покажчика NV, дескриптор NV для читання, який має "
+"вже існувати у TPM і який містить ключ."
+
+#, c-format
+msgid "sealed key larger than %llu bytes"
+msgstr "запечатаний ключ є більшим за %llu байтів"
+
+msgid "no memory left to allocate unlock key buffer"
+msgstr ""
+"не лишилося пам'яті для розміщення у пам'яті буфера ключів розблоковування"
+
+msgid ""
+"cannot use TPM2 key protector without initializing it, call "
+"tpm2_protector_init first"
+msgstr ""
+"не можна використовувати захисник ключа TPM2 без його ініціалізації, "
+"викличте спочатку tpm2_protector_init"
+
+msgid "in SRK mode, a key file must be specified: --tpm2key/-T or --keyfile/-k"
+msgstr ""
+"у режимі SRK має бути вказано файл ключа: --tpm2key/-T або --keyfile/-k"
+
+msgid ""
+"in SRK mode, please specify a key file with only --tpm2key/-T or --keyfile/-k"
+msgstr ""
+"у режимі SRK, будь ласка, вкажіть файл ключа з якимось із варіантів, --"
+"tpm2key/-T або --keyfile/-k"
+
+msgid "in SRK mode, an NV Index cannot be specified"
+msgstr "у режимі SRK, не може бути вказано покажчик NV"
+
+msgid "in NV Index mode, an NV Index must be specified: --nvindex or -n"
+msgstr "у режимі покажчика NV, має бути вказано покажчик NV: --nvindex або -n"
+
+msgid "a key file cannot be specified when using NV index mode"
+msgstr "файл ключа не може бути вказано, якщо використано режим покажчика NV"
+
+msgid ""
+"an SRK cannot be specified when using NV index mode with a persistent handle"
+msgstr ""
+"SRK не може бути вказано, якщо використано режим покажчика NV зі сталим "
+"дескриптором"
+
+msgid ""
+"an NV index must be either a persistent handle or an NV index handle when "
+"using NV index mode"
+msgstr ""
+"покажчик NV має бути або сталим дескриптором або дескриптором покажчика NV, "
+"якщо використано режим покажчика NV"
+
+msgid "no memory to duplicate file path"
+msgstr "недостатньо пам'яті для дублювання шляху до файла"
+
+#, c-format
+msgid "value '%s' is not a valid TPM2 key protector mode"
+msgstr "значення «%s» не є коректним режимом захисника ключа TPM2"
+
+msgid ""
+"the TPM2 key protector does not accept any non-option arguments (i.e., like "
+"-o and/or --option only)"
+msgstr ""
+"захисник ключа TPM2 не приймає ніяких непов'язаних із параметрами аргументів "
+"(тобто подібно до лише -o і/або --option)"
+
+msgid "tpm2_key_protector_clear accepts no arguments"
+msgstr "tpm2_key_protector_clear не приймає аргументів"
+
+msgid ""
+"[-m mode] [-p pcr_list] [-b pcr_bank] [-c pcr_list] [-T tpm2_key_file_path] "
+"[-k sealed_key_file_path] [-s srk_handle] [-a asymmetric_key_type] [-n "
+"nv_index]"
+msgstr ""
+"[-m режим] [-p список_pcr] [-b банк_pcr] [-c список_pcr] [-T "
+"шлях_до_файла_ключа_tpm2] [-k шлях_до_файла_запечатаного_ключа] [-s "
+"дескриптор_srk] [-a тип_асиметричного_ключа] [-n покажчик_nv]"
+
+msgid "Initialize the TPM2 key protector."
+msgstr "Ініціалізувати захисник ключа TPM2."
+
+msgid "Clear the TPM2 key protector if previously initialized."
+msgstr "Вилучити захисник ключа TPM2, якщо його було раніше ініціалізовано."
+
+msgid "Dump TPM2 PCRs"
+msgstr "Створити дамп PCR TPM2"
+
+msgid "Print all PCRs of the specified TPM 2.0 bank"
+msgstr "Вивести усі PCR вказано банку TPM 2.0"
+
+msgid "Unlock volume(s) using key protector(s)."
+msgstr "Розблокувати томи за допомогою ключового захисту."
+
+msgid "Enable hardware acceleration."
+msgstr "Увімкнути апаратне прискорення."
+
+#, c-format
+msgid "no key protector provided a usable key for %s%s%s (%s)"
+msgstr ""
+"жоден із захисників ключа не надав придатного для використання ключа для "
+"%s%s%s (%s)"
+
+#, c-format
+msgid "Invalid cryptodisk_passphrase_tries value `%s'. Defaulting to %lu.\n"
+msgstr ""
+"Некоректне значення cryptodisk_passphrase_tries «%s». Повертаємося до "
+"типового %lu.\n"
+
+msgid "[--quiet] DEVICE"
+msgstr "[--quiet] ПРИСТРІЙ"
+
+msgid "Check if a logical volume resides on encrypted disks."
+msgstr "Перевірити, чи перебуває логічний том на зашифрованих дисках."
+
+msgid "overflow detected while obtaining size of device name"
+msgstr "виявлено переповнення під час отримання розміру назви пристрою"
+
+msgid "overflow detected while obtaining encoding size"
+msgstr "виявлено переповнення під час отримання розміру кодування"
+
+msgid "overflow detected while obtaining size of canonical name"
+msgstr "виявлено переповнення під час отримання розміру канонічної назви"
+
+msgid "overflow detected while obtaining size of device path"
+msgstr "виявлено переповнення під час отримання розміру шляху до пристрою"
+
+msgid "overflow detected while obtaining size of an open path"
+msgstr "виявлено переповнення під час отримання розміру шляху для відкриття"
+
+msgid "overflow detected while obtaining bootpath size"
+msgstr "виявлено переповнення під час отримання розміру шляху для завантаження"
+
+msgid "overflow detected while allocating size of password buffer"
+msgstr ""
+"виявлено переповнення під час розміщення у пам'яті розміру буфера паролів"
+
+msgid "link target length overflow"
+msgstr "переповнення довжини призначення посилання"
+
+msgid "directory item size overflow"
+msgstr "переповнення розміру запису каталогу"
+
+msgid "buffer size overflow"
+msgstr "переповнення розміру буфера"
+
+msgid "directory element size overflow"
+msgstr "переповнення розміру елемента каталогу"
+
+msgid "data size overflow"
+msgstr "переповнення розміру даних"
+
+msgid "mtime overflow"
+msgstr "переповнення mtime"
+
+msgid "mode overflow"
+msgstr "переповнення режиму"
+
+msgid "namesize overflow"
+msgstr "переповнення розміру назви"
+
+msgid "file name size overflow"
+msgstr "переповнення розміну назви файла"
+
+msgid "target data size overflow"
+msgstr "переповнення розміру даних призначення"
+
+msgid "symlink size overflow"
+msgstr "переповнення розміру символічного посилання"
+
+msgid "directory entry name length overflow"
+msgstr "переповнення довжини назви запису каталогу"
+
+msgid "compression buffer size overflow"
+msgstr "переповнення розміру буфера стискання"
+
+msgid "symlink name length overflow"
+msgstr "переповнення довжини назви символічного посилання"
+
+msgid "name length overflow"
+msgstr "переповнення довжини назви"
+
+msgid "name size overflow"
+msgstr "переповнення розміру назви"
+
+msgid "link size overflow"
+msgstr "переповнення розміру посилання"
+
+msgid "long name size overflow"
+msgstr "переповнення розміру довгої назви"
+
+msgid "directory data size overflow"
+msgstr "переповнення розміру даних каталогу"
+
+msgid "path buffer size overflow"
+msgstr "переповнення розміру буфера шляху"
+
+msgid "elemsize overflow"
+msgstr "переповнення розміру елемента"
+
+msgid "Get property."
+msgstr "Отримати властивість."
+
+msgid "prop"
+msgstr "властивість"
+
+#, c-format
+msgid "use '%s %s' to force a system restart"
+msgstr "скористайтеся «%s %s» для примусового перезапуску системи"
+
+msgid "tag length overflow"
+msgstr "переповнення довжини мітки"
+
+msgid "overflow detected while obatining size of ofdata path"
+msgstr "виявлено переповнення під час отримання розміру шляху до даних"
+
+msgid "overflow detected while obtaining length of host"
+msgstr "виявлено переповнення під час отримання довжини вузла"
+
+msgid "maximum recursion depth exceeded"
+msgstr "перевищено максимальну глибину рекурсії"
+
+msgid "disabled command line interface access"
+msgstr "доступ до вимкненого інтерфейсу командного рядка"
+
+msgid "Add a note segment reserving SIZE bytes for an appended signature"
+msgstr ""
+"Додати сегмент нотатки з резервуванням РОЗМІР байтів для дописаного підпису"
+
+msgid "can't set env_block as it's read-only"
+msgstr ""
+"не вдалося встановити значення env_block, оскільки його призначено лише для "
+"читання"
+
+msgid "zfs-bootfs ZFS_DATASET"
+msgstr "zfs-bootfs НАБІР_ДАНИХ_ZFS"
+
+msgid "Compute ZFS dataset bootpath."
+msgstr "Обчислити шлях завантаження набору даних ZFS."
+
+#, c-format
+msgid "appended signature size `%s', and it should not be zero"
+msgstr "розмір дописаного підпису — «%s», а він має бути ненульовим"
+
+msgid "disable command line interface access"
+msgstr "вимкнути доступ до інтерфейсу командного рядка"
+
+msgid "Add or remove a key protector to or from a key."
+msgstr "Додати захисник ключа до ключа або вилучити його з нього."
+
+msgid "Set key protector to use (only tpm2 is currently supported)."
+msgstr ""
+"Встановити використаний захисник ключа (у поточній версії передбачено "
+"підтримку лише tpm2)."
+
+msgid "Set the path to the TPM2 device. (default: /dev/tpm0)"
+msgstr "Встановити шлях до пристрою TPM2. (типове значення: /dev/tpm0)"
+
+msgid ""
+"Set a comma-separated list of PCRs used to authorize key release e.g., "
+"'7,11'. Please be aware that PCR 0~7 are used by the firmware and the "
+"measurement result may change after a firmware update (for baremetal "
+"systems) or a package (OVMF/SLOF) update in the VM host. This may lead to "
+"the failure of key unsealing. (default: 7)"
+msgstr ""
+"Встановити список відокремлених комами PCR, які використовуються для "
+"уповноваження розблокування ключа, наприклад, «7,11». Зверніть увагу, що PCR "
+"0~7 використовуються мікропрограмою, і результат вимірювання може змінитися "
+"після оновлення мікропрограми (для систем фізичних серверів) або оновлення "
+"пакета (OVMF/SLOF) на основній системі віртуальної машини. Це може призвести "
+"до збою розблокування ключа. (Типове значення: 7)"
+
+msgid ""
+"Set the bank of PCRs used to authorize key release: SHA1, SHA256, SHA384, or "
+"SHA512. (default: SHA256)"
+msgstr ""
+"Встановити банк PCR, які використовують для уповноваження випуску ключа: "
+"SHA1, SHA256, SHA384 або SHA512. (типове значення: SHA256)"
+
+msgid "Set the path to a file that contains the cleartext key to protect."
+msgstr ""
+"Встановити шлях до файла, у якому міститься текстовий ключ для захисту."
+
+msgid ""
+"Set the path to the file that will contain the key after sealing (must be "
+"accessible to GRUB during boot)."
+msgstr ""
+"Встановити шлях до файла, у якому міститиметься ключ після запечатування "
+"(має бути доступним для GRUB під час завантаження)."
+
+msgid "Set the SRK handle if the SRK is to be made persistent."
+msgstr "Встановити дескриптор SRK, якщо SRK слід зробити сталим."
+
+msgid ""
+"Set the type of SRK: RSA (RSA2048) and ECC (ECC_NIST_P256).(default: ECC)"
+msgstr ""
+"Встановити тип SRK: RSA (RSA2048) або ECC (ECC_NIST_P256). (типове значення: "
+"ECC)"
+
+msgid "Evict a previously persisted SRK from the TPM, if any."
+msgstr "Прибрати раніше зроблений сталим SRK з TPM, якщо такий існує."
+
+msgid "Use TPM 2.0 Key File format."
+msgstr "Ви користати формат файла ключа TPM 2.0."
+
+msgid "Store the sealed key in a persistent or NV index handle."
+msgstr ""
+"Зберегти запечатаний ключ у сталому дескрипторі або дескрипторі покажчика NV."
+
+#, c-format
+msgid "Could not send TPM command.\n"
+msgstr "Не вдалося надіслати команду TPM.\n"
+
+#, c-format
+msgid "Could not read all the specified PCRs.\n"
+msgstr "Не вдалося прочитати усі вказані PCR.\n"
+
+#, c-format
+msgid "PCR concatenation buffer not big enough.\n"
+msgstr "Буфер з'єднання PCR не є достатньо великим.\n"
+
+#, c-format
+msgid "Bad PCR value size: expected %llu bytes but got %u bytes.\n"
+msgstr ""
+"Помилкове значення розміру PCR: мало бути %llu байтів, але маємо лише %u "
+"байтів.\n"
+
+#, c-format
+msgid "Could not allocate memory for the raw format key.\n"
+msgstr "Не вдалося розмістити у пам'яті ключ у простому форматі.\n"
+
+#, c-format
+msgid "Invalid tpm2key size for TPM NV buffer\n"
+msgstr "Некоректний розмір tpm2key для буфера NV TPM\n"
+
+#, c-format
+msgid "Input key size larger than %u bytes.\n"
+msgstr "Розмір вхідного ключа перевищує %u байтів.\n"
+
+#, c-format
+msgid "Could not export to TPM 2.0 Key File format\n"
+msgstr "Не вдалося експортувати дані у форматі файла ключа TPM 2.0\n"
+
+#, c-format
+msgid "Could not export to the raw format\n"
+msgstr "Не вдалося експортувати у простому форматі\n"
+
+#, c-format
+msgid "--tpm2-evict is invalid when --action is 'add'.\n"
+msgstr "--tpm2-evict є некоректним, якщо --action має значення «add».\n"
+
+#, c-format
+msgid "Persistent handle does not support TPM 2.0 Key File format.\n"
+msgstr ""
+"Для сталого дескриптора не передбачено підтримки формату файла ключа TPM "
+"2.0.\n"
+
+#, c-format
+msgid "--tpm2-nvindex must be a persistent or NV index handle.\n"
+msgstr ""
+"--tpm2-nvindex не повинен бути сталим дескриптором або дескриптором "
+"покажчика NV.\n"
+
+#, c-format
+msgid "--tpm2-nvindex and --tpm2-srk must be different.\n"
+msgstr "--tpm2-nvindex і --tpm2-srk мають бути різними.\n"
+
+#, c-format
+msgid "--tpm2-srk must be a persistent handle, e.g. 0x81000000.\n"
+msgstr "--tpm2-srk має бути сталим дескриптором, наприклад 0x81000000.\n"
+
+#, c-format
+msgid "--tpm2-asymmetric is invalid when --action is 'remove'.\n"
+msgstr ""
+"--tpm2-asymmetric є некоректним, якщо аргументом --action є 'remove'.\n"
+
+#, c-format
+msgid "--tpm2-bank is invalid when --action is 'remove'.\n"
+msgstr "--tpm2-bank є некоректним, якщо аргументом --action є 'remove'.\n"
+
+#, c-format
+msgid "--tpm2-keyfile is invalid when --action is 'remove'.\n"
+msgstr "--tpm2-keyfile є некоректним, якщо аргументом --action є 'remove'.\n"
+
+#, c-format
+msgid "--tpm2-outfile is invalid when --action is 'remove'.\n"
+msgstr "--tpm2-outfile є некоректним, якщо аргументом --action є 'remove'.\n"
+
+#, c-format
+msgid "--tpm2-pcrs is invalid when --action is 'remove'.\n"
+msgstr "--tpm2-pcrs є некоректним, якщо аргументом --action є 'remove'.\n"
+
+#, c-format
+msgid "missing --tpm2-srk or --tpm2-nvindex for --action 'remove'.\n"
+msgstr ""
+"пропущено --tpm2-srk або --tpm2-nvindex для значення --action 'remove'.\n"
+
+#, c-format
+msgid ""
+"The TPM2 key protector only supports the following actions: add, remove.\n"
+msgstr ""
+"Для захисника ключа TPM2 передбачено підтримку лише таких дій: add, remove.\n"
+
+#, c-format
+msgid "--action|-a can only be specified once.\n"
+msgstr "--action|-a можна вказувати у межах однієї команди лише раз.\n"
+
+#, c-format
+msgid "--protector|-p can only be specified once.\n"
+msgstr "--protector|-p можна вказувати у межах однієї команди лише раз.\n"
+
+#, c-format
+msgid "'%s' is not a valid protector.\n"
+msgstr "«%s» не є коректним захисником.\n"
+
+#, c-format
+msgid "--tpm2-device can only be specified once.\n"
+msgstr "--tpm2-device можна вказувати лише один раз.\n"
+
+#, c-format
+msgid "--tpm2-pcrs can only be specified once.\n"
+msgstr "--tpm2-pcrs можна вказувати лише один раз.\n"
+
+#, c-format
+msgid "--tpm2-srk can only be specified once.\n"
+msgstr "--tpm2-srk можна вказувати лише один раз.\n"
+
+#, c-format
+msgid "--tpm2-asymmetric can only be specified once.\n"
+msgstr "--tpm2-asymmetric можна вказувати лише один раз.\n"
+
+#, c-format
+msgid "--tpm2-bank can only be specified once.\n"
+msgstr "--tpm2-bank можна вказувати лише один раз.\n"
+
+#, c-format
+msgid "--tpm2-keyfile can only be specified once.\n"
+msgstr "--tpm2-keyfile можна вказувати лише один раз.\n"
+
+#, c-format
+msgid "--tpm2-evict can only be specified once.\n"
+msgstr "--tpm2-evict можна вказувати лише один раз.\n"
+
+#, c-format
+msgid "--tpm2-tpm2key can only be specified once.\n"
+msgstr "--tpm2-tpm2key можна вказувати лише один раз.\n"
+
+#, c-format
+msgid "--tpm2-nvindex can only be specified once.\n"
+msgstr "--tpm2-nvindex можна вказувати лише один раз.\n"
+
+#, c-format
+msgid "--action is mandatory.\n"
+msgstr "--action є обов'язковим.\n"
+
+#, c-format
+msgid "--protector is mandatory and only 'tpm2' is currently supported.\n"
+msgstr ""
+"--protector є обов'язковим, а у поточній версії передбачено підтримку "
+"«tpm2».\n"
+
+msgid ""
+"Protect a cleartext key using a GRUB key protector that can retrieve the key "
+"during boot to unlock fully-encrypted disks automatically."
+msgstr ""
+"Захистити текстовий ключ за допомогою захисника ключів GRUB, який може "
+"отримувати ключ під час завантаження і розблоковувати повністю зашифровані "
+"диски автоматично."
+
+msgid ""
+"x509 public key can be support only to appended signature with powerpc-"
+"ieee1275 images"
+msgstr ""
+"Підтримку відкритих ключів x509 передбачено лише для дописаного підпису з "
+"образами powerpc-ieee1275"
+
+msgid "SBAT data can be added only to EFI or powerpc-ieee1275 images"
+msgstr "Дані SBAT може бути додано лише до образів EFI або powerpc-ieee1275"
+
+msgid "appended signature can be support only to powerpc-ieee1275 images"
+msgstr ""
+"підтримку дописаних підписів передбачено лише для образів powerpc-ieee1275"
+
+#, c-format
+msgid ""
+"GRUB_OS_PROBER_SKIP_LIST contains deprecated <UUID>@/dev/* notation. The @/"
+"dev/* suffix is ignored."
+msgstr ""
+"GRUB_OS_PROBER_SKIP_LIST містить застарілі позначення <UUID>@/dev/*. Суфікс "
+"@/dev/* буде проігноровано."
+
+#, fuzzy
+#~ msgid "Show the list of trusted X.509 certificates from the db list"
+#~ msgstr "Вивести список довірених ключів."
+
+#, fuzzy
+#~ msgid "Specify path to find UKI entries."
+#~ msgstr "Вказати хеш для використання."
+
+#, fuzzy, c-format
+#~ msgid "duplicate file: `%s'"
+#~ msgstr "Не вдалося створити файл: %s"
+
+#, fuzzy
+#~ msgid "overflow detected creating argv list"
+#~ msgstr "виявлено переповнення"
+
+#, fuzzy, c-format
+#~ msgid "variable '%s' isn't set"
+#~ msgstr "значення змінної «%s» не встановлено"
+
+#, fuzzy
+#~ msgid "memory reading is disabled in lockdown mode"
+#~ msgstr "встановлений обсяг пам'яті перевищує виділений програмі"
+
+#, fuzzy
+#~ msgid "RDMSR is unsupported"
+#~ msgstr "підтримки інтерпретації не передбачено"
+
+#, fuzzy
+#~ msgid "WRMSR is unsupported"
+#~ msgstr "підтримки інтерпретації не передбачено"
+
+#, fuzzy
+#~ msgid "List memory regions."
+#~ msgstr "Вивести список вільних блоків пам'яті."
+
+#, fuzzy
+#~ msgid "Only probe encrypted disks."
+#~ msgstr "Виконати лише зондування дисків EFI."
+
+#, fuzzy, c-format
+#~ msgid "could not open file: %s"
+#~ msgstr "не вдалося відкрити файл ключа %s"
+
+#, fuzzy, c-format
+#~ msgid "could not read file size: %s"
+#~ msgstr "не вдалося прочитати %s: %s"
+
+#, fuzzy, c-format
+#~ msgid "could not allocate buffer for %s"
+#~ msgstr "не вдалося розмістити у пам'яті буфер команд"
+
+#, fuzzy, c-format
+#~ msgid "could not retrieve file contents: %s"
+#~ msgstr "не вдалося отримати список блоків: %s"
+
+#, fuzzy
+#~ msgid "malformed TPM wire key file"
+#~ msgstr "не вдалося прочитати файл ключа"
+
+#, fuzzy
+#~ msgid "malformed TPM 2.0 key file"
+#~ msgstr "не вдалося прочитати файл ключа"
+
+#, fuzzy
+#~ msgid "key file not specified"
+#~ msgstr "Не вказано пункт меню."
+
+#, fuzzy
+#~ msgid "Unknown Mode"
+#~ msgstr "Невідоме кодування"
+
+#, fuzzy
+#~ msgid "Invalid passphrase."
+#~ msgstr "некоректний параметр"
+
+#, fuzzy, c-format
+#~ msgid "unrecognized option: %s"
+#~ msgstr "Нерозпізнаний параметр «%s»\\n"
+
+#, fuzzy
+#~ msgid "disk name expected"
+#~ msgstr "слід вказати назву файла"
+
+#, fuzzy, c-format
+#~ msgid "invalid disk: %s"
+#~ msgstr "некоректний режим %s"
+
+#, fuzzy, c-format
+#~ msgid "unrecognized disk: %s"
+#~ msgstr "не вдалося розпізнати розмір ключа"
+
+#, fuzzy, c-format
+#~ msgid "no such disk: %s"
+#~ msgstr "не вдалося відкрити диск: %s"
+
+#, fuzzy
+#~ msgid "invalid JFS inode"
+#~ msgstr "некоректний режим %s"
+
+#, fuzzy
+#~ msgid "invalid directory slot index"
+#~ msgstr "некоректне шифрування %s або режим %s"
+
+#, fuzzy
+#~ msgid "zstd file corrupted or unsupported block options"
+#~ msgstr "файл xz пошкоджено або вказано непідтримувані параметри блоку"
+
+#, fuzzy
+#~ msgid "bad shim loader signature"
+#~ msgstr "некоректний підпис прокладки"
+
+#, fuzzy
+#~ msgid "DEV"
+#~ msgstr "ПРИСТРІЙ"
+
+#, fuzzy
+#~ msgid "set TPM device."
+#~ msgstr "Показати список пристроїв PCI."
+
+#, fuzzy, c-format
+#~ msgid "cannot open TPM device '%s': %s"
+#~ msgstr "не вдалося відкрити пристрій: %s"
+
+#, fuzzy, c-format
+#~ msgid "cannot close TPM device: %s"
+#~ msgstr "не вдалося відкрити пристрій: %s"
+
+#, fuzzy
+#~ msgid "invalid partition number"
+#~ msgstr "некоректний параметр"
+
+#, fuzzy, c-format
+#~ msgid "cannot cap PCR %u"
+#~ msgstr "не вдалося створити резервну копію `%s': %s"
+
+#, fuzzy
+#~ msgid "No device tree found"
+#~ msgstr "некоректна ієрархія пристроїв"
+
+#, fuzzy
+#~ msgid "failed to retrieve the prop field"
+#~ msgstr "не вдалося отримати поле структури"
+
+#, fuzzy
+#~ msgid "[-p] [--set variable]"
+#~ msgstr "Встановити значення змінних."
+
+#, fuzzy
+#~ msgid "Retrieve device tree information."
+#~ msgstr "Отримати відомості щодо пристрою."
+
+#, fuzzy
+#~ msgid "filename too long"
+#~ msgstr "надто довгий рядок"
+
 #, c-format
 #~ msgid "GNU GRUB  version %s"
 #~ msgstr "GNU GRUB, версія %s"
 
-#, c-format
-#~ msgid "%s, with Linux %s (recovery mode)"
-#~ msgstr "%s, з Linux %s (режим відновлення)"
+#, fuzzy
+#~ msgid "embed FILE as an x509 certificate for appended signature checking"
+#~ msgstr "вбудувати ФАЙЛ як відкритий ключ для перевірки підписів"
 
-#, c-format
-#~ msgid "%s, with Linux %s"
-#~ msgstr "%s, з Linux %s"
+#, fuzzy, c-format
+#~ msgid "cannot open device %s: %s"
+#~ msgstr "не вдалося відкрити пристрій: %s"
+
+#, fuzzy, c-format
+#~ msgid "cannot probe fs for %s: %s"
+#~ msgstr "не вдалося відновити `%s': %s"
+
+#, fuzzy, c-format
+#~ msgid "non-numeric or invalid appended signature size `%s'"
+#~ msgstr "нечисловий або некоректний розмір файла ключа «%s»"
+
+#, fuzzy
+#~ msgid "embed FILE as public key for PGP signature checking"
+#~ msgstr "вбудувати ФАЙЛ як відкритий ключ для перевірки підписів"
+
+#, fuzzy
+#~ msgid "option requires an argument"
+#~ msgstr "%s: до параметра «%s%s» слід додати аргумент\n"
+
+#, fuzzy, c-format
+#~ msgid "Could not open file: %s\n"
+#~ msgstr "не вдалося відкрити файл ключа %s"
+
+#, fuzzy, c-format
+#~ msgid "Could not seek file: %s\n"
+#~ msgstr "Не вдалося створити файл: %s"
+
+#, fuzzy, c-format
+#~ msgid "Could not get file length: %s\n"
+#~ msgstr "не вдалося виконати strndup для шифру довжини `%"
+
+#, fuzzy, c-format
+#~ msgid "Could not allocate memory for file: %s\n"
+#~ msgstr "Не вдалося виявити драйвер FPSWA"
+
+#, fuzzy, c-format
+#~ msgid "Could not read file: %s\n"
+#~ msgstr "Не вдалося створити файл: %s"
+
+#, fuzzy, c-format
+#~ msgid "Could not get TPM response.\n"
+#~ msgstr "непідтримувана відповідь HTTP"
+
+#, fuzzy, c-format
+#~ msgid "Could not open TPM device (%s).\n"
+#~ msgstr "не вдалося відкрити пристрій: %s"
+
+#, fuzzy, c-format
+#~ msgid "Could not close TPM device (%s).\n"
+#~ msgstr "Не вдалося виявити драйвер FPSWA"
+
+#, fuzzy, c-format
+#~ msgid "Could not write key file (%s).\n"
+#~ msgstr "не вдалося відкрити файл ключа %s"
+
+#, fuzzy, c-format
+#~ msgid "--tpm2-keyfile must be specified.\n"
+#~ msgstr "має бути вказано файл для виведення даних"
+
+#, fuzzy, c-format
+#~ msgid "--tpm2-outfile or --tpm2-nvindex must be specified.\n"
+#~ msgstr "має бути вказано файл для виведення даних"
+
+#, fuzzy, c-format
+#~ msgid "'%s' is not a valid action.\n"
+#~ msgstr "«%s» не є локальним диском"
+
+#, fuzzy, c-format
+#~ msgid "--tpm2-outfile can only be specified once.\n"
+#~ msgstr "має бути вказано файл для виведення даних"
+
+#, fuzzy, c-format
+#~ msgid "Could not parse arguments.\n"
+#~ msgstr "%s: занадто багато аргументів\n"
 
 #, c-format
 #~ msgid ""
@@ -8037,14 +8931,19 @@ msgstr "Додаємо пункт меню завантаження для па�
 #~ "завантаження виконуваних файлів на розділах і створення нових записів "
 #~ "завантаження."
 
+#, c-format
+#~ msgid "%s, with Linux %s (recovery mode)"
+#~ msgstr "%s, з Linux %s (режим відновлення)"
+
+#, c-format
+#~ msgid "%s, with Linux %s"
+#~ msgstr "%s, з Linux %s"
+
 #~ msgid "SOURCE|-u UUID|-a|-b"
 #~ msgstr "ДЖЕРЕЛО|-u UUID|-a|-b"
 
 #~ msgid "Linux not supported yet"
 #~ msgstr "Підтримки Linux ще не передбачено"
-
-#~ msgid "interpret is not supported"
-#~ msgstr "підтримки інтерпретації не передбачено"
 
 #~ msgid "Slot \"%"
 #~ msgstr "Слот \"%"
@@ -8116,9 +9015,6 @@ msgstr "Додаємо пункт меню завантаження для па�
 #~ msgid "(PROGRAM ERROR) No version known!?"
 #~ msgstr "(ПОМИЛКА ПРОГРАМИ) Невідома версія!?"
 
-#~ msgid "%s: Too many arguments\n"
-#~ msgstr "%s: занадто багато аргументів\n"
-
 #~ msgid "(PROGRAM ERROR) Option should have been recognized!?"
 #~ msgstr "(ПОМИЛКА ПРОГРАМИ) Параметр має розпізнаватися!?"
 
@@ -8133,9 +9029,6 @@ msgstr "Додаємо пункт меню завантаження для па�
 
 #~ msgid "%s: option '%s%s' doesn't allow an argument\n"
 #~ msgstr "%s: додавання аргументів до параметра «%s%s» не передбачено\n"
-
-#~ msgid "%s: option '%s%s' requires an argument\n"
-#~ msgstr "%s: до параметра «%s%s» слід додати аргумент\n"
 
 #~ msgid "%s: invalid option -- '%c'\n"
 #~ msgstr "%s: некоректний параметр — «%c»\n"

@@ -7729,17 +7729,447 @@ msgstr ""
 msgid "Adding boot menu entry for UEFI Firmware Settings ...\\n"
 msgstr "נוספת רשומת תפריט טעינה להגדרות קושחת UEFI…\\n"
 
+msgid "hash file of the binary."
+msgstr "קובץ גיבוב של הבינרי."
+
+msgid "hash file of the certificate."
+msgstr "קובץ גיבוב של האישור."
+
+msgid "<SIGNED_FILE>"
+msgstr "<קובץ_חתום>"
+
+msgid ""
+"Verify SIGNED_FILE against the trusted X.509 certificates in the db list"
+msgstr "אימות „קובץ_חתום” מול אישורי ה־X.509 האמינים שברשימת מסד הנתונים"
+
+msgid "<X509_CERTIFICATE>"
+msgstr "<אישור_X509>"
+
+msgid "Add trusted X509_CERTIFICATE to the db list"
+msgstr "הוספת „אישור_X509” אמין לרשימת מסד הנתונים (db)"
+
+msgid "Add distrusted X509_CERTIFICATE to the dbx list"
+msgstr "הוספת „אישור_X509” לא אמין לרשימת מסד הנתונים המחריג (dbx)"
+
+msgid ""
+"Show the list of distrusted certificates and certificate/binary hashes from "
+"the dbx list"
+msgstr ""
+"הצגת רשימת האישורים הלא אמינים וגיבובי אישור/בינרי מרשימת מסד הנתונים המחריג "
+"(dbx)"
+
+msgid "BINARY HASH FILE"
+msgstr "קובץ גיבוב בינרי"
+
+msgid "Add trusted BINARY HASH to the db list."
+msgstr "הוספת גיבוב בינרי אמין לרשימת מסד הנתונים (db)."
+
+msgid "RDMSR is unsupported"
+msgstr "אין תמיכה ב־RDMSR"
+
+msgid "WRMSR is unsupported"
+msgstr "אין תמיכה ב־WRMSR"
+
+msgid "max recursion depth exceeded"
+msgstr "הגעת לעומק הרקורסיה המרבי"
+
+msgid "empty entry in PCR list"
+msgstr "רשומה ריקה ברשימת PCR"
+
+#, c-format
+msgid "could not retrieve file contents: %s"
+msgstr "לא ניתן למשוך את תוכן הקובץ: %s"
+
+msgid "no memory left to allocate unlock key buffer"
+msgstr "לא נשאר זיכרון להקצאת מכלא מפתח נעילה"
+
+msgid ""
+"cannot use TPM2 key protector without initializing it, call "
+"tpm2_protector_init first"
+msgstr ""
+"לא ניתן להשתמש במגן מפתח TPM2 מבלי לאתחל אותו, יש לקרוא תחילה "
+"ל־tpm2_protector_init"
+
+msgid "in SRK mode, a key file must be specified: --tpm2key/-T or --keyfile/-k"
+msgstr "במצב SRK, חובה לציין קובץ מפתח: ‎--tpm2key/-T או ‎--keyfile/-k"
+
+msgid ""
+"in SRK mode, please specify a key file with only --tpm2key/-T or --keyfile/-k"
+msgstr "במצב SRK, נא לציין קובץ מפתח רק עם ‎--tpm2key/-T או עם ‎--keyfile/-k"
+
+msgid "in SRK mode, an NV Index cannot be specified"
+msgstr "במצב SRK, לא ניתן לציין מפתח NV"
+
+msgid "in NV Index mode, an NV Index must be specified: --nvindex or -n"
+msgstr "במצב מפתח NV, יש לציין מפתח NV:‏ ‎--nvindex או ‎-n"
+
+msgid "a key file cannot be specified when using NV index mode"
+msgstr "לא ניתן לציין קובץ מפתח בעת שימוש במצב מפתח NV"
+
+msgid "tpm2_key_protector_clear accepts no arguments"
+msgstr "tpm2_key_protector_clear לא מקבל ארגומנטים"
+
+msgid "Initialize the TPM2 key protector."
+msgstr "אתחול מגן המפתח של TPM2."
+
+msgid "Enable hardware acceleration."
+msgstr "הפעלת האצת חומרה."
+
+msgid "overflow detected while obtaining size of device name"
+msgstr "התגלתה הצפה בעת קבלת גודל שם ההתקן"
+
+msgid "overflow detected while obtaining encoding size"
+msgstr "התגלתה הצפה בעת קבלת גודל הקידוד"
+
+msgid "overflow detected while obtaining size of canonical name"
+msgstr "התגלתה הצפה בעת קבלת גודל השם המתואם"
+
+msgid "overflow detected while obtaining size of device path"
+msgstr "התגלתה הצפה בעת קבלת גודל נתיב ההתקן"
+
+msgid "overflow detected while obtaining size of an open path"
+msgstr "התגלתה הצפה בעת קבלת גודל של נתיב פתוח"
+
+msgid "overflow detected while obtaining bootpath size"
+msgstr "התגלתה הצפה בעת קבלת גודל נתיב טעינה"
+
+msgid "maximum recursion depth exceeded"
+msgstr "חריגה מעומק הרקורסיה המרבי"
+
+msgid "disabled command line interface access"
+msgstr "הגישה דרך ממשק שורת הפקודות הושבתה"
+
+msgid "can't set env_block as it's read-only"
+msgstr "לא ניתן להגדיר env_block כיוון שהוא לקריאה בלבד"
+
+msgid "Add or remove a key protector to or from a key."
+msgstr "הוספה או הסרה של מגן מפתח מתוך או אל מפתח."
+
+msgid "Set key protector to use (only tpm2 is currently supported)."
+msgstr "הגדרת מגן מפתח לשימוש (כרגע יש תמיכה רק ב־tpm2)."
+
+msgid "Set the path to the TPM2 device. (default: /dev/tpm0)"
+msgstr "הגדרת נתיב להתקן ה־TPM2. (ברירת מחדל: ‎/dev/tpm0)"
+
+msgid "Use TPM 2.0 Key File format."
+msgstr "להשתמש בתסדיר קובץ מפתח TPM 2.0."
+
+#, c-format
+msgid "Could not send TPM command.\n"
+msgstr "לא ניתן לשלוח פקודת TPM.\n"
+
+#, c-format
+msgid "Could not read all the specified PCRs.\n"
+msgstr "לא ניתן לקרוא את כל ה־PCRים שצוינו.\n"
+
+#, c-format
+msgid "Input key size larger than %u bytes.\n"
+msgstr "גודל מפתח הקלט גדול מ־%u בתים.\n"
+
+#, c-format
+msgid "Could not export to TPM 2.0 Key File format\n"
+msgstr "לא ניתן לייצא לתסדיר קובץ מפתח TPM2.0\n"
+
+#, c-format
+msgid "Could not export to the raw format\n"
+msgstr "לא ניתן לייצר לתסדיר הגולמי\n"
+
+#, c-format
+msgid "--tpm2-evict is invalid when --action is 'add'.\n"
+msgstr "‎--tpm2-evict שגוי כשה־‎--action הוא ‚add’.\n"
+
+#, c-format
+msgid "--tpm2-keyfile must be specified.\n"
+msgstr "חובה לציין ‎--tpm2-keyfile.\n"
+
+#, c-format
+msgid "--tpm2-outfile or --tpm2-nvindex must be specified.\n"
+msgstr "חובה לציין ‎--tpm2-outfile או ‎--tpm2-nvindex.\n"
+
+#, c-format
+msgid "--tpm2-nvindex and --tpm2-srk must be different.\n"
+msgstr "‎--tpm2-nvindex ו־‎--tpm2-srk חייבים להיות שונים.\n"
+
+#, c-format
+msgid "--tpm2-asymmetric is invalid when --action is 'remove'.\n"
+msgstr "‎--tpm2-assymetric שגוי כשה־‎--action הוא ‚remove’.\n"
+
+#, c-format
+msgid "--tpm2-bank is invalid when --action is 'remove'.\n"
+msgstr "‎--tpm2-bank שגוי כשה־‎--action הוא ‚remove’.\n"
+
+#, c-format
+msgid "--tpm2-keyfile is invalid when --action is 'remove'.\n"
+msgstr "‎--tpm2-keyfile שגוי כשה־‎--action הוא ‚remove’.\n"
+
+#, c-format
+msgid "--tpm2-outfile is invalid when --action is 'remove'.\n"
+msgstr "‎--tpm2-outfile שגוי כשה־‎--action הוא ‚remove’.\n"
+
+#, c-format
+msgid "--tpm2-pcrs is invalid when --action is 'remove'.\n"
+msgstr "‎--tpm2-pcrs שגוי כשה־‎--action הוא ‚remove’.\n"
+
+#, c-format
+msgid "missing --tpm2-srk or --tpm2-nvindex for --action 'remove'.\n"
+msgstr "חסר ‎--tpm2-srk או ‎--tpm2-nvindex ל־‎--action 'remove'.\n"
+
+#, c-format
+msgid ""
+"The TPM2 key protector only supports the following actions: add, remove.\n"
+msgstr ""
+"מגן מפתח TPM2 תומך רק בשתי הפעולות הבאות: add,‏ remove (הוספה והסרה בהתאמה).\n"
+
+#, c-format
+msgid "--action|-a can only be specified once.\n"
+msgstr "אפשר לציין את ‎--action|-a פעם אחת בלבד.\n"
+
+#, c-format
+msgid "--protector|-p can only be specified once.\n"
+msgstr "אפשר לציין את ‎--protector|-p פעם אחת בלבד.\n"
+
+#, c-format
+msgid "'%s' is not a valid protector.\n"
+msgstr "‚%s’ אינו מגן תקני.\n"
+
+#, c-format
+msgid "--tpm2-device can only be specified once.\n"
+msgstr "אפשר לציין את ‎--tpm2-device פעם אחת בלבד.\n"
+
+#, c-format
+msgid "--tpm2-pcrs can only be specified once.\n"
+msgstr "אפשר לציין את ‎--tpm2-pcrs פעם אחת בלבד.\n"
+
+#, c-format
+msgid "--tpm2-srk can only be specified once.\n"
+msgstr "אפשר לציין את ‎--tpm2-srk פעם אחת בלבד.\n"
+
+#, c-format
+msgid "--tpm2-asymmetric can only be specified once.\n"
+msgstr "אפשר לציין את ‎--tpm2-assymetric פעם אחת בלבד.\n"
+
+#, c-format
+msgid "--tpm2-bank can only be specified once.\n"
+msgstr "אפשר לציין את ‎--tpm2-bank פעם אחת בלבד.\n"
+
+#, c-format
+msgid "--tpm2-keyfile can only be specified once.\n"
+msgstr "אפשר לציין את ‎--tpm2-keyfile פעם אחת בלבד.\n"
+
+#, c-format
+msgid "--tpm2-outfile can only be specified once.\n"
+msgstr "אפשר לציין את ‎--tpm2-outfile פעם אחת בלבד.\n"
+
+#, c-format
+msgid "--tpm2-evict can only be specified once.\n"
+msgstr "אפשר לציין את ‎--tpm2-evict פעם אחת בלבד.\n"
+
+#, c-format
+msgid "--tpm2-tpm2key can only be specified once.\n"
+msgstr "אפשר לציין את ‎--tpm2-tpm2key פעם אחת בלבד.\n"
+
+#, c-format
+msgid "--tpm2-nvindex can only be specified once.\n"
+msgstr "אפשר לציין את ‎--tpm2-nvindex פעם אחת בלבד.\n"
+
+#, c-format
+msgid "--action is mandatory.\n"
+msgstr "‎--action הוא חובה.\n"
+
+#, c-format
+msgid "--protector is mandatory and only 'tpm2' is currently supported.\n"
+msgstr "‎--protector הוא חובה וכרגע יש תמיכה רק ב־‚tpm2’.\n"
+
+msgid ""
+"Protect a cleartext key using a GRUB key protector that can retrieve the key "
+"during boot to unlock fully-encrypted disks automatically."
+msgstr ""
+"הגנה על מפתח בטקסט גלוי באמצעות מגן מפתחות של GRUB שיכול למשוך את המפתח בזמן "
+"העלייה כדי לשחרר כוננים עם הצפנה מלאה אוטומטית."
+
+#, c-format
+msgid "Could not parse arguments.\n"
+msgstr "לא ניתן לפענח ארגומנטים.\n"
+
+#, fuzzy
+#~ msgid "Show the list of trusted X.509 certificates from the db list"
+#~ msgstr "הצגת רשימת המפתחות המהימנים."
+
+#, fuzzy
+#~ msgid "Specify path to find UKI entries."
+#~ msgstr "ציון הגיבוי לשימוש."
+
+#, fuzzy, c-format
+#~ msgid "duplicate file: `%s'"
+#~ msgstr "לא ניתן ליצור קובץ: %s"
+
+#, fuzzy
+#~ msgid "overflow detected creating argv list"
+#~ msgstr "התגלתה חריגה"
+
+#, fuzzy, c-format
+#~ msgid "variable '%s' isn't set"
+#~ msgstr "המשתנה ‚%s’ לא מוגדר"
+
+#, fuzzy
+#~ msgid "memory reading is disabled in lockdown mode"
+#~ msgstr "הזיכרון שמוגדר גדול מהזיכרון המוקצה"
+
+#, fuzzy
+#~ msgid "List memory regions."
+#~ msgstr "הצגת בלוקים פנויים של זיכרון."
+
+#, fuzzy
+#~ msgid "Only probe encrypted disks."
+#~ msgstr "לתשאל רק כונני EFI."
+
+#, fuzzy, c-format
+#~ msgid "could not open file: %s"
+#~ msgstr "לא ניתן לפתוח קובץ מפתח %s"
+
+#, fuzzy, c-format
+#~ msgid "could not read file size: %s"
+#~ msgstr "אי אפשר לקרוא את ‚%s’:‏ %s"
+
+#, fuzzy, c-format
+#~ msgid "could not allocate buffer for %s"
+#~ msgstr "לא ניתן להקצות מכלא אירוע CC"
+
+#, fuzzy
+#~ msgid "malformed TPM 2.0 key file"
+#~ msgstr "קריאת קובץ המפתח נכשלה"
+
+#, fuzzy
+#~ msgid "key file not specified"
+#~ msgstr "לא צוינה רשומה בתפריט."
+
+#, fuzzy
+#~ msgid "Unknown Mode"
+#~ msgstr "קידוד תווים לא ידוע"
+
+#, fuzzy
+#~ msgid "Invalid passphrase."
+#~ msgstr "משתנה שגוי"
+
+#, fuzzy, c-format
+#~ msgid "unrecognized option: %s"
+#~ msgstr "האפשרות ‚%s’ אינה מזוהה\\n"
+
+#, fuzzy
+#~ msgid "disk name expected"
+#~ msgstr "אמור להיות שם קובץ"
+
+#, fuzzy, c-format
+#~ msgid "invalid disk: %s"
+#~ msgstr "מצב שגוי %s"
+
+#, fuzzy, c-format
+#~ msgid "unrecognized disk: %s"
+#~ msgstr "גודל המפתח לא מזוהה"
+
+#, fuzzy, c-format
+#~ msgid "no such disk: %s"
+#~ msgstr "לא ניתן לפתוח את הכונן: %s"
+
+#, fuzzy
+#~ msgid "invalid JFS inode"
+#~ msgstr "מצב שגוי %s"
+
+#, fuzzy
+#~ msgid "zstd file corrupted or unsupported block options"
+#~ msgstr "קובץ ה־xz פגום או שאפשרויות הבלוק לא נתמכות"
+
+#, fuzzy
+#~ msgid "bad shim loader signature"
+#~ msgstr "חתימת shim פגומה"
+
+#, fuzzy
+#~ msgid "DEV"
+#~ msgstr "התקן"
+
+#, fuzzy
+#~ msgid "set TPM device."
+#~ msgstr "הצגת התקני PCI."
+
+#, fuzzy, c-format
+#~ msgid "cannot open TPM device '%s': %s"
+#~ msgstr "לא ניתן לפתוח את ההתקן: %s"
+
+#, fuzzy, c-format
+#~ msgid "cannot close TPM device: %s"
+#~ msgstr "לא ניתן לפתוח את ההתקן: %s"
+
+#, fuzzy
+#~ msgid "invalid partition number"
+#~ msgstr "משתנה שגוי"
+
+#, fuzzy
+#~ msgid "No device tree found"
+#~ msgstr "עץ ההתקן שגוי"
+
+#, fuzzy
+#~ msgid "failed to retrieve the prop field"
+#~ msgstr "משיכת שדה המבנה נכשלה"
+
+#, fuzzy
+#~ msgid "Retrieve device tree information."
+#~ msgstr "משיכת מידע על ההתקן."
+
+#, fuzzy
+#~ msgid "filename too long"
+#~ msgstr "המחרוזת ארוכה מדי"
+
 #, c-format
 #~ msgid "GNU GRUB  version %s"
 #~ msgstr "גרסת GNU GRUB‏ %s"
 
-#, c-format
-#~ msgid "%s, with Linux %s (recovery mode)"
-#~ msgstr "%s, עם לינוקס %s (מצב שיקום)"
+#, fuzzy, c-format
+#~ msgid "cannot open device %s: %s"
+#~ msgstr "לא ניתן לפתוח את ההתקן: %s"
 
-#, c-format
-#~ msgid "%s, with Linux %s"
-#~ msgstr "%s, עם לינוקס %s"
+#, fuzzy, c-format
+#~ msgid "non-numeric or invalid appended signature size `%s'"
+#~ msgstr "ערך לא מספרי או מספר שגוי ‚%s’"
+
+#, fuzzy
+#~ msgid "option requires an argument"
+#~ msgstr "%s: האפשרות דורשת ארגומנט -- `%s'\\n"
+
+#, fuzzy, c-format
+#~ msgid "Could not open file: %s\n"
+#~ msgstr "לא ניתן לפתוח קובץ מפתח %s"
+
+#, fuzzy, c-format
+#~ msgid "Could not seek file: %s\n"
+#~ msgstr "לא ניתן ליצור קובץ: %s"
+
+#, fuzzy, c-format
+#~ msgid "Could not allocate memory for file: %s\n"
+#~ msgstr "לא ניתן לאתר את מנהל ההתקן FPSWA"
+
+#, fuzzy, c-format
+#~ msgid "Could not read file: %s\n"
+#~ msgstr "לא ניתן ליצור קובץ: %s"
+
+#, fuzzy, c-format
+#~ msgid "Could not get TPM response.\n"
+#~ msgstr "תגובת HTTP לא נתמכת"
+
+#, fuzzy, c-format
+#~ msgid "Could not open TPM device (%s).\n"
+#~ msgstr "לא ניתן לפתוח את ההתקן: %s"
+
+#, fuzzy, c-format
+#~ msgid "Could not close TPM device (%s).\n"
+#~ msgstr "לא ניתן לאתר את מנהל ההתקן FPSWA"
+
+#, fuzzy, c-format
+#~ msgid "Could not write key file (%s).\n"
+#~ msgstr "לא ניתן לפתוח קובץ מפתח %s"
+
+#, fuzzy, c-format
+#~ msgid "'%s' is not a valid action.\n"
+#~ msgstr "‚%s’ אינו כונן מקומי"
 
 #, c-format
 #~ msgid ""
@@ -7759,3 +8189,11 @@ msgstr "נוספת רשומת תפריט טעינה להגדרות קושחת UE
 #~ msgstr ""
 #~ "os-prober יופעל לאיתור מחיצות שניתן לטעון מהן.\\nהפלט שלו ישמש לאיתור "
 #~ "קבצים בינריים עליהן ותיווצרנה רשומות טעינה חדשות."
+
+#, c-format
+#~ msgid "%s, with Linux %s (recovery mode)"
+#~ msgstr "%s, עם לינוקס %s (מצב שיקום)"
+
+#, c-format
+#~ msgid "%s, with Linux %s"
+#~ msgstr "%s, עם לינוקס %s"

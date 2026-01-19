@@ -7799,16 +7799,16 @@ msgid "Adding boot menu entry for UEFI Firmware Settings ...\\n"
 msgstr "正在添加 UEFI 固件设置的引导菜单项……\\n"
 
 #, c-format
+#~ msgid "GNU GRUB  version %s"
+#~ msgstr "GNU GRUB  %s 版"
+
+#, c-format
 #~ msgid "%s, with Linux %s (recovery mode)"
 #~ msgstr "%s，使用 Linux %s（恢复模式）"
 
 #, c-format
 #~ msgid "%s, with Linux %s"
 #~ msgstr "%s，使用 Linux %s"
-
-#, c-format
-#~ msgid "GNU GRUB  version %s"
-#~ msgstr "GNU GRUB  %s 版"
 
 #, c-format
 #~ msgid ""
@@ -7894,27 +7894,22 @@ msgstr "正在添加 UEFI 固件设置的引导菜单项……\\n"
 #~ msgstr "（程序错误）选项应当已被识别！？"
 
 #, fuzzy
-#~| msgid "%s: option '-W %s' is ambiguous\n"
 #~ msgid "%s: option '%s%s' is ambiguous\n"
 #~ msgstr "%s：选项“-W %s”有歧义\n"
 
 #, fuzzy
-#~| msgid "%s: option '%s' is ambiguous; possibilities:"
 #~ msgid "%s: option '%s%s' is ambiguous; possibilities:"
 #~ msgstr "%s：选项“%s”有歧义；可能是:"
 
 #, fuzzy
-#~| msgid "%s: unrecognized option '%c%s'\n"
 #~ msgid "%s: unrecognized option '%s%s'\n"
 #~ msgstr "%s：无法识别的选项“%c%s”\n"
 
 #, fuzzy
-#~| msgid "%s: option '%c%s' doesn't allow an argument\n"
 #~ msgid "%s: option '%s%s' doesn't allow an argument\n"
 #~ msgstr "%s：选项“%c%s”不允许有参数\n"
 
 #, fuzzy
-#~| msgid "%s: option '--%s' requires an argument\n"
 #~ msgid "%s: option '%s%s' requires an argument\n"
 #~ msgstr "%s：选项“--%s”需要一个参数\n"
 
@@ -7925,7 +7920,6 @@ msgstr "正在添加 UEFI 固件设置的引导菜单项……\\n"
 #~ msgstr "%s：选项需要一个参数 -- “%c”\n"
 
 #, fuzzy
-#~| msgid "Unable to delete non-empty directory\n"
 #~ msgid "unable to record current working directory"
 #~ msgstr "无法删除非空目录\n"
 
