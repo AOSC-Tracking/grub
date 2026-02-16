@@ -1467,6 +1467,7 @@ elif test x$grub_cv_target_cc_link_format = x-mi386pe || test x$grub_cv_target_c
   TARGET_IMG_LDSCRIPT='$(top_srcdir)'"/conf/i386-cygwin-img-ld.sc"
   TARGET_IMG_LDFLAGS="-Wl,-T${TARGET_IMG_LDSCRIPT}"
   TARGET_IMG_LDFLAGS_AC="-Wl,-T${srcdir}/conf/i386-cygwin-img-ld.sc"
+  TARGET_IMG_BASE_LDOPT="-Wl,-Ttext"
   TARGET_IMG_CFLAGS=
 else
   TARGET_APPLE_LINKER=0
@@ -1474,6 +1475,7 @@ else
   TARGET_IMG_LDSCRIPT=
   TARGET_IMG_LDFLAGS='-Wl,-N'
   TARGET_IMG_LDFLAGS_AC='-Wl,-N'
+  TARGET_IMG_BASE_LDOPT="-Wl,-Ttext"
   TARGET_IMG_CFLAGS=
 fi
 
@@ -1809,18 +1811,6 @@ grub_PROG_TARGET_CC
 m4_ifndef([AX_CHECK_LINK_FLAG], [m4_fatal([autoconf-archive is missing. You must install it to generate the configure script.])])
 
 if test "x$TARGET_APPLE_LINKER" != x1 ; then
-AX_CHECK_LINK_FLAG([-Wl,--image-base,0x400000],
-    [TARGET_IMG_BASE_LDOPT="-Wl,--image-base"],
-    [TARGET_IMG_BASE_LDOPT="-Wl,-Ttext"],
-    [],
-    [AC_LANG_SOURCE([
-asm (".globl start; start:");
-asm (".globl _start; _start:");
-asm (".globl __start; __start:");
-void __main (void);
-void __main (void) {}
-int main (void);
-    ])])
 grub_PROG_OBJCOPY_ABSOLUTE
 fi
 grub_PROG_LD_BUILD_ID_NONE
