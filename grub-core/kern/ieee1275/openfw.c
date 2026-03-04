@@ -489,6 +489,7 @@ grub_ieee1275_encode_devname (const char *path)
   char *encoding;
   char *optr;
   const char *iptr;
+  int error = 0;
 
   if (! device)
     return 0;
@@ -520,11 +521,21 @@ grub_ieee1275_encode_devname (const char *path)
       if (*endptr != '\0' || partno > 65535 ||
           (partno == 0 && ! grub_ieee1275_test_flag (GRUB_IEEE1275_FLAG_0_BASED_PARTITIONS)))
         {
-          grub_free (partition);
-          grub_free (device);
-          grub_free (encoding);
+          /*
+           * On iso9660 there will be no partition as seen in the SLOF
+           * firmware.
+           * In this case partition contains the path to the booted file.
+           * This can't be treated as an error, the device name must be
+           * returned, otherwise image files created using grub-mkrescue
+           * will fail to boot.
+           */
+          error = 1;
+          if (grub_strstr (path, partition) != NULL) {
+            error = 0;
+          }
           grub_error (GRUB_ERR_BAD_ARGUMENT, N_("invalid partition number"));
-          return NULL;
+          *optr = '\0';
+          goto out;
         }
 
       *optr++ = ',';
@@ -538,9 +549,13 @@ grub_ieee1275_encode_devname (const char *path)
   else
     *optr = '\0';
 
+out:
   grub_free (partition);
   grub_free (device);
-
+  if (error) {
+    grub_free (encoding);
+    return NULL;
+  }
   return encoding;
 }
 
