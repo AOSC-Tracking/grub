@@ -501,8 +501,7 @@ grub_cmd_initrd (grub_command_t cmd __attribute__ ((unused)),
 {
   grub_size_t size = 0;
   void *initrd_dest;
-  void *balloon = NULL;
-  grub_err_t err;
+  void *initrd_page_base = NULL;
   struct grub_linux_initrd_context initrd_ctx = { 0, 0, 0 };
 
   if (argc == 0)
@@ -519,25 +518,11 @@ grub_cmd_initrd (grub_command_t cmd __attribute__ ((unused)),
 
   size = grub_get_initrd_size (&initrd_ctx);
 
-  // make sure we can allocate sufficient memory for the initrd
-  balloon = grub_memalign (0x10000, size);
-  if (!balloon)
+  initrd_page_base = grub_efi_allocate_any_pages((size + 0x10000) >> 12);
+  if (!initrd_page_base)
     goto fail;
-  else
-    // free this region for the relocator
-    grub_free(balloon);
 
-  {
-    grub_relocator_chunk_t ch;
-    err = grub_relocator_alloc_chunk_align (relocator, &ch,
-					    0, (0xffffffff - size) + 1,
-					    size, 0x10000,
-					    GRUB_RELOCATOR_PREFERENCE_LOW, 0);
-
-    if (err)
-      goto fail;
-    initrd_dest = get_virtual_current_address (ch);
-  }
+  initrd_dest = (void *)ALIGN_UP((grub_size_t)initrd_page_base, 0x10000);
 
   if (grub_initrd_load (&initrd_ctx, initrd_dest))
     goto fail;
