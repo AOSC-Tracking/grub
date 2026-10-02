@@ -75,10 +75,37 @@ VARIABLE(grub_relocator16_start)
 	wrmsr
 #endif
 
-	/* Turn off PAE. */
+	/* Turn off PAE if the CPU actually has a CR4, i.e. is PAE-capable.
+	   CR4-less CPUs (386 and 486-class CPUs without a detectable PAE
+	   feature, like the AMD Am486) take #UD on an unconditional CR4
+	   access, which triple-faults the machine here.  Gate it on the
+	   EFLAGS.ID toggle (CPUID presence) plus the CPUID PAE feature bit.
+	   The stack for the flag juggling is the relocator's own allocated
+	   stack area, right after the blob.  */
+	leal	(LOCAL (relocator16_end) - LOCAL (base)) (%esi), %esp
+	addl	$GRUB_RELOCATOR16_STACK_SIZE, %esp
+	pushfl
+	popl	%eax
+	movl	%eax, %ecx
+	xorl	$0x00200000, %eax
+	pushl	%eax
+	popfl
+	pushfl
+	popl	%eax
+	xorl	%ecx, %eax
+	pushl	%ecx
+	popfl
+	testl	$0x00200000, %eax
+	jz	1f			/* CPUID unsupported: no CR4 either. */
+	xorl	%eax, %eax
+	incl	%eax
+	cpuid
+	testl	$0x40, %edx		/* CPUID PAE feature (leaf 1, EDX bit 6). */
+	jz	1f
 	movl	%cr4, %eax
 	andl	$(~GRUB_MEMORY_CPU_CR4_PAE_ON), %eax
 	movl	%eax, %cr4
+1:
 
 	/* Update other registers. */
 	movl	$PSEUDO_REAL_DSEG, %eax
